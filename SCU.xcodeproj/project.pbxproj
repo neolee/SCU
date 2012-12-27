@@ -13,7 +13,43 @@
 		B542191B168C3AF000C21C1C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B5421919168C3AF000C21C1C /* Credits.rtf */; };
 		B542191E168C3AF000C21C1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B542191D168C3AF000C21C1C /* AppDelegate.m */; };
 		B5421921168C3AF000C21C1C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B542191F168C3AF000C21C1C /* MainMenu.xib */; };
+		B54219B7168C3E3D00C21C1C /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5421933168C3E3D00C21C1C /* MASPreferencesWindow.xib */; };
+		B54219B8168C3E3D00C21C1C /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5421935168C3E3D00C21C1C /* MASPreferencesWindowController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B54219B9168C3E3D00C21C1C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B5421936168C3E3D00C21C1C /* README.md */; };
+		B5421A2E168C402F00C21C1C /* libYACYAML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5421A27168C3FDF00C21C1C /* libYACYAML.a */; };
+		B5421A30168C402F00C21C1C /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5421A2F168C402F00C21C1C /* libresolv.dylib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5421A26168C3FDF00C21C1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7DDC030E156541F8001832F5;
+			remoteInfo = YACYAML;
+		};
+		B5421A28168C3FDF00C21C1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7DDC031E156541F8001832F5;
+			remoteInfo = YACYAMLTests;
+		};
+		B5421A2A168C3FDF00C21C1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7DE3E3AC15654430006663D2;
+			remoteInfo = libYAML;
+		};
+		B5421A2C168C400D00C21C1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DDC030D156541F8001832F5;
+			remoteInfo = YACYAML;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B5421906168C3AF000C21C1C /* SCU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCU.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +65,13 @@
 		B542191C168C3AF000C21C1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B542191D168C3AF000C21C1C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B5421920168C3AF000C21C1C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B5421932168C3E3D00C21C1C /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
+		B5421933168C3E3D00C21C1C /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
+		B5421934168C3E3D00C21C1C /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
+		B5421935168C3E3D00C21C1C /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
+		B5421936168C3E3D00C21C1C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YACYAML.xcodeproj; path = YACYAML/YACYAML.xcodeproj; sourceTree = "<group>"; };
+		B5421A2F168C402F00C21C1C /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5421A30168C402F00C21C1C /* libresolv.dylib in Frameworks */,
+				B5421A2E168C402F00C21C1C /* libYACYAML.a in Frameworks */,
 				B542190B168C3AF000C21C1C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +91,8 @@
 		B54218FB168C3AEF00C21C1C = {
 			isa = PBXGroup;
 			children = (
+				B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */,
+				B5421930168C3E3D00C21C1C /* MASPreferences */,
 				B5421910168C3AF000C21C1C /* SCU */,
 				B5421909168C3AF000C21C1C /* Frameworks */,
 				B5421907168C3AF000C21C1C /* Products */,
@@ -63,6 +110,7 @@
 		B5421909168C3AF000C21C1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5421A2F168C402F00C21C1C /* libresolv.dylib */,
 				B542190A168C3AF000C21C1C /* Cocoa.framework */,
 				B542190C168C3AF000C21C1C /* Other Frameworks */,
 			);
@@ -102,6 +150,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B5421930168C3E3D00C21C1C /* MASPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				B5421932168C3E3D00C21C1C /* MASPreferencesViewController.h */,
+				B5421933168C3E3D00C21C1C /* MASPreferencesWindow.xib */,
+				B5421934168C3E3D00C21C1C /* MASPreferencesWindowController.h */,
+				B5421935168C3E3D00C21C1C /* MASPreferencesWindowController.m */,
+				B5421936168C3E3D00C21C1C /* README.md */,
+			);
+			path = MASPreferences;
+			sourceTree = "<group>";
+		};
+		B5421A1E168C3FDF00C21C1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5421A27168C3FDF00C21C1C /* libYACYAML.a */,
+				B5421A29168C3FDF00C21C1C /* YACYAMLTests.octest */,
+				B5421A2B168C3FDF00C21C1C /* libYAML.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,6 +186,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B5421A2D168C400D00C21C1C /* PBXTargetDependency */,
 			);
 			name = SCU;
 			productName = SCU;
@@ -141,12 +212,42 @@
 			mainGroup = B54218FB168C3AEF00C21C1C;
 			productRefGroup = B5421907168C3AF000C21C1C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B5421A1E168C3FDF00C21C1C /* Products */;
+					ProjectRef = B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B5421905168C3AF000C21C1C /* SCU */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B5421A27168C3FDF00C21C1C /* libYACYAML.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libYACYAML.a;
+			remoteRef = B5421A26168C3FDF00C21C1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B5421A29168C3FDF00C21C1C /* YACYAMLTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = YACYAMLTests.octest;
+			remoteRef = B5421A28168C3FDF00C21C1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B5421A2B168C3FDF00C21C1C /* libYAML.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libYAML.a;
+			remoteRef = B5421A2A168C3FDF00C21C1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B5421904168C3AF000C21C1C /* Resources */ = {
@@ -156,6 +257,8 @@
 				B5421915168C3AF000C21C1C /* InfoPlist.strings in Resources */,
 				B542191B168C3AF000C21C1C /* Credits.rtf in Resources */,
 				B5421921168C3AF000C21C1C /* MainMenu.xib in Resources */,
+				B54219B7168C3E3D00C21C1C /* MASPreferencesWindow.xib in Resources */,
+				B54219B9168C3E3D00C21C1C /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,10 +271,19 @@
 			files = (
 				B5421917168C3AF000C21C1C /* main.m in Sources */,
 				B542191E168C3AF000C21C1C /* AppDelegate.m in Sources */,
+				B54219B8168C3E3D00C21C1C /* MASPreferencesWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5421A2D168C400D00C21C1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YACYAML;
+			targetProxy = B5421A2C168C400D00C21C1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B5421913168C3AF000C21C1C /* InfoPlist.strings */ = {
@@ -260,7 +372,16 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCU/SCU-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+				);
 				INFOPLIST_FILE = "SCU/SCU-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -272,7 +393,16 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCU/SCU-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+				);
 				INFOPLIST_FILE = "SCU/SCU-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -297,6 +427,7 @@
 				B5421926168C3AF000C21C1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
