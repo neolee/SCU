@@ -24,6 +24,15 @@
     [_prefWindowController showWindow:self];
 }
 
+- (IBAction)showPreferencesWindow:(id)sender {
+    [_prefWindowController showWindow:self];
+}
+
+- (IBAction)reloadFromDisk:(id)sender {
+    // TODO: Reload all preferences from disk: ~/Library/Rime/*
+    
+}
+
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
     return YES;
 }

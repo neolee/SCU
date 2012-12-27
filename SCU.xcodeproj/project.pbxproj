@@ -161,10 +161,10 @@
 			children = (
 				B5421912168C3AF000C21C1C /* SCU-Info.plist */,
 				B5421913168C3AF000C21C1C /* InfoPlist.strings */,
+				B5E3005E168C54A50068BBE7 /* Localizable.strings */,
 				B5421916168C3AF000C21C1C /* main.m */,
 				B5421918168C3AF000C21C1C /* SCU-Prefix.pch */,
 				B5421919168C3AF000C21C1C /* Credits.rtf */,
-				B5E3005E168C54A50068BBE7 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0450;
-				ORGANIZATIONNAME = Neo;
+				ORGANIZATIONNAME = "Paradigm X";
 			};
 			buildConfigurationList = B5421900168C3AEF00C21C1C /* Build configuration list for PBXProject "SCU" */;
 			compatibilityVersion = "Xcode 3.2";

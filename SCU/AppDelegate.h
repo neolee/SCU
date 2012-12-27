@@ -13,5 +13,6 @@
     MASPreferencesWindowController *_prefWindowController;
 }
 
-@property (assign) IBOutlet NSWindow *window;
+- (IBAction)showPreferencesWindow:(id)sender;
+- (IBAction)reloadFromDisk:(id)sender;
 @end
