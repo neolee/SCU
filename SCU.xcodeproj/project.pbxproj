@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B519C002168C87D700B04D55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B519C004168C87D700B04D55 /* Localizable.strings */; };
 		B542190B168C3AF000C21C1C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B542190A168C3AF000C21C1C /* Cocoa.framework */; };
 		B5421915168C3AF000C21C1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5421913168C3AF000C21C1C /* InfoPlist.strings */; };
 		B5421917168C3AF000C21C1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5421916168C3AF000C21C1C /* main.m */; };
@@ -22,7 +23,6 @@
 		B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */; };
 		B5E30059168C49170068BBE7 /* StylePreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */; };
 		B5E3005A168C49170068BBE7 /* StylePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */; };
-		B5E3005F168C54A50068BBE7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5E3005E168C54A50068BBE7 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B519C003168C87D700B04D55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B5421906168C3AF000C21C1C /* SCU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B542190A168C3AF000C21C1C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B542190D168C3AF000C21C1C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -83,7 +84,6 @@
 		B5E30056168C49170068BBE7 /* StylePreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StylePreferencesViewController.h; sourceTree = "<group>"; };
 		B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StylePreferencesViewController.m; sourceTree = "<group>"; };
 		B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StylePreferencesViewController.xib; sourceTree = "<group>"; };
-		B5E3005E168C54A50068BBE7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +161,7 @@
 			children = (
 				B5421912168C3AF000C21C1C /* SCU-Info.plist */,
 				B5421913168C3AF000C21C1C /* InfoPlist.strings */,
-				B5E3005E168C54A50068BBE7 /* Localizable.strings */,
+				B519C004168C87D700B04D55 /* Localizable.strings */,
 				B5421916168C3AF000C21C1C /* main.m */,
 				B5421918168C3AF000C21C1C /* SCU-Prefix.pch */,
 				B5421919168C3AF000C21C1C /* Credits.rtf */,
@@ -280,7 +280,7 @@
 				B54219B9168C3E3D00C21C1C /* README.md in Resources */,
 				B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */,
 				B5E3005A168C49170068BBE7 /* StylePreferencesViewController.xib in Resources */,
-				B5E3005F168C54A50068BBE7 /* Localizable.strings in Resources */,
+				B519C002168C87D700B04D55 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +310,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B519C004168C87D700B04D55 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B519C003168C87D700B04D55 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B5421913168C3AF000C21C1C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
