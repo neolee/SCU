@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MASPreferencesWindowController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    MASPreferencesWindowController *_prefWindowController;
+}
 
 @property (assign) IBOutlet NSWindow *window;
-
 @end

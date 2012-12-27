@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  SCU
+
+  Created by Neo on 12/27/12.
+  Copyright (c) 2012 Neo. All rights reserved.
+*/
+
+"Preference window title" = "Squirrel Configuration Utility";
+
+"General tab label" = "General";
+"Style tab label" = "Style";

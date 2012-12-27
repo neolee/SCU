@@ -7,12 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import "GeneralPreferencesViewController.h"
+#import "StylePreferencesViewController.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    NSViewController *generalViewController = [[GeneralPreferencesViewController alloc] initWithNibName:@"GeneralPreferencesViewController" bundle:[NSBundle mainBundle]];
+    NSViewController *styleViewController = [[StylePreferencesViewController alloc] initWithNibName:@"StylePreferencesViewController" bundle:[NSBundle mainBundle]];
+    NSArray *views = [NSArray arrayWithObjects:generalViewController, styleViewController, nil];
+    NSString *title = NSLocalizedString(@"Preference window title", nil);
+
+    _prefWindowController = [[MASPreferencesWindowController alloc] initWithViewControllers:views title:title];
+    [_prefWindowController showWindow:self];
+}
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+    return YES;
 }
 
 @end

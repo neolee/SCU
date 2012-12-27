@@ -18,6 +18,11 @@
 		B54219B9168C3E3D00C21C1C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B5421936168C3E3D00C21C1C /* README.md */; };
 		B5421A2E168C402F00C21C1C /* libYACYAML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5421A27168C3FDF00C21C1C /* libYACYAML.a */; };
 		B5421A30168C402F00C21C1C /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5421A2F168C402F00C21C1C /* libresolv.dylib */; };
+		B5E30054168C48650068BBE7 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */; };
+		B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */; };
+		B5E30059168C49170068BBE7 /* StylePreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */; };
+		B5E3005A168C49170068BBE7 /* StylePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */; };
+		B5E3005F168C54A50068BBE7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5E3005E168C54A50068BBE7 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,13 @@
 		B5421936168C3E3D00C21C1C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YACYAML.xcodeproj; path = YACYAML/YACYAML.xcodeproj; sourceTree = "<group>"; };
 		B5421A2F168C402F00C21C1C /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		B5E30051168C48650068BBE7 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
+		B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralPreferencesViewController.m; sourceTree = "<group>"; };
+		B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralPreferencesViewController.xib; sourceTree = "<group>"; };
+		B5E30056168C49170068BBE7 /* StylePreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StylePreferencesViewController.h; sourceTree = "<group>"; };
+		B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StylePreferencesViewController.m; sourceTree = "<group>"; };
+		B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StylePreferencesViewController.xib; sourceTree = "<group>"; };
+		B5E3005E168C54A50068BBE7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +145,12 @@
 				B542191C168C3AF000C21C1C /* AppDelegate.h */,
 				B542191D168C3AF000C21C1C /* AppDelegate.m */,
 				B542191F168C3AF000C21C1C /* MainMenu.xib */,
+				B5E30051168C48650068BBE7 /* GeneralPreferencesViewController.h */,
+				B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */,
+				B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */,
+				B5E30056168C49170068BBE7 /* StylePreferencesViewController.h */,
+				B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */,
+				B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */,
 				B5421911168C3AF000C21C1C /* Supporting Files */,
 			);
 			path = SCU;
@@ -146,6 +164,7 @@
 				B5421916168C3AF000C21C1C /* main.m */,
 				B5421918168C3AF000C21C1C /* SCU-Prefix.pch */,
 				B5421919168C3AF000C21C1C /* Credits.rtf */,
+				B5E3005E168C54A50068BBE7 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -259,6 +278,9 @@
 				B5421921168C3AF000C21C1C /* MainMenu.xib in Resources */,
 				B54219B7168C3E3D00C21C1C /* MASPreferencesWindow.xib in Resources */,
 				B54219B9168C3E3D00C21C1C /* README.md in Resources */,
+				B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */,
+				B5E3005A168C49170068BBE7 /* StylePreferencesViewController.xib in Resources */,
+				B5E3005F168C54A50068BBE7 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +294,8 @@
 				B5421917168C3AF000C21C1C /* main.m in Sources */,
 				B542191E168C3AF000C21C1C /* AppDelegate.m in Sources */,
 				B54219B8168C3E3D00C21C1C /* MASPreferencesWindowController.m in Sources */,
+				B5E30054168C48650068BBE7 /* GeneralPreferencesViewController.m in Sources */,
+				B5E30059168C49170068BBE7 /* StylePreferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
