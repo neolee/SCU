@@ -10,7 +10,7 @@
 
 @implementation NSString (SHFoundation)
 
-+ (NSString *)stringFromBool:(BOOL)value {
++ (NSString *)stringWithBool:(BOOL)value {
     return value ? @"true" : @"false";
 }
 

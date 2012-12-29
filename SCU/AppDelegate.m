@@ -28,9 +28,9 @@
     }
     else {
         NSLog(@"Loaded Rime configuration.");
-        NSLog(@"useUSKeyboardLayout: %@", [NSString stringFromBool:_configController.useUSKeyboardLayout]);
-        NSLog(@"enableNotifcations: %@", [NSString stringFromBool:_configController.enableNotifications]);
-        NSLog(@"enableBuiltinNotifications: %@", [NSString stringFromBool:_configController.enableBuiltinNotifications]);
+        NSLog(@"useUSKeyboardLayout: %@", [NSString stringWithBool:_configController.useUSKeyboardLayout]);
+        NSLog(@"enableNotifcations: %@", [NSString stringWithBool:_configController.enableNotifications]);
+        NSLog(@"enableBuiltinNotifications: %@", [NSString stringWithBool:_configController.enableBuiltinNotifications]);
     }
     
     // Display the prefenrences window as main UI

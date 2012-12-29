@@ -49,7 +49,7 @@
 
 - (IBAction)alwaysUseUSKeyboardLayoutChanged:(id)sender {
     BOOL useUSKeyboardLayout = [[NSUserDefaults standardUserDefaults] boolForKey:@"useUSKeyboardLayout"];
-    NSLog(@"useUSKeyboardLayout: %@", [NSString stringFromBool:useUSKeyboardLayout]);
+    NSLog(@"useUSKeyboardLayout: %@", [NSString stringWithBool:useUSKeyboardLayout]);
 }
 
 - (IBAction)switchNotificationChanged:(id)sender {
