@@ -211,7 +211,7 @@
 											<object class="NSButtonCell" id="794770240">
 												<int key="NSCellFlags">-2080374784</int>
 												<int key="NSCellFlags2">0</int>
-												<string key="NSContents">Default</string>
+												<string key="NSContents">Natural</string>
 												<reference key="NSSupport" ref="854491003"/>
 												<reference key="NSControlView" ref="504896890"/>
 												<int key="NSTag">1</int>
@@ -228,7 +228,7 @@
 											<object class="NSButtonCell" id="717629739">
 												<int key="NSCellFlags">67108864</int>
 												<int key="NSCellFlags2">0</int>
-												<string key="NSContents">Microsoft</string>
+												<string key="NSContents">MSPY</string>
 												<reference key="NSSupport" ref="854491003"/>
 												<reference key="NSControlView" ref="504896890"/>
 												<int key="NSButtonFlags">1211912448</int>
@@ -282,7 +282,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 											<object class="NSButtonCell" id="400159109">
 												<int key="NSCellFlags">67108864</int>
 												<int key="NSCellFlags2">0</int>
-												<string key="NSContents">Abc</string>
+												<string key="NSContents">ABC</string>
 												<reference key="NSSupport" ref="854491003"/>
 												<reference key="NSControlView" ref="504896890"/>
 												<int key="NSButtonFlags">1211912448</int>
@@ -294,7 +294,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 											<object class="NSButtonCell" id="461780123">
 												<int key="NSCellFlags">67108864</int>
 												<int key="NSCellFlags2">0</int>
-												<string key="NSContents">FlyPy</string>
+												<string key="NSContents">FLYPY</string>
 												<reference key="NSSupport" ref="854491003"/>
 												<reference key="NSControlView" ref="504896890"/>
 												<int key="NSButtonFlags">1211912448</int>
@@ -463,7 +463,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					<object class="NSTextField" id="747933545">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 287}, {131, 17}}</string>
+						<string key="NSFrame">{{17, 287}, {124, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="275042842"/>
@@ -472,7 +472,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 						<object class="NSTextFieldCell" key="NSCell" id="1011879572">
 							<int key="NSCellFlags">68157504</int>
 							<int key="NSCellFlags2">272630784</int>
-							<string key="NSContents">Switch notifications:</string>
+							<string key="NSContents">Show notifications:</string>
 							<reference key="NSSupport" ref="854491003"/>
 							<string key="NSCellIdentifier">_NS:1535</string>
 							<reference key="NSControlView" ref="747933545"/>
@@ -627,7 +627,8 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<int key="NSPeriodicDelay">400</int>
 							<int key="NSPeriodicInterval">75</int>
 						</object>
-						<reference key="NSSelectedCell" ref="483476807"/>
+						<int key="NSSelectedRow">1</int>
+						<reference key="NSSelectedCell" ref="82049437"/>
 						<reference key="NSBackgroundColor" ref="66508127"/>
 						<reference key="NSCellBackgroundColor" ref="1035514167"/>
 						<reference key="NSFont" ref="854491003"/>
@@ -698,35 +699,35 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: values.alwaysUseUSKeyboardLayout</string>
+						<string key="label">value: values.useUSKeyboardLayout</string>
 						<reference key="source" ref="250367288"/>
 						<reference key="destination" ref="745702753"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="250367288"/>
 							<reference key="NSDestination" ref="745702753"/>
-							<string key="NSLabel">value: values.alwaysUseUSKeyboardLayout</string>
+							<string key="NSLabel">value: values.useUSKeyboardLayout</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">values.alwaysUseUSKeyboardLayout</string>
+							<string key="NSKeyPath">values.useUSKeyboardLayout</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">173</int>
+					<int key="connectionID">190</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">selectedIndex: values.flagSwitchNotification</string>
+						<string key="label">selectedIndex: values.flagShowNotification</string>
 						<reference key="source" ref="275042842"/>
 						<reference key="destination" ref="745702753"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="275042842"/>
 							<reference key="NSDestination" ref="745702753"/>
-							<string key="NSLabel">selectedIndex: values.flagSwitchNotification</string>
+							<string key="NSLabel">selectedIndex: values.flagShowNotification</string>
 							<string key="NSBinding">selectedIndex</string>
-							<string key="NSKeyPath">values.flagSwitchNotification</string>
+							<string key="NSKeyPath">values.flagShowNotification</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">189</int>
+					<int key="connectionID">192</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1628,7 +1629,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">189</int>
+			<int key="maxID">193</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

@@ -10,11 +10,30 @@
 #import "GeneralPreferencesViewController.h"
 #import "StylePreferencesViewController.h"
 
+#import "NSString+SHFoundation.h"
+
 @implementation AppDelegate
+
+- (RimeConfigController *)configController {
+    if (!_configController) _configController = [[RimeConfigController alloc] init];
+    
+    return _configController;
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    // Load Rime/Squirrel configuration
+    if (![self configController]) {
+        NSLog(@"Loading Rime configuration failed.");
+    }
+    else {
+        NSLog(@"Loaded Rime configuration.");
+        NSLog(@"useUSKeyboardLayout: %@", [NSString stringFromBool:_configController.useUSKeyboardLayout]);
+        NSLog(@"enableNotifcations: %@", [NSString stringFromBool:_configController.enableNotifications]);
+        NSLog(@"enableBuiltinNotifications: %@", [NSString stringFromBool:_configController.enableBuiltinNotifications]);
+    }
+    
+    // Display the prefenrences window as main UI
     NSViewController *generalViewController = [[GeneralPreferencesViewController alloc] initWithNibName:@"GeneralPreferencesViewController" bundle:[NSBundle mainBundle]];
     NSViewController *styleViewController = [[StylePreferencesViewController alloc] initWithNibName:@"StylePreferencesViewController" bundle:[NSBundle mainBundle]];
     NSArray *views = [NSArray arrayWithObjects:generalViewController, styleViewController, nil];

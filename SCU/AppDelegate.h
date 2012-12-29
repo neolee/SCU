@@ -7,11 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "RimeConfigController.h"
 #import "MASPreferencesWindowController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
+    RimeConfigController *_configController;
+    
     MASPreferencesWindowController *_prefWindowController;
 }
+
+- (RimeConfigController *)configController;
 
 - (IBAction)showPreferencesWindow:(id)sender;
 - (IBAction)reloadFromDisk:(id)sender;
