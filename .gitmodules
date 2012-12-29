@@ -1,6 +1,3 @@
 [submodule "MASPreferences"]
 	path = MASPreferences
 	url = git@github.com:shpakovski/MASPreferences.git
-[submodule "YACYAML"]
-	path = YACYAML
-	url = git://github.com/th-in-gs/YACYAML.git

@@ -17,7 +17,6 @@
 		B54219B7168C3E3D00C21C1C /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5421933168C3E3D00C21C1C /* MASPreferencesWindow.xib */; };
 		B54219B8168C3E3D00C21C1C /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5421935168C3E3D00C21C1C /* MASPreferencesWindowController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B54219B9168C3E3D00C21C1C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B5421936168C3E3D00C21C1C /* README.md */; };
-		B5421A2E168C402F00C21C1C /* libYACYAML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5421A27168C3FDF00C21C1C /* libYACYAML.a */; };
 		B5421A30168C402F00C21C1C /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5421A2F168C402F00C21C1C /* libresolv.dylib */; };
 		B5552B81168DEFB700601C3C /* SCU.icns in Resources */ = {isa = PBXBuildFile; fileRef = B5552B80168DEFB700601C3C /* SCU.icns */; };
 		B5552BAB168DF99900601C3C /* SHFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5552BAA168DF99900601C3C /* SHFoundation.m */; };
@@ -27,37 +26,6 @@
 		B5E30059168C49170068BBE7 /* StylePreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */; };
 		B5E3005A168C49170068BBE7 /* StylePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B5421A26168C3FDF00C21C1C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7DDC030E156541F8001832F5;
-			remoteInfo = YACYAML;
-		};
-		B5421A28168C3FDF00C21C1C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7DDC031E156541F8001832F5;
-			remoteInfo = YACYAMLTests;
-		};
-		B5421A2A168C3FDF00C21C1C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7DE3E3AC15654430006663D2;
-			remoteInfo = libYAML;
-		};
-		B5421A2C168C400D00C21C1C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7DDC030D156541F8001832F5;
-			remoteInfo = YACYAML;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B519C003168C87D700B04D55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -79,7 +47,6 @@
 		B5421934168C3E3D00C21C1C /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
 		B5421935168C3E3D00C21C1C /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
 		B5421936168C3E3D00C21C1C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YACYAML.xcodeproj; path = YACYAML/YACYAML.xcodeproj; sourceTree = "<group>"; };
 		B5421A2F168C402F00C21C1C /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
 		B5552B80168DEFB700601C3C /* SCU.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SCU.icns; sourceTree = "<group>"; };
 		B5552BA9168DF99900601C3C /* SHFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFoundation.h; sourceTree = "<group>"; };
@@ -100,7 +67,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5421A30168C402F00C21C1C /* libresolv.dylib in Frameworks */,
-				B5421A2E168C402F00C21C1C /* libYACYAML.a in Frameworks */,
 				B542190B168C3AF000C21C1C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,7 +77,6 @@
 		B54218FB168C3AEF00C21C1C = {
 			isa = PBXGroup;
 			children = (
-				B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */,
 				B5421930168C3E3D00C21C1C /* MASPreferences */,
 				B5552BA8168DF99900601C3C /* SHKit */,
 				B5421910168C3AF000C21C1C /* SCU */,
@@ -191,16 +156,6 @@
 			path = MASPreferences;
 			sourceTree = "<group>";
 		};
-		B5421A1E168C3FDF00C21C1C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B5421A27168C3FDF00C21C1C /* libYACYAML.a */,
-				B5421A29168C3FDF00C21C1C /* YACYAMLTests.octest */,
-				B5421A2B168C3FDF00C21C1C /* libYAML.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B5552B77168DE8DB00601C3C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,7 +189,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				B5421A2D168C400D00C21C1C /* PBXTargetDependency */,
 			);
 			name = SCU;
 			productName = SCU;
@@ -260,42 +214,12 @@
 			mainGroup = B54218FB168C3AEF00C21C1C;
 			productRefGroup = B5421907168C3AF000C21C1C /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = B5421A1E168C3FDF00C21C1C /* Products */;
-					ProjectRef = B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				B5421905168C3AF000C21C1C /* SCU */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		B5421A27168C3FDF00C21C1C /* libYACYAML.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libYACYAML.a;
-			remoteRef = B5421A26168C3FDF00C21C1C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B5421A29168C3FDF00C21C1C /* YACYAMLTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = YACYAMLTests.octest;
-			remoteRef = B5421A28168C3FDF00C21C1C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B5421A2B168C3FDF00C21C1C /* libYAML.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libYAML.a;
-			remoteRef = B5421A2A168C3FDF00C21C1C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B5421904168C3AF000C21C1C /* Resources */ = {
@@ -332,14 +256,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B5421A2D168C400D00C21C1C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YACYAML;
-			targetProxy = B5421A2C168C400D00C21C1C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B519C004168C87D700B04D55 /* Localizable.strings */ = {
@@ -380,7 +296,7 @@
 		B5421922168C3AF000C21C1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -401,16 +317,18 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Lib\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Include\"/**";
 			};
 			name = Debug;
 		};
 		B5421923168C3AF000C21C1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -425,8 +343,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Lib\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Include\"/**";
 			};
 			name = Release;
 		};
@@ -436,10 +356,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCU/SCU-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
-					"\"$(OBJROOT)/UninstalledProducts/include\"",
-				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SCU/SCU-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
@@ -457,10 +374,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCU/SCU-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
-					"\"$(OBJROOT)/UninstalledProducts/include\"",
-				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SCU/SCU-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
