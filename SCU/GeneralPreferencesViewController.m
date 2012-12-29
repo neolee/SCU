@@ -7,6 +7,7 @@
 //
 
 #import "GeneralPreferencesViewController.h"
+#import "NSString+SHFoundation.h"
 
 @interface GeneralPreferencesViewController ()
 
@@ -34,6 +35,16 @@
 
 -(NSString *)toolbarItemLabel{
     return NSLocalizedString(@"General tab label", nil);
+}
+
+- (IBAction)alwaysUseUSKeyboardLayoutChanged:(id)sender {
+    BOOL alwaysUseUSKeyboardLayout = [[NSUserDefaults standardUserDefaults] boolForKey:@"alwaysUseUSKeyboardLayout"];
+    NSLog(@"alwaysUseUSKeyboardLayout: %@", [NSString stringFromBool:alwaysUseUSKeyboardLayout]);
+}
+
+- (IBAction)switchNotificationChanged:(id)sender {
+    NSInteger flagSwitchNotification = [[NSUserDefaults standardUserDefaults] integerForKey:@"flagSwitchNotification"];
+    NSLog(@"alwaysUseUSKeyboardLayout: %ld", flagSwitchNotification);
 }
 
 @end

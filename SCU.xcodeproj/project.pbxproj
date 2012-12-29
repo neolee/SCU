@@ -19,6 +19,9 @@
 		B54219B9168C3E3D00C21C1C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B5421936168C3E3D00C21C1C /* README.md */; };
 		B5421A2E168C402F00C21C1C /* libYACYAML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5421A27168C3FDF00C21C1C /* libYACYAML.a */; };
 		B5421A30168C402F00C21C1C /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5421A2F168C402F00C21C1C /* libresolv.dylib */; };
+		B5552B81168DEFB700601C3C /* SCU.icns in Resources */ = {isa = PBXBuildFile; fileRef = B5552B80168DEFB700601C3C /* SCU.icns */; };
+		B5552BAB168DF99900601C3C /* SHFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5552BAA168DF99900601C3C /* SHFoundation.m */; };
+		B5552BCE168DFAB500601C3C /* NSString+SHFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5552BCD168DFAB500601C3C /* NSString+SHFoundation.m */; };
 		B5E30054168C48650068BBE7 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */; };
 		B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */; };
 		B5E30059168C49170068BBE7 /* StylePreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */; };
@@ -78,6 +81,11 @@
 		B5421936168C3E3D00C21C1C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YACYAML.xcodeproj; path = YACYAML/YACYAML.xcodeproj; sourceTree = "<group>"; };
 		B5421A2F168C402F00C21C1C /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		B5552B80168DEFB700601C3C /* SCU.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SCU.icns; sourceTree = "<group>"; };
+		B5552BA9168DF99900601C3C /* SHFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFoundation.h; sourceTree = "<group>"; };
+		B5552BAA168DF99900601C3C /* SHFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFoundation.m; sourceTree = "<group>"; };
+		B5552BCC168DFAB500601C3C /* NSString+SHFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SHFoundation.h"; sourceTree = "<group>"; };
+		B5552BCD168DFAB500601C3C /* NSString+SHFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHFoundation.m"; sourceTree = "<group>"; };
 		B5E30051168C48650068BBE7 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
 		B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralPreferencesViewController.m; sourceTree = "<group>"; };
 		B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralPreferencesViewController.xib; sourceTree = "<group>"; };
@@ -105,7 +113,9 @@
 			children = (
 				B5421A1D168C3FDF00C21C1C /* YACYAML.xcodeproj */,
 				B5421930168C3E3D00C21C1C /* MASPreferences */,
+				B5552BA8168DF99900601C3C /* SHKit */,
 				B5421910168C3AF000C21C1C /* SCU */,
+				B5552B77168DE8DB00601C3C /* Resources */,
 				B5421909168C3AF000C21C1C /* Frameworks */,
 				B5421907168C3AF000C21C1C /* Products */,
 			);
@@ -189,6 +199,25 @@
 				B5421A2B168C3FDF00C21C1C /* libYAML.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B5552B77168DE8DB00601C3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B5552B80168DEFB700601C3C /* SCU.icns */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B5552BA8168DF99900601C3C /* SHKit */ = {
+			isa = PBXGroup;
+			children = (
+				B5552BA9168DF99900601C3C /* SHFoundation.h */,
+				B5552BAA168DF99900601C3C /* SHFoundation.m */,
+				B5552BCC168DFAB500601C3C /* NSString+SHFoundation.h */,
+				B5552BCD168DFAB500601C3C /* NSString+SHFoundation.m */,
+			);
+			path = SHKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +310,7 @@
 				B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */,
 				B5E3005A168C49170068BBE7 /* StylePreferencesViewController.xib in Resources */,
 				B519C002168C87D700B04D55 /* Localizable.strings in Resources */,
+				B5552B81168DEFB700601C3C /* SCU.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +326,8 @@
 				B54219B8168C3E3D00C21C1C /* MASPreferencesWindowController.m in Sources */,
 				B5E30054168C48650068BBE7 /* GeneralPreferencesViewController.m in Sources */,
 				B5E30059168C49170068BBE7 /* StylePreferencesViewController.m in Sources */,
+				B5552BAB168DF99900601C3C /* SHFoundation.m in Sources */,
+				B5552BCE168DFAB500601C3C /* NSString+SHFoundation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +401,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -393,7 +425,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Release;

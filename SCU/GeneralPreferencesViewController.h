@@ -11,4 +11,6 @@
 
 @interface GeneralPreferencesViewController : NSViewController <MASPreferencesViewController> 
 
+- (IBAction)alwaysUseUSKeyboardLayoutChanged:(id)sender;
+- (IBAction)switchNotificationChanged:(id)sender;
 @end
