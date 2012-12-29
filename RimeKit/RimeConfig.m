@@ -8,6 +8,7 @@
 
 #import "RimeConfig.h"
 #import "RimeConstants.h"
+#import <YACYAML/YACYAML.h>
 
 @implementation RimeConfig
 
@@ -17,7 +18,9 @@
     _customPatchName = [[name stringByAppendingString:RIME_CUSTOM_EXT] stringByAppendingString:RIME_CONFIG_FILE_EXT];
     _filePath = [NSString pathWithComponents:[NSArray arrayWithObjects:folder, _fileName, nil]];
     _customPatchPath = [NSString pathWithComponents:[NSArray arrayWithObjects:folder, _customPatchName, nil]];
-
+    
+    
+    
     return self;
 }
 

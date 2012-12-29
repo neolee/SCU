@@ -21,6 +21,7 @@
 		B5552BCE168DFAB500601C3C /* NSString+SHFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5552BCD168DFAB500601C3C /* NSString+SHFoundation.m */; };
 		B58FA757168EF86700E75314 /* libYACYAML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B58FA750168EF81300E75314 /* libYACYAML.a */; };
 		B58FA759168EF87D00E75314 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B58FA758168EF87D00E75314 /* libresolv.dylib */; };
+		B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA78A168F3CB900E75314 /* RimeConfig.m */; };
 		B5DCCC33168EDF4B00E3D502 /* RimeConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */; };
 		B5E30054168C48650068BBE7 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */; };
 		B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */; };
@@ -85,8 +86,8 @@
 		B58FA746168EF81300E75314 /* YACYAML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YACYAML.xcodeproj; path = YACYAML/YACYAML.xcodeproj; sourceTree = "<group>"; };
 		B58FA758168EF87D00E75314 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
 		B58FA770168F3B2300E75314 /* RimeConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RimeConstants.h; path = RimeKit/RimeConstants.h; sourceTree = "<group>"; };
-		B58FA771168F3B7000E75314 /* RimeConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RimeConfig.h; path = RimeKit/RimeConfig.h; sourceTree = "<group>"; };
-		B58FA772168F3B7000E75314 /* RimeConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RimeConfig.m; path = RimeKit/RimeConfig.m; sourceTree = "<group>"; };
+		B58FA789168F3CB900E75314 /* RimeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfig.h; path = RimeKit/RimeConfig.h; sourceTree = "<group>"; };
+		B58FA78A168F3CB900E75314 /* RimeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfig.m; path = RimeKit/RimeConfig.m; sourceTree = "<group>"; };
 		B5DCCC31168EDF4B00E3D502 /* RimeConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfigController.h; path = RimeKit/RimeConfigController.h; sourceTree = "<group>"; };
 		B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfigController.m; path = RimeKit/RimeConfigController.m; sourceTree = "<group>"; };
 		B5E30051168C48650068BBE7 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
@@ -226,8 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				B58FA770168F3B2300E75314 /* RimeConstants.h */,
-				B58FA771168F3B7000E75314 /* RimeConfig.h */,
-				B58FA772168F3B7000E75314 /* RimeConfig.m */,
+				B58FA789168F3CB900E75314 /* RimeConfig.h */,
+				B58FA78A168F3CB900E75314 /* RimeConfig.m */,
 				B5DCCC31168EDF4B00E3D502 /* RimeConfigController.h */,
 				B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */,
 			);
@@ -342,6 +343,7 @@
 				B5552BAB168DF99900601C3C /* SHFoundation.m in Sources */,
 				B5552BCE168DFAB500601C3C /* NSString+SHFoundation.m in Sources */,
 				B5DCCC33168EDF4B00E3D502 /* RimeConfigController.m in Sources */,
+				B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

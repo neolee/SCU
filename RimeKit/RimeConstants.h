@@ -44,5 +44,4 @@
 #define RIME_SCHEMA_WUGNIU_LOPHA            @"wugniu_lopha"
 #define RIME_SCHEMA_ZYENPHENG               @"zyenpheng"
 
-
 #endif
