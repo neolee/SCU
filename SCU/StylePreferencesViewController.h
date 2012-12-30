@@ -12,4 +12,5 @@
 @interface StylePreferencesViewController : NSViewController <MASPreferencesViewController> 
 
 - (IBAction)testYACYAML:(id)sender;
+- (IBAction)testRimeKit:(id)sender;
 @end

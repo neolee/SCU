@@ -9,14 +9,22 @@
 #import <Foundation/Foundation.h>
 
 @interface RimeConfig : NSObject {
-    NSString *_fileName;
-    NSString *_filePath;
-    NSString *_customPatchName;
-    NSString *_customPatchPath;
+    NSString *_configName;
+    NSString *_configPath;
+    NSString *_customConfigName;
+    NSString *_customConfigPath;
+    
+    NSDictionary *_config;
+    NSMutableDictionary *_customConfig;
 }
+
+- (void)reload;
+- (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath;
 
 - (RimeConfig *)initWithConfigName:(NSString *)name;
 - (RimeConfig *)initWithSchemaName:(NSString *)name;
 + (RimeConfig *)defaultConfig;
 + (RimeConfig *)squirrelConfig;
+
+- (NSString *)description;
 @end

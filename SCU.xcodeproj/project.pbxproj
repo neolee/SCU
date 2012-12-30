@@ -22,6 +22,7 @@
 		B58FA757168EF86700E75314 /* libYACYAML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B58FA750168EF81300E75314 /* libYACYAML.a */; };
 		B58FA759168EF87D00E75314 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B58FA758168EF87D00E75314 /* libresolv.dylib */; };
 		B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA78A168F3CB900E75314 /* RimeConfig.m */; };
+		B58FA80F169080FF00E75314 /* SHKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA80E169080FF00E75314 /* SHKit.m */; };
 		B5DCCC33168EDF4B00E3D502 /* RimeConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */; };
 		B5E30054168C48650068BBE7 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */; };
 		B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */; };
@@ -88,6 +89,8 @@
 		B58FA770168F3B2300E75314 /* RimeConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RimeConstants.h; path = RimeKit/RimeConstants.h; sourceTree = "<group>"; };
 		B58FA789168F3CB900E75314 /* RimeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfig.h; path = RimeKit/RimeConfig.h; sourceTree = "<group>"; };
 		B58FA78A168F3CB900E75314 /* RimeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfig.m; path = RimeKit/RimeConfig.m; sourceTree = "<group>"; };
+		B58FA80D169080FF00E75314 /* SHKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKit.h; sourceTree = "<group>"; };
+		B58FA80E169080FF00E75314 /* SHKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKit.m; sourceTree = "<group>"; };
 		B5DCCC31168EDF4B00E3D502 /* RimeConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfigController.h; path = RimeKit/RimeConfigController.h; sourceTree = "<group>"; };
 		B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfigController.m; path = RimeKit/RimeConfigController.m; sourceTree = "<group>"; };
 		B5E30051168C48650068BBE7 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 				B5552BAA168DF99900601C3C /* SHFoundation.m */,
 				B5552BCC168DFAB500601C3C /* NSString+SHFoundation.h */,
 				B5552BCD168DFAB500601C3C /* NSString+SHFoundation.m */,
+				B58FA80D169080FF00E75314 /* SHKit.h */,
+				B58FA80E169080FF00E75314 /* SHKit.m */,
 			);
 			path = SHKit;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 				B5552BCE168DFAB500601C3C /* NSString+SHFoundation.m in Sources */,
 				B5DCCC33168EDF4B00E3D502 /* RimeConfigController.m in Sources */,
 				B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */,
+				B58FA80F169080FF00E75314 /* SHKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "";
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Lib\"";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -426,7 +432,7 @@
 					"-all_load",
 				);
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Include\"/** \"$(TARGET_BUILD_DIR)/usr/local/lib/include\" \"$(OBJROOT)/UninstalledProducts/include\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(TARGET_BUILD_DIR)/usr/local/lib/include\" \"$(OBJROOT)/UninstalledProducts/include\"";
 			};
 			name = Debug;
 		};
@@ -449,14 +455,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "";
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Lib\"";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Include\"/** \"$(TARGET_BUILD_DIR)/usr/local/lib/include\" \"$(OBJROOT)/UninstalledProducts/include\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(TARGET_BUILD_DIR)/usr/local/lib/include\" \"$(OBJROOT)/UninstalledProducts/include\"";
 			};
 			name = Release;
 		};
@@ -468,10 +474,7 @@
 				GCC_PREFIX_HEADER = "SCU/SCU-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SCU/SCU-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -490,10 +493,7 @@
 				GCC_PREFIX_HEADER = "SCU/SCU-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SCU/SCU-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = (
 					"-ObjC",

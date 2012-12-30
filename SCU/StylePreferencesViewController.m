@@ -9,6 +9,8 @@
 #import "StylePreferencesViewController.h"
 #import <YACYAML/YACYAML.h>
 #import "NSString+SHFoundation.h"
+#import "RimeConfig.h"
+#import "RimeConstants.h"
 
 @interface StylePreferencesViewController ()
 
@@ -67,6 +69,17 @@
     NSLog(@"Decoding test 1\n%@", [d4 description]);
     NSArray *a2 = [d4 valueForKeyPath:@"dictKey.arrayKey"];
     NSLog(@"Decoding test 2\n%@\na2[1]=%@", [a2 description], a2[1]);
+}
+
+- (IBAction)testRimeKit:(id)sender {
+    RimeConfig *defaultConfig = [[RimeConfig alloc] initWithConfigName:RIME_DEFAULT_CONFIG_NAME];
+    NSLog(@"Default config loaded.\n%@", defaultConfig);
+    
+    RimeConfig *squirrelConfig = [[RimeConfig alloc] initWithConfigName:RIME_SQUIRREL_CONFIG_NAME];
+    NSLog(@"Squirrel config loaded.\n%@", squirrelConfig);
+    
+    RimeConfig *lunaPinyinConfig = [[RimeConfig alloc] initWithSchemaName:RIME_SCHEMA_LUNA_PINYIN];
+    NSLog(@"Luna Pinyin schema config loaded.\n%@", lunaPinyinConfig);
 }
 
 @end
