@@ -65,7 +65,7 @@
     
     NSDictionary *d4 = [y3 YACYAMLDecode];
     NSLog(@"Decoding test 1\n%@", [d4 description]);
-    NSArray *a2 = [[d4 objectForKey:@"dictKey"] objectForKey:@"arrayKey"];
+    NSArray *a2 = [d4 valueForKeyPath:@"dictKey.arrayKey"];
     NSLog(@"Decoding test 2\n%@\na2[1]=%@", [a2 description], a2[1]);
 }
 
