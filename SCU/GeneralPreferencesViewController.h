@@ -14,6 +14,7 @@
     AppDelegate *_delegate;
 }
 
+- (void)reload;
 - (IBAction)alwaysUseUSKeyboardLayoutChanged:(id)sender;
 - (IBAction)switchNotificationChanged:(id)sender;
 @end

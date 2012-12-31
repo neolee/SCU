@@ -16,7 +16,7 @@
     NSString *_customConfigPath;
     
     // _config contains all key-value pairs from the config file
-    // _customConfig contains all patch key-value pairs from the custom config file WITHOUT the "patch" root key (which will be added when writing to disk)
+    // _customConfig contains all patch key-value pairs from the custom config file
     NSDictionary *_config;
     NSMutableDictionary *_customConfig;
 }
@@ -24,6 +24,22 @@
 - (BOOL)reload:(RimeConfigError **)error;
 - (RimeConfig *)initWithConfigName:(NSString *)name error:(RimeConfigError **)error;
 - (RimeConfig *)initWithSchemaName:(NSString *)name error:(RimeConfigError **)error;
+
+- (id)valueForKey:(NSString *)key;
+- (id)valueForKeyPath:(NSString *)keyPath;
+- (NSArray *)arrayForKey:(NSString *)key;
+- (NSArray *)arrayForKeyPath:(NSString *)keyPath;
+- (BOOL)boolForKey:(NSString *)key;
+- (BOOL)boolForKeyPath:(NSString *)keyPath;
+- (NSDictionary *)dictionaryForKey:(NSString *)key;
+- (NSDictionary *)dictionaryForKeyPath:(NSString *)keyPath;
+- (float)floatForKey:(NSString *)key;
+- (float)floatForKeyPath:(NSString *)keyPath;
+- (NSInteger)integerForKey:(NSString *)key;
+- (NSInteger)integerForKeyPath:(NSString *)keyPath;
+- (NSString *)stringForKey:(NSString *)key;
+- (NSString *)stringForKeyPath:(NSString *)keyPath;
+
 - (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath error:(RimeConfigError **)error;
 - (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath toDisk:(BOOL)writeToDisk error:(RimeConfigError **)error;
 

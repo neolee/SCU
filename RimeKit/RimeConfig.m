@@ -69,6 +69,62 @@
     return YES;
 }
 
+- (id)valueForKey:(NSString *)key {
+    return [_config valueForKey:key];
+}
+
+- (id)valueForKeyPath:(NSString *)keyPath {
+    return [_config valueForKeyPath:keyPath];
+}
+
+- (NSArray *)arrayForKey:(NSString *)key {
+    return (NSArray *)[self valueForKey:key];
+}
+
+- (NSArray *)arrayForKeyPath:(NSString *)keyPath {
+    return (NSArray *)[self valueForKeyPath:keyPath];
+}
+
+- (BOOL)boolForKey:(NSString *)key {
+    return (BOOL)[self valueForKey:key];
+}
+
+- (BOOL)boolForKeyPath:(NSString *)keyPath {
+    return (BOOL)[self valueForKeyPath:keyPath];
+}
+
+- (NSDictionary *)dictionaryForKey:(NSString *)key {
+    return (NSDictionary *)[self valueForKey:key];    
+}
+
+- (NSDictionary *)dictionaryForKeyPath:(NSString *)keyPath {
+    return (NSDictionary *)[self valueForKeyPath:keyPath];
+}
+
+- (float)floatForKey:(NSString *)key {
+    return [[self stringForKey:key] floatValue];
+}
+
+- (float)floatForKeyPath:(NSString *)keyPath {
+    return [[self stringForKeyPath:keyPath] floatValue];
+}
+
+- (NSInteger)integerForKey:(NSString *)key{
+    return (NSInteger)[self valueForKey:key];
+}
+
+- (NSInteger)integerForKeyPath:(NSString *)keyPath {
+    return (NSInteger)[self valueForKeyPath:keyPath];
+}
+
+- (NSString *)stringForKey:(NSString *)key {
+    return (NSString *)[self valueForKey:key];
+}
+
+- (NSString *)stringForKeyPath:(NSString *)keyPath {
+    return (NSString *)[self valueForKeyPath:keyPath];
+}
+
 - (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath error:(RimeConfigError **)error {
     return [self patchValue:value forKeyPath:keyPath toDisk:YES error:error];
 }

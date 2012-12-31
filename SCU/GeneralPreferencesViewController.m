@@ -16,20 +16,24 @@
 
 @implementation GeneralPreferencesViewController
 
+- (void)reload {
+    [[NSUserDefaults standardUserDefaults] setBool:_delegate.configController.useUSKeyboardLayout forKey:@"useUSKeyboardLayout"];
+    
+    NSInteger flagShowNotification = 1;
+    BOOL enableNotifications = _delegate.configController.enableNotifications;
+    BOOL enableBuiltinNotifications = _delegate.configController.enableBuiltinNotifications;
+    if (enableNotifications && enableBuiltinNotifications) flagShowNotification = 0;
+    if (!enableNotifications && !enableBuiltinNotifications) flagShowNotification = 2;
+    [[NSUserDefaults standardUserDefaults] setInteger:flagShowNotification forKey:@"flagShowNotification"];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _delegate = [NSApp delegate];
         
-        [[NSUserDefaults standardUserDefaults] setBool:_delegate.configController.useUSKeyboardLayout forKey:@"useUSKeyboardLayout"];
-        
-        NSInteger flagShowNotification = 1;
-        BOOL enableNotifications = _delegate.configController.enableNotifications;
-        BOOL enableBuiltinNotifications = _delegate.configController.enableBuiltinNotifications;
-        if (enableNotifications && enableBuiltinNotifications) flagShowNotification = 0;
-        if (!enableNotifications && !enableBuiltinNotifications) flagShowNotification = 2;
-        [[NSUserDefaults standardUserDefaults] setInteger:flagShowNotification forKey:@"flagShowNotification"];
+        [self reload];
     }
     
     return self;
