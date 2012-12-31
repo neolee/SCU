@@ -23,6 +23,9 @@
 		B58FA759168EF87D00E75314 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B58FA758168EF87D00E75314 /* libresolv.dylib */; };
 		B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA78A168F3CB900E75314 /* RimeConfig.m */; };
 		B58FA80F169080FF00E75314 /* SHKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA80E169080FF00E75314 /* SHKit.m */; };
+		B58FA81D169136A500E75314 /* RimeConfigError.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA81C169136A500E75314 /* RimeConfigError.m */; };
+		B58FA82116915BEA00E75314 /* SchemataPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA81F16915BEA00E75314 /* SchemataPreferencesViewController.m */; };
+		B58FA82216915BEA00E75314 /* SchemataPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58FA82016915BEA00E75314 /* SchemataPreferencesViewController.xib */; };
 		B5DCCC33168EDF4B00E3D502 /* RimeConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */; };
 		B5E30054168C48650068BBE7 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */; };
 		B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */; };
@@ -91,6 +94,11 @@
 		B58FA78A168F3CB900E75314 /* RimeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfig.m; path = RimeKit/RimeConfig.m; sourceTree = "<group>"; };
 		B58FA80D169080FF00E75314 /* SHKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKit.h; sourceTree = "<group>"; };
 		B58FA80E169080FF00E75314 /* SHKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKit.m; sourceTree = "<group>"; };
+		B58FA81B169136A500E75314 /* RimeConfigError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfigError.h; path = RimeKit/RimeConfigError.h; sourceTree = "<group>"; };
+		B58FA81C169136A500E75314 /* RimeConfigError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfigError.m; path = RimeKit/RimeConfigError.m; sourceTree = "<group>"; };
+		B58FA81E16915BEA00E75314 /* SchemataPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemataPreferencesViewController.h; sourceTree = "<group>"; };
+		B58FA81F16915BEA00E75314 /* SchemataPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemataPreferencesViewController.m; sourceTree = "<group>"; };
+		B58FA82016915BEA00E75314 /* SchemataPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SchemataPreferencesViewController.xib; sourceTree = "<group>"; };
 		B5DCCC31168EDF4B00E3D502 /* RimeConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfigController.h; path = RimeKit/RimeConfigController.h; sourceTree = "<group>"; };
 		B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfigController.m; path = RimeKit/RimeConfigController.m; sourceTree = "<group>"; };
 		B5E30051168C48650068BBE7 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
@@ -161,13 +169,15 @@
 			children = (
 				B542191C168C3AF000C21C1C /* AppDelegate.h */,
 				B542191D168C3AF000C21C1C /* AppDelegate.m */,
-				B542191F168C3AF000C21C1C /* MainMenu.xib */,
 				B5E30051168C48650068BBE7 /* GeneralPreferencesViewController.h */,
 				B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */,
 				B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */,
 				B5E30056168C49170068BBE7 /* StylePreferencesViewController.h */,
 				B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */,
 				B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */,
+				B58FA81E16915BEA00E75314 /* SchemataPreferencesViewController.h */,
+				B58FA81F16915BEA00E75314 /* SchemataPreferencesViewController.m */,
+				B58FA82016915BEA00E75314 /* SchemataPreferencesViewController.xib */,
 				B5421911168C3AF000C21C1C /* Supporting Files */,
 			);
 			path = SCU;
@@ -177,11 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				B5421912168C3AF000C21C1C /* SCU-Info.plist */,
-				B5421913168C3AF000C21C1C /* InfoPlist.strings */,
-				B519C004168C87D700B04D55 /* Localizable.strings */,
 				B5421916168C3AF000C21C1C /* main.m */,
 				B5421918168C3AF000C21C1C /* SCU-Prefix.pch */,
-				B5421919168C3AF000C21C1C /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -200,6 +207,10 @@
 		B5552B77168DE8DB00601C3C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B542191F168C3AF000C21C1C /* MainMenu.xib */,
+				B519C004168C87D700B04D55 /* Localizable.strings */,
+				B5421913168C3AF000C21C1C /* InfoPlist.strings */,
+				B5421919168C3AF000C21C1C /* Credits.rtf */,
 				B5552B80168DEFB700601C3C /* SCU.icns */,
 			);
 			path = Resources;
@@ -236,6 +247,8 @@
 				B58FA78A168F3CB900E75314 /* RimeConfig.m */,
 				B5DCCC31168EDF4B00E3D502 /* RimeConfigController.h */,
 				B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */,
+				B58FA81B169136A500E75314 /* RimeConfigError.h */,
+				B58FA81C169136A500E75314 /* RimeConfigError.m */,
 			);
 			name = RimeKit;
 			sourceTree = "<group>";
@@ -330,6 +343,7 @@
 				B5E3005A168C49170068BBE7 /* StylePreferencesViewController.xib in Resources */,
 				B519C002168C87D700B04D55 /* Localizable.strings in Resources */,
 				B5552B81168DEFB700601C3C /* SCU.icns in Resources */,
+				B58FA82216915BEA00E75314 /* SchemataPreferencesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +364,8 @@
 				B5DCCC33168EDF4B00E3D502 /* RimeConfigController.m in Sources */,
 				B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */,
 				B58FA80F169080FF00E75314 /* SHKit.m in Sources */,
+				B58FA81D169136A500E75314 /* RimeConfigError.m in Sources */,
+				B58FA82116915BEA00E75314 /* SchemataPreferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +386,7 @@
 				B519C003168C87D700B04D55 /* en */,
 			);
 			name = Localizable.strings;
+			path = ../SCU;
 			sourceTree = "<group>";
 		};
 		B5421913168C3AF000C21C1C /* InfoPlist.strings */ = {
@@ -378,6 +395,7 @@
 				B5421914168C3AF000C21C1C /* en */,
 			);
 			name = InfoPlist.strings;
+			path = ../SCU;
 			sourceTree = "<group>";
 		};
 		B5421919168C3AF000C21C1C /* Credits.rtf */ = {
@@ -386,6 +404,7 @@
 				B542191A168C3AF000C21C1C /* en */,
 			);
 			name = Credits.rtf;
+			path = ../SCU;
 			sourceTree = "<group>";
 		};
 		B542191F168C3AF000C21C1C /* MainMenu.xib */ = {
@@ -394,6 +413,7 @@
 				B5421920168C3AF000C21C1C /* en */,
 			);
 			name = MainMenu.xib;
+			path = ../SCU;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

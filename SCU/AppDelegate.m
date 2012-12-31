@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "GeneralPreferencesViewController.h"
 #import "StylePreferencesViewController.h"
+#import "SchemataPreferencesViewController.h"
 
 #import "NSString+SHFoundation.h"
 
@@ -36,7 +37,8 @@
     // Display the prefenrences window as main UI
     NSViewController *generalViewController = [[GeneralPreferencesViewController alloc] initWithNibName:@"GeneralPreferencesViewController" bundle:[NSBundle mainBundle]];
     NSViewController *styleViewController = [[StylePreferencesViewController alloc] initWithNibName:@"StylePreferencesViewController" bundle:[NSBundle mainBundle]];
-    NSArray *views = [NSArray arrayWithObjects:generalViewController, styleViewController, nil];
+    NSViewController *schemataViewController = [[SchemataPreferencesViewController alloc] initWithNibName:@"SchemataPreferencesViewController" bundle:[NSBundle mainBundle]];
+    NSArray *views = [NSArray arrayWithObjects:generalViewController, styleViewController, schemataViewController, nil];
     NSString *title = NSLocalizedString(@"Preference window title", nil);
 
     _prefWindowController = [[MASPreferencesWindowController alloc] initWithViewControllers:views title:title];

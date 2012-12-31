@@ -17,6 +17,8 @@
 #define RIME_CUSTOM_EXT                     @".custom"
 #define RIME_CONFIG_FILE_EXT                @".yaml"
 
+#define RIME_CUSTOM_ROOT_KEY                @"patch"
+
 #define RIME_DEFAULT_CONFIG_NAME            @"default"
 #define RIME_SQUIRREL_CONFIG_NAME           @"squirrel"
 

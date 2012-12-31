@@ -7,14 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RimeConfig.h"
 
 @interface RimeConfigController : NSObject {
-    
+    RimeConfig *_defaultConfig;
+    RimeConfig *_squirrelConfig;
+    RimeConfig *_lunaPinyinConfig;
+    RimeConfig *_lunaPinyinFluencyConfig;
+    RimeConfig *_wubi86Config;
 }
 
 @property BOOL useUSKeyboardLayout;
 @property BOOL enableNotifications;
 @property BOOL enableBuiltinNotifications;
 
-- (id)init;
+- (id)init:(RimeConfigError **)error;
+
++ (NSString *)rimeFolder;
++ (BOOL)checkRimeFolder;
+
 @end
