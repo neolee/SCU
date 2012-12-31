@@ -75,32 +75,6 @@
 }
 
 - (IBAction)testRimeKit:(id)sender {
-    RimeConfigError *error;
-    
-    RimeConfigController *controller = [[RimeConfigController alloc] init:&error];
-    
-    if (!controller) {
-        NSString *message;
-        NSString *info;
-        
-        switch ([error errorType]) {
-            case RimeConfigFolderNotExistsError:
-                message = @"Rime configuration folder does not exist";
-                info = [NSString stringWithFormat:@"Path: %@\n\nYou should run the Deploy command from Squirrel IME menu before any customization.", [RimeConfigController rimeFolder]];
-                break;
-            case RimeConfigFileNotExistsError:
-                message = @"Rime configuration file does not exist";
-                info = [NSString stringWithFormat:@"Path: %@\n\nYou should run the Deploy command from Squirrel IME menu before any customization.", [error configFile]];
-                break;
-            default:
-                message = @"Rime configuration loading failed";
-                info = @"You should run the Deploy command from Squirrel IME menu before any customization. If this error persists please report to me.";
-                break;
-        }
-        [SHKit alertWithMessage:message info:info cancelButton:@"OK"];
-        
-        return;
-    }
     
     
 }
