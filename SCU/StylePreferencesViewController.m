@@ -15,10 +15,16 @@
 
 @implementation StylePreferencesViewController
 
+- (void)reload {
+
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        _delegate = [NSApp delegate];
+        
         _numbersOfCandidates = [[NSArray alloc] initWithObjects:
                    [NSDictionary dictionaryWithObjectsAndKeys:@"3", @"name", @"3", @"value", nil],
                    [NSDictionary dictionaryWithObjectsAndKeys:@"4", @"name", @"4", @"value", nil],
@@ -30,6 +36,9 @@
                    nil];
 
         _numberOfCandidates = @"5";
+        _fontSize = 16;
+        
+        [self reload];
     }
     
     return self;

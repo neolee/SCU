@@ -39,8 +39,6 @@
     return self;
 }
 
-
-
 -(NSString *)identifier {
     return @"General";
 }
