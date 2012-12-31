@@ -69,6 +69,19 @@
     return YES;
 }
 
+- (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath error:(RimeConfigError **)error {
+    return [self patchValue:value forKeyPath:keyPath toDisk:YES error:error];
+}
+
+- (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath toDisk:(BOOL)writeToDisk error:(RimeConfigError **)error {
+    assert(_customConfig);
+    
+    
+    
+    
+    return YES;
+}
+
 - (id)valueForKey:(NSString *)key {
     return [_config valueForKey:key];
 }
@@ -123,19 +136,6 @@
 
 - (NSString *)stringForKeyPath:(NSString *)keyPath {
     return (NSString *)[self valueForKeyPath:keyPath];
-}
-
-- (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath error:(RimeConfigError **)error {
-    return [self patchValue:value forKeyPath:keyPath toDisk:YES error:error];
-}
-
-- (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath toDisk:(BOOL)writeToDisk error:(RimeConfigError **)error {
-    assert(_customConfig);
-
-    
-    
-    
-    return YES;
 }
 
 + (NSString *)rimeFolder {

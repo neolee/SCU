@@ -35,15 +35,15 @@
     return self;
 }
 
--(NSString *)identifier{
+-(NSString *)identifier {
     return @"Style";
 }
 
--(NSImage *)toolbarItemImage{
+-(NSImage *)toolbarItemImage {
     return [NSImage imageNamed:NSImageNameColorPanel];
 }
 
--(NSString *)toolbarItemLabel{
+-(NSString *)toolbarItemLabel {
     return NSLocalizedString(@"Style tab label", nil);
 }
 

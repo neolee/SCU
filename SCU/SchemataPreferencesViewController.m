@@ -31,18 +31,6 @@
     return self;
 }
 
--(NSString *)identifier{
-    return @"Schemata";
-}
-
--(NSImage *)toolbarItemImage{
-    return [NSImage imageNamed:NSImageNameAdvanced];
-}
-
--(NSString *)toolbarItemLabel{
-    return NSLocalizedString(@"Schemata tab label", nil);
-}
-
 - (IBAction)testYACYAML:(id)sender {
     NSString *s1 = @"some string";
     NSNumber *n1 = [NSNumber numberWithInt:69];
@@ -77,6 +65,18 @@
 - (IBAction)testRimeKit:(id)sender {
     
     
+}
+
+-(NSString *)identifier {
+    return @"Schemata";
+}
+
+-(NSImage *)toolbarItemImage {
+    return [NSImage imageNamed:NSImageNameAdvanced];
+}
+
+-(NSString *)toolbarItemLabel {
+    return NSLocalizedString(@"Schemata tab label", nil);
 }
 
 @end

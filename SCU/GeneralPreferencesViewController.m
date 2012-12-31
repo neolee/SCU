@@ -41,15 +41,15 @@
 
 
 
--(NSString *)identifier{
+-(NSString *)identifier {
     return @"General";
 }
 
--(NSImage *)toolbarItemImage{
+-(NSImage *)toolbarItemImage {
     return [NSImage imageNamed:NSImageNamePreferencesGeneral];
 }
 
--(NSString *)toolbarItemLabel{
+-(NSString *)toolbarItemLabel {
     return NSLocalizedString(@"General tab label", nil);
 }
 
