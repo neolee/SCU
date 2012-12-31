@@ -9,6 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import "MASPreferencesViewController.h"
 
-@interface StylePreferencesViewController : NSViewController <MASPreferencesViewController> 
+@interface StylePreferencesViewController : NSViewController <MASPreferencesViewController> {
+}
 
+@property NSArray *numbersOfCandidates;
+@property NSString *numberOfCandidates;
 @end

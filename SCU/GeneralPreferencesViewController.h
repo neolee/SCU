@@ -14,6 +14,9 @@
     AppDelegate *_delegate;
 }
 
+@property BOOL useUSKeyboardLayout;
+@property NSInteger flagShowNotification;
+
 - (void)reload;
 - (IBAction)alwaysUseUSKeyboardLayoutChanged:(id)sender;
 - (IBAction)switchNotificationChanged:(id)sender;

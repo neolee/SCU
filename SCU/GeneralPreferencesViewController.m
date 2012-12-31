@@ -17,14 +17,14 @@
 @implementation GeneralPreferencesViewController
 
 - (void)reload {
-    [[NSUserDefaults standardUserDefaults] setBool:_delegate.configController.useUSKeyboardLayout forKey:@"useUSKeyboardLayout"];
+    [self setUseUSKeyboardLayout:_delegate.configController.useUSKeyboardLayout];
     
-    NSInteger flagShowNotification = 1;
+    NSInteger flag = 1;
     BOOL enableNotifications = _delegate.configController.enableNotifications;
     BOOL enableBuiltinNotifications = _delegate.configController.enableBuiltinNotifications;
-    if (enableNotifications && enableBuiltinNotifications) flagShowNotification = 0;
-    if (!enableNotifications && !enableBuiltinNotifications) flagShowNotification = 2;
-    [[NSUserDefaults standardUserDefaults] setInteger:flagShowNotification forKey:@"flagShowNotification"];
+    if (enableNotifications && enableBuiltinNotifications) flag = 0;
+    if (!enableNotifications && !enableBuiltinNotifications) flag = 2;
+    [self setFlagShowNotification:flag];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -39,6 +39,8 @@
     return self;
 }
 
+
+
 -(NSString *)identifier{
     return @"General";
 }
@@ -52,13 +54,11 @@
 }
 
 - (IBAction)alwaysUseUSKeyboardLayoutChanged:(id)sender {
-    BOOL useUSKeyboardLayout = [[NSUserDefaults standardUserDefaults] boolForKey:@"useUSKeyboardLayout"];
-    NSLog(@"useUSKeyboardLayout: %@", [NSString stringWithBool:useUSKeyboardLayout]);
+    NSLog(@"useUSKeyboardLayout: %@", [NSString stringWithBool:_useUSKeyboardLayout]);
 }
 
 - (IBAction)switchNotificationChanged:(id)sender {
-    NSInteger flagShowNotification = [[NSUserDefaults standardUserDefaults] integerForKey:@"flagShowNotification"];
-    NSLog(@"flagShowNotification: %ld", flagShowNotification);
+    NSLog(@"flagShowNotification: %ld", _flagShowNotification);
 }
 
 @end

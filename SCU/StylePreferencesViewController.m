@@ -19,7 +19,17 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Initialization code here.
+        _numbersOfCandidates = [[NSArray alloc] initWithObjects:
+                   [NSDictionary dictionaryWithObjectsAndKeys:@"3", @"name", @"3", @"value", nil],
+                   [NSDictionary dictionaryWithObjectsAndKeys:@"4", @"name", @"4", @"value", nil],
+                   [NSDictionary dictionaryWithObjectsAndKeys:@"5", @"name", @"5", @"value", nil],
+                   [NSDictionary dictionaryWithObjectsAndKeys:@"6", @"name", @"6", @"value", nil],
+                   [NSDictionary dictionaryWithObjectsAndKeys:@"7", @"name", @"7", @"value", nil],
+                   [NSDictionary dictionaryWithObjectsAndKeys:@"8", @"name", @"8", @"value", nil],
+                   [NSDictionary dictionaryWithObjectsAndKeys:@"9", @"name", @"9", @"value", nil],
+                   nil];
+
+        _numberOfCandidates = @"5";
     }
     
     return self;
