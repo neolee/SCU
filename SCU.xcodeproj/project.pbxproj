@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B519C002168C87D700B04D55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B519C004168C87D700B04D55 /* Localizable.strings */; };
+		B5293FEE1692F0ED00543EEC /* AppsPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5293FEC1692F0ED00543EEC /* AppsPreferencesViewController.m */; };
+		B5293FEF1692F0ED00543EEC /* AppsPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5293FED1692F0ED00543EEC /* AppsPreferencesViewController.xib */; };
+		B5293FF31692F10900543EEC /* HelpPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5293FF11692F10900543EEC /* HelpPreferencesViewController.m */; };
+		B5293FF41692F10900543EEC /* HelpPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5293FF21692F10900543EEC /* HelpPreferencesViewController.xib */; };
 		B542190B168C3AF000C21C1C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B542190A168C3AF000C21C1C /* Cocoa.framework */; };
 		B5421915168C3AF000C21C1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5421913168C3AF000C21C1C /* InfoPlist.strings */; };
 		B5421917168C3AF000C21C1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5421916168C3AF000C21C1C /* main.m */; };
@@ -66,6 +70,12 @@
 
 /* Begin PBXFileReference section */
 		B519C003168C87D700B04D55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B5293FEB1692F0ED00543EEC /* AppsPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppsPreferencesViewController.h; sourceTree = "<group>"; };
+		B5293FEC1692F0ED00543EEC /* AppsPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppsPreferencesViewController.m; sourceTree = "<group>"; };
+		B5293FED1692F0ED00543EEC /* AppsPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppsPreferencesViewController.xib; sourceTree = "<group>"; };
+		B5293FF01692F10900543EEC /* HelpPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpPreferencesViewController.h; sourceTree = "<group>"; };
+		B5293FF11692F10900543EEC /* HelpPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpPreferencesViewController.m; sourceTree = "<group>"; };
+		B5293FF21692F10900543EEC /* HelpPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpPreferencesViewController.xib; sourceTree = "<group>"; };
 		B5421906168C3AF000C21C1C /* SCU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B542190A168C3AF000C21C1C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B542190D168C3AF000C21C1C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -175,9 +185,15 @@
 				B5E30056168C49170068BBE7 /* StylePreferencesViewController.h */,
 				B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */,
 				B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */,
+				B5293FEB1692F0ED00543EEC /* AppsPreferencesViewController.h */,
+				B5293FEC1692F0ED00543EEC /* AppsPreferencesViewController.m */,
+				B5293FED1692F0ED00543EEC /* AppsPreferencesViewController.xib */,
 				B58FA81E16915BEA00E75314 /* SchemataPreferencesViewController.h */,
 				B58FA81F16915BEA00E75314 /* SchemataPreferencesViewController.m */,
 				B58FA82016915BEA00E75314 /* SchemataPreferencesViewController.xib */,
+				B5293FF01692F10900543EEC /* HelpPreferencesViewController.h */,
+				B5293FF11692F10900543EEC /* HelpPreferencesViewController.m */,
+				B5293FF21692F10900543EEC /* HelpPreferencesViewController.xib */,
 				B5421911168C3AF000C21C1C /* Supporting Files */,
 			);
 			path = SCU;
@@ -344,6 +360,8 @@
 				B519C002168C87D700B04D55 /* Localizable.strings in Resources */,
 				B5552B81168DEFB700601C3C /* SCU.icns in Resources */,
 				B58FA82216915BEA00E75314 /* SchemataPreferencesViewController.xib in Resources */,
+				B5293FEF1692F0ED00543EEC /* AppsPreferencesViewController.xib in Resources */,
+				B5293FF41692F10900543EEC /* HelpPreferencesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +384,8 @@
 				B58FA80F169080FF00E75314 /* SHKit.m in Sources */,
 				B58FA81D169136A500E75314 /* RimeConfigError.m in Sources */,
 				B58FA82116915BEA00E75314 /* SchemataPreferencesViewController.m in Sources */,
+				B5293FEE1692F0ED00543EEC /* AppsPreferencesViewController.m in Sources */,
+				B5293FF31692F10900543EEC /* HelpPreferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

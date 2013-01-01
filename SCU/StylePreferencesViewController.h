@@ -10,7 +10,7 @@
 #import "MASPreferencesViewController.h"
 #import "AppDelegate.h"
 
-@interface StylePreferencesViewController : NSViewController <MASPreferencesViewController> {
+@interface StylePreferencesViewController : NSViewController<MASPreferencesViewController> {
     AppDelegate *_delegate;
     
     __unsafe_unretained IBOutlet NSTextField *_fontField;
@@ -29,6 +29,7 @@
 @property NSArray *colorThemes;
 @property NSString *colorTheme;
 
+- (void)reload;
 - (IBAction)chooseFont:(id)sender;
 - (void)updateFontField;
 @end

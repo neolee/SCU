@@ -7,9 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MASPreferencesViewController.h"
+#import "AppDelegate.h"
 
-@interface SchemataPreferencesViewController : NSViewController
+@interface SchemataPreferencesViewController : NSViewController<MASPreferencesViewController> {
+    AppDelegate *_delegate;
+}
 
-- (IBAction)testYACYAML:(id)sender;
-- (IBAction)testRimeKit:(id)sender;
+- (void)reload;
 @end

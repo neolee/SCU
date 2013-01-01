@@ -10,7 +10,7 @@
 #import "MASPreferencesViewController.h"
 #import "AppDelegate.h"
 
-@interface GeneralPreferencesViewController : NSViewController <MASPreferencesViewController> {
+@interface GeneralPreferencesViewController : NSViewController<MASPreferencesViewController> {
     AppDelegate *_delegate;
 }
 

@@ -1,25 +1,18 @@
 //
-//  SchemataPreferencesViewController.m
+//  AppsPreferencesViewController.m
 //  SCU
 //
-//  Created by Neo on 12/31/12.
-//  Copyright (c) 2012 Paradigm X. All rights reserved.
+//  Created by Neo on 1/1/13.
+//  Copyright (c) 2013 Paradigm X. All rights reserved.
 //
 
-#import "SchemataPreferencesViewController.h"
+#import "AppsPreferencesViewController.h"
 
-#import <YACYAML/YACYAML.h>
-
-#import "NSString+SHFoundation.h"
-#import "SHKit.h"
-
-#import "RimeConfigController.h"
-
-@interface SchemataPreferencesViewController ()
+@interface AppsPreferencesViewController ()
 
 @end
 
-@implementation SchemataPreferencesViewController
+@implementation AppsPreferencesViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,11 +30,11 @@
 }
 
 - (void)reload {
-    
+
 }
 
 -(NSString *)identifier {
-    return @"Schemata";
+    return @"Apps";
 }
 
 -(NSImage *)toolbarItemImage {
@@ -49,7 +42,7 @@
 }
 
 -(NSString *)toolbarItemLabel {
-    return NSLocalizedString(@"Schemata tab label", nil);
+    return NSLocalizedString(@"Apps tab label", nil);
 }
 
 @end
