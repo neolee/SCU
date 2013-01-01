@@ -47,6 +47,16 @@
 }
 
 - (BOOL)reload:(RimeConfigError **)error {
+    // Key assumption about loading configuration:
+    // 1. M-RimeConfig, C-RimeConfigController and V-PreferencesViewController.
+    // 2. Every time Squirrel run ite Deploy procedure all patch values in *.custom.yaml will be merge into
+    //    the actual configuration file *.yaml.
+    // 3. If we write something to the *.custom.yaml by calling patchValue then reload configuration without
+    //    running Squirrel's Deploy command, data in RimeConfigController and PreferencesViewControllers
+    //    will be restored to state after last time Deploy.
+    // 4. To keep logical consistency RimeConfig should simulate Squirrel's merge procedure when populate
+    //    values (see valueForKey and valueForKeyPath method).
+        
     if (![[NSFileManager defaultManager] fileExistsAtPath:_configPath]) {
         NSLog(@"WARNING: Config file does not exist: %@", _configPath);
         if (error) {
@@ -69,6 +79,12 @@
     return YES;
 }
 
+- (NSString *)patchKeyPath:(NSString *)key {
+    return [NSString stringWithFormat:@"patch.%@", key];
+}
+
+#pragma mark - Write model patch value
+
 - (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath error:(RimeConfigError **)error {
     return [self patchValue:value forKeyPath:keyPath toDisk:YES error:error];
 }
@@ -76,18 +92,41 @@
 - (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath toDisk:(BOOL)writeToDisk error:(RimeConfigError **)error {
     assert(_customConfig);
     
-    
+    // Key assumption about patching value:
+    // 1. M-RimeConfig, C-RimeConfigController and V-PreferencesViewController.
+    // 2. One RimeConfig object represents a *.custom.yaml file. Any modification on the object should be
+    //    sync-ed to the file immediately.
+    // 3. If the file has been changed by other apps SCU may override the changes from other apps.
+    // 4. If RimeConfigController orders RimeConfig to patch a value RimeConfig will save it in _customConfig
+    //    and try to sync to the disk file. If syncing to file fails, _customConfig will NOT rollback. All
+    //    changes will be re-tried next time patchValue being called.
     
     
     return YES;
 }
 
+#pragma mark - Read model attribute
+
 - (id)valueForKey:(NSString *)key {
-    return [_config valueForKey:key];
+    // See comment in method reload
+    id value = [_customConfig valueForKeyPath:[self patchKeyPath:key]];
+    if (value) {
+        return value;
+    }
+    else {
+        return [_config valueForKey:key];
+    }
 }
 
 - (id)valueForKeyPath:(NSString *)keyPath {
-    return [_config valueForKeyPath:keyPath];
+    // See comment in method reload
+    id value = [_customConfig valueForKeyPath:[self patchKeyPath:keyPath]];
+    if (value) {
+        return value;
+    }
+    else {
+        return [_config valueForKeyPath:keyPath];
+    }
 }
 
 - (NSArray *)arrayForKey:(NSString *)key {
@@ -137,6 +176,8 @@
 - (NSString *)stringForKeyPath:(NSString *)keyPath {
     return (NSString *)[self valueForKeyPath:keyPath];
 }
+
+#pragma mark - Class helpers
 
 + (NSString *)rimeFolder {
     return [RIME_CONFIG_FOLDER stringByExpandingTildeInPath];

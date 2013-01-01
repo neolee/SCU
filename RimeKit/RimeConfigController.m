@@ -42,6 +42,8 @@
     return self;
 }
 
+#pragma mark - Class helpers
+
 + (NSString *)rimeFolder {
     return [RimeConfig rimeFolder];
 }

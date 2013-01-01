@@ -17,10 +17,12 @@
     RimeConfig *_wubi86Config;
 }
 
+// Category: General
 @property BOOL useUSKeyboardLayout;
 @property BOOL enableNotifications;
 @property BOOL enableBuiltinNotifications;
 
+// Category: Style
 @property BOOL isHorizontal;
 @property NSInteger numberOfCandidates;
 @property NSString *fontFace;
