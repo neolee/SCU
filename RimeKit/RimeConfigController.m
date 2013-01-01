@@ -22,7 +22,6 @@
     if (!_defaultConfig) return nil;    
     _squirrelConfig = [RimeConfig squirrelConfig:error];
     if (!_squirrelConfig) return nil;
-//    NSLog(@"Squirrel Configuration:\n%@", _squirrelConfig);
     
     // Set patched configuration properties
     _useUSKeyboardLayout = [_squirrelConfig boolForKey:@"us_keyboard_layout"];

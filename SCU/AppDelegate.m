@@ -30,19 +30,20 @@
             
             switch ([error errorType]) {
                 case RimeConfigFolderNotExistsError:
-                    message = @"Rime configuration folder does not exist";
-                    info = [NSString stringWithFormat:@"Path: %@\n\nYou should run the Deploy command from Squirrel IME menu before any customization.", [RimeConfigController rimeFolder]];
+                    message = NSLocalizedString(@"Rime configuration folder does not exist", nil);
+                    info = [NSString stringWithFormat:NSLocalizedString(@"Should run the Deploy command with file path", nil), [RimeConfigController rimeFolder]];
                     break;
                 case RimeConfigFileNotExistsError:
-                    message = @"Rime configuration file does not exist";
-                    info = [NSString stringWithFormat:@"Path: %@\n\nYou should run the Deploy command from Squirrel IME menu before any customization.", [error configFile]];
+                    message = NSLocalizedString(@"Rime configuration file does not exist", nil);
+                    info = [NSString stringWithFormat:NSLocalizedString(@"Should run the Deploy command with file path", nil), [error configFile]];
                     break;
                 default:
-                    message = @"Rime configuration loading failed";
-                    info = @"You should run the Deploy command from Squirrel IME menu before any customization. If this error persists please report to me.";
+                    message = NSLocalizedString(@"Rime configuration loading failed", nil);
+                    info = NSLocalizedString(@"Should run the Deploy command with further info", nil);
                     break;
             }
-            [SHKit alertWithMessage:message info:info cancelButton:@"OK"];
+            NSString *buttonLabel = NSLocalizedString(@"OK", nil);
+            [SHKit alertWithMessage:message info:info cancelButton:buttonLabel];
             
             return nil;
         }
@@ -56,6 +57,8 @@
     // Load Rime/Squirrel configuration
     if (![self configController]) {
         NSLog(@"Loading Rime configuration failed.");
+
+        [NSApp terminate:nil];
     }
     else {
         NSLog(@"Loaded Rime configuration.");

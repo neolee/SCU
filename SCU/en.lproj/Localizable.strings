@@ -13,3 +13,10 @@
 "Schemata tab label" = "Schemata";
 "Apps tab label" = "Apps";
 "Help tab label" = "Help";
+
+"Rime configuration folder does not exist" = "Rime configuration folder does not exist";
+"Rime configuration file does not exist" = "Rime configuration file does not exist";
+"Rime configuration loading failed" = "Rime configuration loading failed";
+"Should run the Deploy command with file path" = "Path: %@\n\nYou should run the Deploy command from Squirrel IME menu before any customization.";
+"Should run the Deploy command with further info" = "You should run the Deploy command from Squirrel IME menu before any customization. If this error persists please report to me.";
+"OK" = "OK";
