@@ -16,6 +16,20 @@
 
 @implementation GeneralPreferencesViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _delegate = [NSApp delegate];
+    }
+    
+    return self;
+}
+
+- (void)awakeFromNib {
+    [self reload];
+}
+
 - (void)reload {
     [self setUseUSKeyboardLayout:_delegate.configController.useUSKeyboardLayout];
     
@@ -25,18 +39,6 @@
     if (enableNotifications && enableBuiltinNotifications) flag = 0;
     if (!enableNotifications && !enableBuiltinNotifications) flag = 2;
     [self setFlagShowNotification:flag];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        _delegate = [NSApp delegate];
-        
-        [self reload];
-    }
-    
-    return self;
 }
 
 -(NSString *)identifier {

@@ -11,10 +11,25 @@
 #import "AppDelegate.h"
 
 @interface StylePreferencesViewController : NSViewController <MASPreferencesViewController> {
-    AppDelegate *_delegate;    
+    AppDelegate *_delegate;
+    
+    __unsafe_unretained IBOutlet NSTextField *_fontField;
 }
 
+@property BOOL isHorizontal;
+@property NSInteger orientation;
 @property NSArray *numbersOfCandidates;
-@property NSString *numberOfCandidates;
+@property NSInteger numberOfCandidates;
+@property NSFont *currentFont;
+@property NSString *fontFace;
 @property NSInteger fontSize;
+@property NSInteger cornerRadius;
+@property NSInteger borderHeight;
+@property NSInteger borderWidth;
+@property float alpha;
+@property NSArray *colorThemes;
+@property NSString *colorTheme;
+
+- (IBAction)chooseFont:(id)sender;
+- (void)updateFontField;
 @end
