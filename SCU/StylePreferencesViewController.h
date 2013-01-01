@@ -16,13 +16,12 @@
     __unsafe_unretained IBOutlet NSTextField *_fontField;
 }
 
-@property BOOL isHorizontal;
 @property NSInteger orientation;
 @property NSArray *numbersOfCandidates;
 @property NSInteger numberOfCandidates;
 @property NSFont *currentFont;
 @property NSString *fontFace;
-@property NSInteger fontSize;
+@property NSInteger fontPoint;
 @property NSInteger cornerRadius;
 @property NSInteger borderHeight;
 @property NSInteger borderWidth;

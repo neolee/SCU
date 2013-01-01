@@ -123,11 +123,11 @@
 }
 
 - (NSInteger)integerForKey:(NSString *)key{
-    return (NSInteger)[self valueForKey:key];
+    return [[self stringForKey:key] integerValue];
 }
 
 - (NSInteger)integerForKeyPath:(NSString *)keyPath {
-    return (NSInteger)[self valueForKeyPath:keyPath];
+    return [[self stringForKeyPath:keyPath] integerValue];
 }
 
 - (NSString *)stringForKey:(NSString *)key {

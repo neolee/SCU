@@ -21,9 +21,18 @@
 @property BOOL enableNotifications;
 @property BOOL enableBuiltinNotifications;
 
+@property BOOL isHorizontal;
+@property NSInteger numberOfCandidates;
+@property NSString *fontFace;
+@property NSInteger fontPoint;
+@property NSInteger cornerRadius;
+@property NSInteger borderHeight;
+@property NSInteger borderWidth;
+@property float alpha;
+@property NSString *colorTheme;
+
 - (id)init:(RimeConfigError **)error;
 
 + (NSString *)rimeFolder;
 + (BOOL)checkRimeFolder;
-
 @end

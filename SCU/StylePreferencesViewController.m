@@ -43,9 +43,10 @@
                         [NSDictionary dictionaryWithObjectsAndKeys:@"星際我爭霸／StarCraft", @"name", @"starcraft", @"value", nil],
                         nil];
 
+        _orientation = 0;
         _numberOfCandidates = 5;
-        _fontSize = [NSFont systemFontSize];
-        _currentFont = [NSFont systemFontOfSize:_fontSize];
+        _fontPoint = [NSFont systemFontSize];
+        _currentFont = [NSFont systemFontOfSize:_fontPoint];
         _cornerRadius = 5;
         _borderHeight = 0;
         _borderWidth = 0;
@@ -61,6 +62,19 @@
 }
 
 - (void)reload {
+    BOOL isHorizontal = [[_delegate configController] isHorizontal];
+    [self setOrientation:(isHorizontal ? 1 : 0)];
+    [self setNumberOfCandidates:[[_delegate configController] numberOfCandidates]];
+    [self setFontFace:[[_delegate configController] fontFace]];
+    [self setFontPoint:[[_delegate configController] fontPoint]];
+    [self setCornerRadius:[[_delegate configController] cornerRadius]];
+    [self setBorderHeight:[[_delegate configController] borderHeight]];
+    [self setBorderWidth:[[_delegate configController] borderWidth]];
+    [self setAlpha:[[_delegate configController] alpha]];
+    [self setColorTheme:[[_delegate configController] colorTheme]];
+    
+    // Update local helper object and UI
+    _currentFont = [NSFont fontWithName:_fontFace size:_fontPoint];
     [self updateFontField];
 }
 
@@ -78,7 +92,7 @@
 - (void)changeFont:(id)sender {
     NSFontManager *fontManager = [NSFontManager sharedFontManager];
     [self setCurrentFont:[fontManager convertFont:[fontManager selectedFont]]];
-    [self setFontSize:[_currentFont pointSize]];
+    [self setFontPoint:[_currentFont pointSize]];
     [self updateFontField];
 }
 
