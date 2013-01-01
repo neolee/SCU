@@ -74,7 +74,10 @@
     [self setColorTheme:[[_delegate configController] colorTheme]];
     
     // Update local helper object and UI
-    _currentFont = [NSFont fontWithName:_fontFace size:_fontPoint];
+    if (_fontFace && ![_fontFace isEqualToString:@""] && _fontPoint > 0) {
+        _currentFont = [NSFont fontWithName:_fontFace size:_fontPoint];
+    }
+    
     [self updateFontField];
 }
 

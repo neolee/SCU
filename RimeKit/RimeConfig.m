@@ -48,7 +48,7 @@
 
 - (BOOL)reload:(RimeConfigError **)error {
     if (![[NSFileManager defaultManager] fileExistsAtPath:_configPath]) {
-        NSLog(@"WARNING: Requested config file does not exist: %@", _configPath);
+        NSLog(@"WARNING: Config file does not exist: %@", _configPath);
         if (error) {
             *error = [[RimeConfigError alloc] init];
             [*error setErrorType:RimeConfigFileNotExistsError];
@@ -59,7 +59,7 @@
     _config = [[NSString stringWithContentsOfFile:_configPath encoding:NSUTF8StringEncoding error:nil] YACYAMLDecode];
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:_customConfigPath]) {
-        NSLog(@"INFO: Requested custom config file does not exist: %@. Will create new while patching value.", _customConfigPath);
+        NSLog(@"INFO: Custom config file does not exist: %@. Will create new one while patching values.", _customConfigPath);
         _customConfig = [[NSMutableDictionary alloc] init];
     }
     else {
@@ -99,11 +99,11 @@
 }
 
 - (BOOL)boolForKey:(NSString *)key {
-    return (BOOL)[self valueForKey:key];
+    return (BOOL)[self integerForKey:key];
 }
 
 - (BOOL)boolForKeyPath:(NSString *)keyPath {
-    return (BOOL)[self valueForKeyPath:keyPath];
+    return (BOOL)[self integerForKeyPath:keyPath];
 }
 
 - (NSDictionary *)dictionaryForKey:(NSString *)key {
