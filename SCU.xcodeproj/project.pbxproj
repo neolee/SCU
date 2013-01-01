@@ -12,6 +12,8 @@
 		B5293FEF1692F0ED00543EEC /* AppsPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5293FED1692F0ED00543EEC /* AppsPreferencesViewController.xib */; };
 		B5293FF31692F10900543EEC /* HelpPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5293FF11692F10900543EEC /* HelpPreferencesViewController.m */; };
 		B5293FF41692F10900543EEC /* HelpPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5293FF21692F10900543EEC /* HelpPreferencesViewController.xib */; };
+		B5293FF71692F41100543EEC /* squirrelDeployCommand.png in Resources */ = {isa = PBXBuildFile; fileRef = B5293FF51692F41100543EEC /* squirrelDeployCommand.png */; };
+		B5293FF81692F41100543EEC /* squirrelDeployCommand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5293FF61692F41100543EEC /* squirrelDeployCommand@2x.png */; };
 		B542190B168C3AF000C21C1C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B542190A168C3AF000C21C1C /* Cocoa.framework */; };
 		B5421915168C3AF000C21C1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5421913168C3AF000C21C1C /* InfoPlist.strings */; };
 		B5421917168C3AF000C21C1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5421916168C3AF000C21C1C /* main.m */; };
@@ -76,6 +78,8 @@
 		B5293FF01692F10900543EEC /* HelpPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpPreferencesViewController.h; sourceTree = "<group>"; };
 		B5293FF11692F10900543EEC /* HelpPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpPreferencesViewController.m; sourceTree = "<group>"; };
 		B5293FF21692F10900543EEC /* HelpPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpPreferencesViewController.xib; sourceTree = "<group>"; };
+		B5293FF51692F41100543EEC /* squirrelDeployCommand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squirrelDeployCommand.png; sourceTree = "<group>"; };
+		B5293FF61692F41100543EEC /* squirrelDeployCommand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squirrelDeployCommand@2x.png"; sourceTree = "<group>"; };
 		B5421906168C3AF000C21C1C /* SCU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B542190A168C3AF000C21C1C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B542190D168C3AF000C21C1C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -228,6 +232,8 @@
 				B5421913168C3AF000C21C1C /* InfoPlist.strings */,
 				B5421919168C3AF000C21C1C /* Credits.rtf */,
 				B5552B80168DEFB700601C3C /* SCU.icns */,
+				B5293FF51692F41100543EEC /* squirrelDeployCommand.png */,
+				B5293FF61692F41100543EEC /* squirrelDeployCommand@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -362,6 +368,8 @@
 				B58FA82216915BEA00E75314 /* SchemataPreferencesViewController.xib in Resources */,
 				B5293FEF1692F0ED00543EEC /* AppsPreferencesViewController.xib in Resources */,
 				B5293FF41692F10900543EEC /* HelpPreferencesViewController.xib in Resources */,
+				B5293FF71692F41100543EEC /* squirrelDeployCommand.png in Resources */,
+				B5293FF81692F41100543EEC /* squirrelDeployCommand@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
