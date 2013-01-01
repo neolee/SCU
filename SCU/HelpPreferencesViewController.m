@@ -24,6 +24,8 @@
     return self;
 }
 
+#pragma mark - MASPreferencesViewController protocol
+
 -(NSString *)identifier {
     return @"Help";
 }

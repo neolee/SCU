@@ -33,6 +33,8 @@
 
 }
 
+#pragma mark - MASPreferencesViewController protocol
+
 -(NSString *)identifier {
     return @"Apps";
 }
@@ -44,5 +46,7 @@
 -(NSString *)toolbarItemLabel {
     return NSLocalizedString(@"Apps tab label", nil);
 }
+
+#pragma mark - Configuration changing actions
 
 @end

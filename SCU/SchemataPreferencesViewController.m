@@ -40,6 +40,8 @@
     
 }
 
+#pragma mark - MASPreferencesViewController protocol
+
 -(NSString *)identifier {
     return @"Schemata";
 }
@@ -51,5 +53,7 @@
 -(NSString *)toolbarItemLabel {
     return NSLocalizedString(@"Schemata tab label", nil);
 }
+
+#pragma mark - Configuration changing actions
 
 @end

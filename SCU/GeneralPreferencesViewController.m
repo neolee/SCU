@@ -41,6 +41,8 @@
     [self setFlagShowNotification:flag];
 }
 
+#pragma mark - MASPreferencesViewController protocol
+
 -(NSString *)identifier {
     return @"General";
 }
@@ -52,6 +54,8 @@
 -(NSString *)toolbarItemLabel {
     return NSLocalizedString(@"General tab label", nil);
 }
+
+#pragma mark - Configuration changing actions
 
 - (IBAction)alwaysUseUSKeyboardLayoutChanged:(id)sender {
     NSLog(@"useUSKeyboardLayout: %@", [NSString stringWithBool:_useUSKeyboardLayout]);

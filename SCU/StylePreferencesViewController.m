@@ -99,6 +99,8 @@
     [self updateFontField];
 }
 
+#pragma mark - MASPreferencesViewController protocol
+
 -(NSString *)identifier {
     return @"Style";
 }
@@ -110,5 +112,7 @@
 -(NSString *)toolbarItemLabel {
     return NSLocalizedString(@"Style tab label", nil);
 }
+
+#pragma mark - Configuration changing actions
 
 @end
