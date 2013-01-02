@@ -14,6 +14,14 @@
 		B5293FF41692F10900543EEC /* HelpPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5293FF21692F10900543EEC /* HelpPreferencesViewController.xib */; };
 		B5293FF71692F41100543EEC /* squirrelDeployCommand.png in Resources */ = {isa = PBXBuildFile; fileRef = B5293FF51692F41100543EEC /* squirrelDeployCommand.png */; };
 		B5293FF81692F41100543EEC /* squirrelDeployCommand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5293FF61692F41100543EEC /* squirrelDeployCommand@2x.png */; };
+		B52941651694660600543EEC /* SHKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B52941501694660600543EEC /* SHKit.m */; };
+		B52941661694660600543EEC /* NSArray+SHExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B52941521694660600543EEC /* NSArray+SHExtensions.m */; };
+		B52941671694660600543EEC /* NSColor+SHExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B52941541694660600543EEC /* NSColor+SHExtensions.m */; };
+		B52941681694660600543EEC /* NSDictionary+KeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = B52941561694660600543EEC /* NSDictionary+KeyPath.m */; };
+		B52941691694660600543EEC /* NSDictionary+SHExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B52941581694660600543EEC /* NSDictionary+SHExtensions.m */; };
+		B529416A1694660600543EEC /* NSObject+DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = B529415A1694660600543EEC /* NSObject+DeepMutableCopy.m */; };
+		B529416B1694660600543EEC /* NSString+SHExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B529415C1694660600543EEC /* NSString+SHExtensions.m */; };
+		B529416D1694660600543EEC /* SHFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B529415F1694660600543EEC /* SHFoundation.m */; };
 		B542190B168C3AF000C21C1C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B542190A168C3AF000C21C1C /* Cocoa.framework */; };
 		B5421915168C3AF000C21C1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5421913168C3AF000C21C1C /* InfoPlist.strings */; };
 		B5421917168C3AF000C21C1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5421916168C3AF000C21C1C /* main.m */; };
@@ -23,11 +31,9 @@
 		B54219B7168C3E3D00C21C1C /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5421933168C3E3D00C21C1C /* MASPreferencesWindow.xib */; };
 		B54219B8168C3E3D00C21C1C /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5421935168C3E3D00C21C1C /* MASPreferencesWindowController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5552B81168DEFB700601C3C /* SCU.icns in Resources */ = {isa = PBXBuildFile; fileRef = B5552B80168DEFB700601C3C /* SCU.icns */; };
-		B5552BAB168DF99900601C3C /* SHFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5552BAA168DF99900601C3C /* SHFoundation.m */; };
 		B58FA757168EF86700E75314 /* libYACYAML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B58FA750168EF81300E75314 /* libYACYAML.a */; };
 		B58FA759168EF87D00E75314 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B58FA758168EF87D00E75314 /* libresolv.dylib */; };
 		B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA78A168F3CB900E75314 /* RimeConfig.m */; };
-		B58FA80F169080FF00E75314 /* SHKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA80E169080FF00E75314 /* SHKit.m */; };
 		B58FA81D169136A500E75314 /* RimeConfigError.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA81C169136A500E75314 /* RimeConfigError.m */; };
 		B58FA82116915BEA00E75314 /* SchemataPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA81F16915BEA00E75314 /* SchemataPreferencesViewController.m */; };
 		B58FA82216915BEA00E75314 /* SchemataPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58FA82016915BEA00E75314 /* SchemataPreferencesViewController.xib */; };
@@ -79,6 +85,22 @@
 		B5293FF21692F10900543EEC /* HelpPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpPreferencesViewController.xib; sourceTree = "<group>"; };
 		B5293FF51692F41100543EEC /* squirrelDeployCommand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squirrelDeployCommand.png; sourceTree = "<group>"; };
 		B5293FF61692F41100543EEC /* squirrelDeployCommand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squirrelDeployCommand@2x.png"; sourceTree = "<group>"; };
+		B529414F1694660600543EEC /* SHKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKit.h; sourceTree = "<group>"; };
+		B52941501694660600543EEC /* SHKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKit.m; sourceTree = "<group>"; };
+		B52941511694660600543EEC /* NSArray+SHExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SHExtensions.h"; sourceTree = "<group>"; };
+		B52941521694660600543EEC /* NSArray+SHExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SHExtensions.m"; sourceTree = "<group>"; };
+		B52941531694660600543EEC /* NSColor+SHExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+SHExtensions.h"; sourceTree = "<group>"; };
+		B52941541694660600543EEC /* NSColor+SHExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+SHExtensions.m"; sourceTree = "<group>"; };
+		B52941551694660600543EEC /* NSDictionary+KeyPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KeyPath.h"; sourceTree = "<group>"; };
+		B52941561694660600543EEC /* NSDictionary+KeyPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+KeyPath.m"; sourceTree = "<group>"; };
+		B52941571694660600543EEC /* NSDictionary+SHExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SHExtensions.h"; sourceTree = "<group>"; };
+		B52941581694660600543EEC /* NSDictionary+SHExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SHExtensions.m"; sourceTree = "<group>"; };
+		B52941591694660600543EEC /* NSObject+DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DeepMutableCopy.h"; sourceTree = "<group>"; };
+		B529415A1694660600543EEC /* NSObject+DeepMutableCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DeepMutableCopy.m"; sourceTree = "<group>"; };
+		B529415B1694660600543EEC /* NSString+SHExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SHExtensions.h"; sourceTree = "<group>"; };
+		B529415C1694660600543EEC /* NSString+SHExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHExtensions.m"; sourceTree = "<group>"; };
+		B529415E1694660600543EEC /* SHFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFoundation.h; sourceTree = "<group>"; };
+		B529415F1694660600543EEC /* SHFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFoundation.m; sourceTree = "<group>"; };
 		B5421906168C3AF000C21C1C /* SCU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B542190A168C3AF000C21C1C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B542190D168C3AF000C21C1C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -96,15 +118,11 @@
 		B5421934168C3E3D00C21C1C /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
 		B5421935168C3E3D00C21C1C /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
 		B5552B80168DEFB700601C3C /* SCU.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SCU.icns; sourceTree = "<group>"; };
-		B5552BA9168DF99900601C3C /* SHFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFoundation.h; sourceTree = "<group>"; };
-		B5552BAA168DF99900601C3C /* SHFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFoundation.m; sourceTree = "<group>"; };
 		B58FA746168EF81300E75314 /* YACYAML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YACYAML.xcodeproj; path = YACYAML/YACYAML.xcodeproj; sourceTree = "<group>"; };
 		B58FA758168EF87D00E75314 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
 		B58FA770168F3B2300E75314 /* RimeConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RimeConstants.h; path = RimeKit/RimeConstants.h; sourceTree = "<group>"; };
 		B58FA789168F3CB900E75314 /* RimeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfig.h; path = RimeKit/RimeConfig.h; sourceTree = "<group>"; };
 		B58FA78A168F3CB900E75314 /* RimeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfig.m; path = RimeKit/RimeConfig.m; sourceTree = "<group>"; };
-		B58FA80D169080FF00E75314 /* SHKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKit.h; sourceTree = "<group>"; };
-		B58FA80E169080FF00E75314 /* SHKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKit.m; sourceTree = "<group>"; };
 		B58FA81B169136A500E75314 /* RimeConfigError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfigError.h; path = RimeKit/RimeConfigError.h; sourceTree = "<group>"; };
 		B58FA81C169136A500E75314 /* RimeConfigError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfigError.m; path = RimeKit/RimeConfigError.m; sourceTree = "<group>"; };
 		B58FA81E16915BEA00E75314 /* SchemataPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemataPreferencesViewController.h; sourceTree = "<group>"; };
@@ -134,12 +152,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B52941431694660600543EEC /* SHKit */ = {
+			isa = PBXGroup;
+			children = (
+				B529414E1694660600543EEC /* MacOS */,
+				B52941511694660600543EEC /* NSArray+SHExtensions.h */,
+				B52941521694660600543EEC /* NSArray+SHExtensions.m */,
+				B52941531694660600543EEC /* NSColor+SHExtensions.h */,
+				B52941541694660600543EEC /* NSColor+SHExtensions.m */,
+				B52941551694660600543EEC /* NSDictionary+KeyPath.h */,
+				B52941561694660600543EEC /* NSDictionary+KeyPath.m */,
+				B52941571694660600543EEC /* NSDictionary+SHExtensions.h */,
+				B52941581694660600543EEC /* NSDictionary+SHExtensions.m */,
+				B52941591694660600543EEC /* NSObject+DeepMutableCopy.h */,
+				B529415A1694660600543EEC /* NSObject+DeepMutableCopy.m */,
+				B529415B1694660600543EEC /* NSString+SHExtensions.h */,
+				B529415C1694660600543EEC /* NSString+SHExtensions.m */,
+				B529415E1694660600543EEC /* SHFoundation.h */,
+				B529415F1694660600543EEC /* SHFoundation.m */,
+			);
+			path = SHKit;
+			sourceTree = "<group>";
+		};
+		B529414E1694660600543EEC /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				B529414F1694660600543EEC /* SHKit.h */,
+				B52941501694660600543EEC /* SHKit.m */,
+			);
+			path = MacOS;
+			sourceTree = "<group>";
+		};
 		B54218FB168C3AEF00C21C1C = {
 			isa = PBXGroup;
 			children = (
 				B58FA746168EF81300E75314 /* YACYAML.xcodeproj */,
 				B5421930168C3E3D00C21C1C /* MASPreferences */,
-				B5552BA8168DF99900601C3C /* SHKit */,
+				B52941431694660600543EEC /* SHKit */,
 				B5DCCC30168EDEAA00E3D502 /* RimeKit */,
 				B5421910168C3AF000C21C1C /* SCU */,
 				B5552B77168DE8DB00601C3C /* Resources */,
@@ -233,17 +282,6 @@
 				B5293FF61692F41100543EEC /* squirrelDeployCommand@2x.png */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		B5552BA8168DF99900601C3C /* SHKit */ = {
-			isa = PBXGroup;
-			children = (
-				B5552BA9168DF99900601C3C /* SHFoundation.h */,
-				B5552BAA168DF99900601C3C /* SHFoundation.m */,
-				B58FA80D169080FF00E75314 /* SHKit.h */,
-				B58FA80E169080FF00E75314 /* SHKit.m */,
-			);
-			path = SHKit;
 			sourceTree = "<group>";
 		};
 		B58FA747168EF81300E75314 /* Products */ = {
@@ -380,14 +418,20 @@
 				B54219B8168C3E3D00C21C1C /* MASPreferencesWindowController.m in Sources */,
 				B5E30054168C48650068BBE7 /* GeneralPreferencesViewController.m in Sources */,
 				B5E30059168C49170068BBE7 /* StylePreferencesViewController.m in Sources */,
-				B5552BAB168DF99900601C3C /* SHFoundation.m in Sources */,
 				B5DCCC33168EDF4B00E3D502 /* RimeConfigController.m in Sources */,
 				B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */,
-				B58FA80F169080FF00E75314 /* SHKit.m in Sources */,
 				B58FA81D169136A500E75314 /* RimeConfigError.m in Sources */,
 				B58FA82116915BEA00E75314 /* SchemataPreferencesViewController.m in Sources */,
 				B5293FEE1692F0ED00543EEC /* AppsPreferencesViewController.m in Sources */,
 				B5293FF31692F10900543EEC /* HelpPreferencesViewController.m in Sources */,
+				B52941651694660600543EEC /* SHKit.m in Sources */,
+				B52941661694660600543EEC /* NSArray+SHExtensions.m in Sources */,
+				B52941671694660600543EEC /* NSColor+SHExtensions.m in Sources */,
+				B52941681694660600543EEC /* NSDictionary+KeyPath.m in Sources */,
+				B52941691694660600543EEC /* NSDictionary+SHExtensions.m in Sources */,
+				B529416A1694660600543EEC /* NSObject+DeepMutableCopy.m in Sources */,
+				B529416B1694660600543EEC /* NSString+SHExtensions.m in Sources */,
+				B529416D1694660600543EEC /* SHFoundation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

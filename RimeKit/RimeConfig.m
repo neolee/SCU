@@ -70,7 +70,7 @@
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:_customConfigPath]) {
         NSLog(@"INFO: Custom config file does not exist: %@. Will create new one while patching values.", _customConfigPath);
-        _customConfig = [[NSMutableDictionary alloc] init];
+        _customConfig = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"", @"patch", nil];
     }
     else {
         _customConfig = [[NSString stringWithContentsOfFile:_customConfigPath encoding:NSUTF8StringEncoding error:nil] YACYAMLDecode];
