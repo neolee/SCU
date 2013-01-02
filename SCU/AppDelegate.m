@@ -13,7 +13,6 @@
 #import "SchemataPreferencesViewController.h"
 #import "HelpPreferencesViewController.h"
 
-#import "NSString+SHFoundation.h"
 #import "SHKit.h"
 
 @implementation AppDelegate

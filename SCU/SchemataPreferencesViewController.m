@@ -8,13 +8,6 @@
 
 #import "SchemataPreferencesViewController.h"
 
-#import <YACYAML/YACYAML.h>
-
-#import "NSString+SHFoundation.h"
-#import "SHKit.h"
-
-#import "RimeConfigController.h"
-
 @interface SchemataPreferencesViewController ()
 
 @end

@@ -49,13 +49,13 @@
 - (BOOL)reload:(RimeConfigError **)error {
     // Key assumption about loading configuration:
     // 1. M-RimeConfig, C-RimeConfigController and V-PreferencesViewController.
-    // 2. Every time Squirrel run ite Deploy procedure all patch values in *.custom.yaml will be merge into
-    //    the actual configuration file *.yaml.
-    // 3. If we write something to the *.custom.yaml by calling patchValue then reload configuration without
-    //    running Squirrel's Deploy command, data in RimeConfigController and PreferencesViewControllers
-    //    will be restored to state after last time Deploy.
+    // 2. Every time Squirrel run its Deploy procedure all patch values in *.custom.yaml will be merge into
+    //    the actual configuration file *.yaml. Values in _config are all that matter.
+    // 3. If we write something to the *.custom.yaml by calling patchValue then reload configurations without
+    //    running Squirrel's Deploy command, data in _config and _customConfig will be different.
     // 4. To keep logical consistency RimeConfig should simulate Squirrel's merge procedure when populate
-    //    values (see valueForKey and valueForKeyPath method).
+    //    values (see valueForKey and valueForKeyPath method). i.e. When RimeConfigController requests value
+    //    for a key(path) RimeConfig always gives out merged value.
         
     if (![[NSFileManager defaultManager] fileExistsAtPath:_configPath]) {
         NSLog(@"WARNING: Config file does not exist: %@", _configPath);
@@ -90,8 +90,6 @@
 }
 
 - (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath toDisk:(BOOL)writeToDisk error:(RimeConfigError **)error {
-    assert(_customConfig);
-    
     // Key assumption about patching value:
     // 1. M-RimeConfig, C-RimeConfigController and V-PreferencesViewController.
     // 2. One RimeConfig object represents a *.custom.yaml file. Any modification on the object should be
@@ -100,6 +98,9 @@
     // 4. If RimeConfigController orders RimeConfig to patch a value RimeConfig will save it in _customConfig
     //    and try to sync to the disk file. If syncing to file fails, _customConfig will NOT rollback. All
     //    changes will be re-tried next time patchValue being called.
+    
+    assert(_customConfig);
+    
     
     
     return YES;

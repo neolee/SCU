@@ -24,7 +24,6 @@
 		B54219B8168C3E3D00C21C1C /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5421935168C3E3D00C21C1C /* MASPreferencesWindowController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5552B81168DEFB700601C3C /* SCU.icns in Resources */ = {isa = PBXBuildFile; fileRef = B5552B80168DEFB700601C3C /* SCU.icns */; };
 		B5552BAB168DF99900601C3C /* SHFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5552BAA168DF99900601C3C /* SHFoundation.m */; };
-		B5552BCE168DFAB500601C3C /* NSString+SHFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5552BCD168DFAB500601C3C /* NSString+SHFoundation.m */; };
 		B58FA757168EF86700E75314 /* libYACYAML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B58FA750168EF81300E75314 /* libYACYAML.a */; };
 		B58FA759168EF87D00E75314 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B58FA758168EF87D00E75314 /* libresolv.dylib */; };
 		B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA78A168F3CB900E75314 /* RimeConfig.m */; };
@@ -99,8 +98,6 @@
 		B5552B80168DEFB700601C3C /* SCU.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SCU.icns; sourceTree = "<group>"; };
 		B5552BA9168DF99900601C3C /* SHFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFoundation.h; sourceTree = "<group>"; };
 		B5552BAA168DF99900601C3C /* SHFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFoundation.m; sourceTree = "<group>"; };
-		B5552BCC168DFAB500601C3C /* NSString+SHFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SHFoundation.h"; sourceTree = "<group>"; };
-		B5552BCD168DFAB500601C3C /* NSString+SHFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHFoundation.m"; sourceTree = "<group>"; };
 		B58FA746168EF81300E75314 /* YACYAML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YACYAML.xcodeproj; path = YACYAML/YACYAML.xcodeproj; sourceTree = "<group>"; };
 		B58FA758168EF87D00E75314 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
 		B58FA770168F3B2300E75314 /* RimeConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RimeConstants.h; path = RimeKit/RimeConstants.h; sourceTree = "<group>"; };
@@ -243,8 +240,6 @@
 			children = (
 				B5552BA9168DF99900601C3C /* SHFoundation.h */,
 				B5552BAA168DF99900601C3C /* SHFoundation.m */,
-				B5552BCC168DFAB500601C3C /* NSString+SHFoundation.h */,
-				B5552BCD168DFAB500601C3C /* NSString+SHFoundation.m */,
 				B58FA80D169080FF00E75314 /* SHKit.h */,
 				B58FA80E169080FF00E75314 /* SHKit.m */,
 			);
@@ -386,7 +381,6 @@
 				B5E30054168C48650068BBE7 /* GeneralPreferencesViewController.m in Sources */,
 				B5E30059168C49170068BBE7 /* StylePreferencesViewController.m in Sources */,
 				B5552BAB168DF99900601C3C /* SHFoundation.m in Sources */,
-				B5552BCE168DFAB500601C3C /* NSString+SHFoundation.m in Sources */,
 				B5DCCC33168EDF4B00E3D502 /* RimeConfigController.m in Sources */,
 				B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */,
 				B58FA80F169080FF00E75314 /* SHKit.m in Sources */,

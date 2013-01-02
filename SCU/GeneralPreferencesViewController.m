@@ -7,7 +7,6 @@
 //
 
 #import "GeneralPreferencesViewController.h"
-#import "NSString+SHFoundation.h"
 
 
 @interface GeneralPreferencesViewController ()
@@ -58,7 +57,7 @@
 #pragma mark - Configuration changing actions
 
 - (IBAction)alwaysUseUSKeyboardLayoutChanged:(id)sender {
-    NSLog(@"useUSKeyboardLayout: %@", [NSString stringWithBool:_useUSKeyboardLayout]);
+    NSLog(@"useUSKeyboardLayout: %d", _useUSKeyboardLayout);
 }
 
 - (IBAction)switchNotificationChanged:(id)sender {
