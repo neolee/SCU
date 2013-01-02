@@ -18,22 +18,25 @@
 }
 
 // Category: General
-@property BOOL useUSKeyboardLayout;
-@property BOOL enableNotifications;
-@property BOOL enableBuiltinNotifications;
+@property (nonatomic) BOOL useUSKeyboardLayout;
+@property (nonatomic) BOOL enableNotifications;
+@property (nonatomic) BOOL enableBuiltinNotifications;
 
 // Category: Style
-@property BOOL isHorizontal;
-@property NSInteger numberOfCandidates;
-@property NSString *fontFace;
-@property NSInteger fontPoint;
-@property NSInteger cornerRadius;
-@property NSInteger borderHeight;
-@property NSInteger borderWidth;
-@property float alpha;
-@property NSString *colorTheme;
+@property (nonatomic) BOOL isHorizontal;
+@property (nonatomic) NSInteger numberOfCandidates;
+@property (nonatomic) NSString *fontFace;
+@property (nonatomic) NSInteger fontPoint;
+@property (nonatomic) NSInteger cornerRadius;
+@property (nonatomic) NSInteger borderHeight;
+@property (nonatomic) NSInteger borderWidth;
+@property (nonatomic) float alpha;
+@property (nonatomic) NSString *colorTheme;
 
 - (id)init:(RimeConfigError **)error;
+
+- (void)setUseUSKeyboardLayout:(BOOL)value;
+- (void)setShowNotificationWhen:(NSUInteger)value;
 
 + (NSString *)rimeFolder;
 + (BOOL)checkRimeFolder;

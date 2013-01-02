@@ -15,6 +15,8 @@
     NSString *_customConfigName;
     NSString *_customConfigPath;
     
+    BOOL _customConfigExists;
+    
     // _config contains all key-value pairs from the config file
     // _customConfig contains all patch key-value pairs from the custom config file
     NSDictionary *_config;

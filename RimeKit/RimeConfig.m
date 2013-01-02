@@ -10,6 +10,9 @@
 
 #import <YACYAML/YACYAML.h>
 
+#import "NSObject+DeepMutableCopy.h"
+#import "NSDictionary+KeyPath.h"
+
 #import "RimeConstants.h"
 
 @implementation RimeConfig
@@ -38,6 +41,7 @@
     _customConfigName = [[name stringByAppendingString:RIME_CUSTOM_EXT] stringByAppendingString:RIME_CONFIG_FILE_EXT];
     _configPath = [NSString pathWithComponents:[NSArray arrayWithObjects:folder, _configName, nil]];
     _customConfigPath = [NSString pathWithComponents:[NSArray arrayWithObjects:folder, _customConfigName, nil]];
+    _customConfigExists = NO;
     
     if (![self reload:error]) {
         return nil;
@@ -70,10 +74,10 @@
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:_customConfigPath]) {
         NSLog(@"INFO: Custom config file does not exist: %@. Will create new one while patching values.", _customConfigPath);
-        _customConfig = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"", @"patch", nil];
     }
     else {
-        _customConfig = [[NSString stringWithContentsOfFile:_customConfigPath encoding:NSUTF8StringEncoding error:nil] YACYAMLDecode];
+        _customConfig = [[[NSString stringWithContentsOfFile:_customConfigPath encoding:NSUTF8StringEncoding error:nil] YACYAMLDecode] deepMutableCopy];
+        _customConfigExists = YES;
     }
     
     return YES;
@@ -99,9 +103,20 @@
     //    and try to sync to the disk file. If syncing to file fails, _customConfig will NOT rollback. All
     //    changes will be re-tried next time patchValue being called.
     
+    if (!_customConfigExists) {
+        _customConfig = [[NSMutableDictionary alloc] init];
+    }
     assert(_customConfig);
     
+    [_customConfig setObject:value forKeyPath:keyPath];
+    if (!_customConfigExists) _customConfigExists = YES;
     
+    if (writeToDisk) {
+         return [[_customConfig YACYAMLEncodedString] writeToFile:_customConfigPath
+                                                   atomically:NO
+                                                     encoding:NSUTF8StringEncoding
+                                                            error:error];
+    }
     
     return YES;
 }
@@ -110,9 +125,8 @@
 
 - (id)valueForKey:(NSString *)key {
     // See comment in method reload
-    id value = [_customConfig valueForKeyPath:[self patchKeyPath:key]];
-    if (value) {
-        return value;
+    if (_customConfigExists && [_customConfig valueForKeyPath:[self patchKeyPath:key]]) {
+        return [_customConfig valueForKeyPath:[self patchKeyPath:key]];
     }
     else {
         return [_config valueForKey:key];
@@ -121,9 +135,8 @@
 
 - (id)valueForKeyPath:(NSString *)keyPath {
     // See comment in method reload
-    id value = [_customConfig valueForKeyPath:[self patchKeyPath:keyPath]];
-    if (value) {
-        return value;
+    if (_customConfigExists && [_customConfig valueForKeyPath:[self patchKeyPath:keyPath]]) {
+        return [_customConfig valueForKeyPath:[self patchKeyPath:keyPath]];
     }
     else {
         return [_config valueForKeyPath:keyPath];

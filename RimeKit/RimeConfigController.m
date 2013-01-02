@@ -42,6 +42,26 @@
     return self;
 }
 
+- (void)setUseUSKeyboardLayout:(BOOL)value {
+    if (_useUSKeyboardLayout != value) {
+        _useUSKeyboardLayout = value;
+        
+        RimeConfigError *error;
+        [_squirrelConfig patchValue:[NSNumber numberWithBool:_useUSKeyboardLayout] forKeyPath:@"patch.us_keyboard_layout" error:&error];
+    }
+}
+
+- (void)setShowNotificationWhen:(NSUInteger)value {
+    // Input value: 0-always 1-appropriate=growl_is_running 2-never
+    NSArray *values = [NSArray arrayWithObjects:@"always", @"growl_is_running", @"never", nil];
+    
+    _enableNotifications = (value != 2);
+    _enableBuiltinNotifications = (value == 0);
+    
+    RimeConfigError *error;
+    [_squirrelConfig patchValue:[values objectAtIndex:value] forKeyPath:@"patch.show_notifications_when" error:&error];
+}
+
 #pragma mark - Class helpers
 
 + (NSString *)rimeFolder {

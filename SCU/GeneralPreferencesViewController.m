@@ -57,11 +57,11 @@
 #pragma mark - Configuration changing actions
 
 - (IBAction)alwaysUseUSKeyboardLayoutChanged:(id)sender {
-    NSLog(@"useUSKeyboardLayout: %d", _useUSKeyboardLayout);
+    [[_delegate configController] setUseUSKeyboardLayout:_useUSKeyboardLayout];
 }
 
 - (IBAction)switchNotificationChanged:(id)sender {
-    NSLog(@"flagShowNotification: %ld", _flagShowNotification);
+    [[_delegate configController] setShowNotificationWhen:_flagShowNotification];
 }
 
 @end

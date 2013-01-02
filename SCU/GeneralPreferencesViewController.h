@@ -15,7 +15,7 @@
 }
 
 @property BOOL useUSKeyboardLayout;
-@property NSInteger flagShowNotification;
+@property NSUInteger flagShowNotification;
 
 - (void)reload;
 - (IBAction)alwaysUseUSKeyboardLayoutChanged:(id)sender;
