@@ -7,7 +7,7 @@
 - [SCU 最新版本](http://update.soulhacker.me/scu/SCU.zip)  
   SHA1 checksum: `84c05381bf6889958359e646e7cdea156dcd9a1d`
   
-已经安装过 SCU 的朋友建议使用应用内置的自动升级功能来进行升级。使用前请确保至少激活过 Squirrel（鼠鬚管）输入法一次，进行任何配置之后必须执行 Squirrel（鼠鬚管）输入法菜单中的 Deploy（部署）命令才能生效。
+已经安装过 SCU 的朋友建议使用应用内置的自动升级功能来进行升级。使用前确保至少激活过 Squirrel（鼠鬚管）输入法一次并务必备份好 Squirrel 配置目录 `~/Library/Rime` ，进行任何配置之后必须执行 Squirrel（鼠鬚管）输入法菜单中的 Deploy（部署）命令才能生效。
 
 **已支持的选项：**
 
