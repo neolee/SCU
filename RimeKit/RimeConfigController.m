@@ -42,6 +42,8 @@
     return self;
 }
 
+#pragma mark - Setter overrides
+
 - (void)setUseUSKeyboardLayout:(BOOL)value {
     if (_useUSKeyboardLayout != value) {
         _useUSKeyboardLayout = value;
@@ -60,6 +62,87 @@
     
     RimeConfigError *error;
     [_squirrelConfig patchValue:[values objectAtIndex:value] forKeyPath:@"patch.show_notifications_when" error:&error];
+}
+
+- (void)setIsHorizontal:(BOOL)value {
+    if (_isHorizontal != value) {
+        _isHorizontal = value;
+        
+        RimeConfigError *error;
+        [_squirrelConfig patchValue:[NSNumber numberWithBool:_isHorizontal] forKeyPath:@"patch.style.horizontal" error:&error];
+    }
+}
+
+- (void)setNumberOfCandidates:(NSInteger)value {
+    if (_numberOfCandidates != value) {
+        _numberOfCandidates = value;
+        
+        RimeConfigError *error;
+        [_defaultConfig patchValue:[NSNumber numberWithInteger:_numberOfCandidates] forKeyPath:@"patch.menu.page_size" error:&error];
+    }
+}
+
+- (void)setFontFace:(NSString *)value {
+    if (_fontFace != value) {
+        _fontFace = value;
+        
+        RimeConfigError *error;
+        [_squirrelConfig patchValue:_fontFace forKeyPath:@"patch.style.font_face" error:&error];
+    }
+}
+
+- (void)setFontPoint:(NSInteger)value {
+    if (_fontPoint != value) {
+        _fontPoint = value;
+        
+        RimeConfigError *error;
+        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_fontPoint] forKeyPath:@"patch.style.font_point" error:&error];
+    }
+}
+
+- (void)setCornerRadius:(NSInteger)value {
+    if (_cornerRadius != value) {
+        _cornerRadius = value;
+        
+        RimeConfigError *error;
+        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_cornerRadius] forKeyPath:@"patch.style.corner_radius" error:&error];
+    }
+}
+
+- (void)setBorderHeight:(NSInteger)value {
+    if (_borderHeight != value) {
+        _borderHeight = value;
+        
+        RimeConfigError *error;
+        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_borderHeight] forKeyPath:@"patch.style.border_height" error:&error];
+    }
+}
+
+- (void)setBorderWidth:(NSInteger)value {
+    if (_borderWidth != value) {
+        _borderWidth = value;
+        
+        RimeConfigError *error;
+        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_borderWidth] forKeyPath:@"patch.style.border_width" error:&error];
+    }
+}
+
+- (void)setAlpha:(float)value {
+    if (_alpha != value) {
+        _alpha = value;
+        
+        RimeConfigError *error;
+        [_squirrelConfig patchValue:[NSNumber numberWithFloat:_alpha] forKeyPath:@"patch.style.alpha" error:&error];
+    }
+}
+
+- (void)setColorTheme:(NSString *)value {
+    if (_colorTheme != value) {
+        _colorTheme = value;
+        
+        RimeConfigError *error;
+        [_squirrelConfig patchValue:_colorTheme forKeyPath:@"patch.style.color_scheme" error:&error];
+    }
 }
 
 #pragma mark - Class helpers

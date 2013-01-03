@@ -39,6 +39,7 @@
 		B58FA81D169136A500E75314 /* RimeConfigError.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA81C169136A500E75314 /* RimeConfigError.m */; };
 		B58FA82116915BEA00E75314 /* SchemataPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA81F16915BEA00E75314 /* SchemataPreferencesViewController.m */; };
 		B58FA82216915BEA00E75314 /* SchemataPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58FA82016915BEA00E75314 /* SchemataPreferencesViewController.xib */; };
+		B5C4F4C11695546500430F20 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = B5C4F4C01695546500430F20 /* dsa_pub.pem */; };
 		B5DCCC33168EDF4B00E3D502 /* RimeConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */; };
 		B5E30054168C48650068BBE7 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */; };
 		B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */; };
@@ -144,6 +145,7 @@
 		B58FA81E16915BEA00E75314 /* SchemataPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemataPreferencesViewController.h; sourceTree = "<group>"; };
 		B58FA81F16915BEA00E75314 /* SchemataPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemataPreferencesViewController.m; sourceTree = "<group>"; };
 		B58FA82016915BEA00E75314 /* SchemataPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SchemataPreferencesViewController.xib; sourceTree = "<group>"; };
+		B5C4F4C01695546500430F20 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		B5DCCC31168EDF4B00E3D502 /* RimeConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfigController.h; path = RimeKit/RimeConfigController.h; sourceTree = "<group>"; };
 		B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfigController.m; path = RimeKit/RimeConfigController.m; sourceTree = "<group>"; };
 		B5E30051168C48650068BBE7 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				B5421913168C3AF000C21C1C /* InfoPlist.strings */,
 				B5421919168C3AF000C21C1C /* Credits.rtf */,
 				B5552B80168DEFB700601C3C /* SCU.icns */,
+				B5C4F4C01695546500430F20 /* dsa_pub.pem */,
 				B5293FF51692F41100543EEC /* squirrelDeployCommand.png */,
 				B5293FF61692F41100543EEC /* squirrelDeployCommand@2x.png */,
 			);
@@ -423,6 +426,7 @@
 				B5293FF41692F10900543EEC /* HelpPreferencesViewController.xib in Resources */,
 				B5293FF71692F41100543EEC /* squirrelDeployCommand.png in Resources */,
 				B5293FF81692F41100543EEC /* squirrelDeployCommand@2x.png in Resources */,
+				B5C4F4C11695546500430F20 /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,7 +599,7 @@
 		B5421925168C3AF000C21C1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Neo Lee";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -612,7 +616,6 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -620,7 +623,7 @@
 		B5421926168C3AF000C21C1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Neo Lee";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -637,7 +640,6 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

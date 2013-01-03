@@ -35,9 +35,21 @@
 
 - (id)init:(RimeConfigError **)error;
 
+// Override property setters to do patching
 - (void)setUseUSKeyboardLayout:(BOOL)value;
 - (void)setShowNotificationWhen:(NSUInteger)value;
 
+- (void)setIsHorizontal:(BOOL)value;
+- (void)setNumberOfCandidates:(NSInteger)value;
+- (void)setFontFace:(NSString *)value;
+- (void)setFontPoint:(NSInteger)value;
+- (void)setCornerRadius:(NSInteger)value;
+- (void)setBorderHeight:(NSInteger)value;
+- (void)setBorderWidth:(NSInteger)value;
+- (void)setAlpha:(float)value;
+- (void)setColorTheme:(NSString *)value;
+
+// Class helpers
 + (NSString *)rimeFolder;
 + (BOOL)checkRimeFolder;
 @end

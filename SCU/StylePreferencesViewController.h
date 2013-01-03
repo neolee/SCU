@@ -30,6 +30,10 @@
 @property NSString *colorTheme;
 
 - (void)reload;
+
 - (IBAction)chooseFont:(id)sender;
 - (void)updateFontField;
+
+// User making changes
+- (IBAction)orientationChanged:(id)sender;
 @end

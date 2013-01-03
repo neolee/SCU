@@ -115,4 +115,8 @@
 
 #pragma mark - Configuration changing actions
 
+- (IBAction)orientationChanged:(id)sender {
+    
+}
+
 @end
