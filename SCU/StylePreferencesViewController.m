@@ -9,6 +9,8 @@
 #import "StylePreferencesViewController.h"
 #import "RimeConfigController.h"
 
+#import "NSString+SHExtensions.h"
+
 @interface StylePreferencesViewController ()
 
 @end
@@ -52,6 +54,16 @@
         _borderWidth = 0;
         _alpha = 0.85;
         _colorTheme = @"native";
+        
+        [self addObserver:self forKeyPath:@"orientation" options:0 context:nil];
+        [self addObserver:self forKeyPath:@"numberOfCandidates" options:0 context:nil];
+        [self addObserver:self forKeyPath:@"fontFace" options:0 context:nil];
+        [self addObserver:self forKeyPath:@"fontPoint" options:0 context:nil];
+        [self addObserver:self forKeyPath:@"cornerRadius" options:0 context:nil];
+        [self addObserver:self forKeyPath:@"borderHeight" options:0 context:nil];
+        [self addObserver:self forKeyPath:@"borderWidth" options:0 context:nil];
+        [self addObserver:self forKeyPath:@"alpha" options:0 context:nil];
+        [self addObserver:self forKeyPath:@"colorTheme" options:0 context:nil];
     }
     
     return self;
@@ -83,6 +95,8 @@
 
 - (void)updateFontField {
     [_fontField setStringValue:[NSString stringWithFormat:@"%@", [_currentFont fontName]]];
+    NSFont *font = [NSFont fontWithName:_fontFace size:[NSFont systemFontSize]];
+    [_fontField setFont:font];
 }
 
 - (IBAction)chooseFont:(id)sender {
@@ -95,6 +109,7 @@
 - (void)changeFont:(id)sender {
     NSFontManager *fontManager = [NSFontManager sharedFontManager];
     [self setCurrentFont:[fontManager convertFont:[fontManager selectedFont]]];
+    [self setFontFace:[_currentFont fontName]];
     [self setFontPoint:[_currentFont pointSize]];
     [self updateFontField];
 }
@@ -115,8 +130,43 @@
 
 #pragma mark - Configuration changing actions
 
-- (IBAction)orientationChanged:(id)sender {
-    
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"orientation"]) {
+        NSLog(@"isHorizontal=%@", [NSString stringWithBool:(_orientation==1)]);
+        return;
+    }
+    if ([keyPath isEqualToString:@"numberOfCandidates"]) {
+        NSLog(@"numberOfCandidates=%ld", _numberOfCandidates);
+        return;
+    }
+    if ([keyPath isEqualToString:@"fontFace"]) {
+        NSLog(@"fontFace=%@", _fontFace);
+        return;
+    }
+    if ([keyPath isEqualToString:@"fontPoint"]) {
+        NSLog(@"fontPoint=%ld", _fontPoint);
+        return;
+    }
+    if ([keyPath isEqualToString:@"cornerRadius"]) {
+        NSLog(@"cornerRadius=%ld", _cornerRadius);
+        return;
+    }
+    if ([keyPath isEqualToString:@"borderHeight"]) {
+        NSLog(@"borderHeight=%ld", _borderHeight);
+        return;
+    }
+    if ([keyPath isEqualToString:@"borderWidth"]) {
+        NSLog(@"borderWidth=%ld", _borderWidth);
+        return;
+    }
+    if ([keyPath isEqualToString:@"alpha"]) {
+        NSLog(@"alpha=%f", _alpha);
+        return;
+    }
+    if ([keyPath isEqualToString:@"colorTheme"]) {
+        NSLog(@"colorTheme=%@", _colorTheme);
+        return;
+    }
 }
 
 @end

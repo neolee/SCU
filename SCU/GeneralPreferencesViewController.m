@@ -8,6 +8,7 @@
 
 #import "GeneralPreferencesViewController.h"
 
+#import "NSString+SHExtensions.h"
 
 @interface GeneralPreferencesViewController ()
 
@@ -20,6 +21,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _delegate = [NSApp delegate];
+        
+        [self addObserver:self forKeyPath:@"useUSKeyboardLayout" options:0 context:nil];
+        [self addObserver:self forKeyPath:@"flagShowNotification" options:0 context:nil];
     }
     
     return self;
@@ -56,12 +60,15 @@
 
 #pragma mark - Configuration changing actions
 
-- (IBAction)alwaysUseUSKeyboardLayoutChanged:(id)sender {
-    [[_delegate configController] setUseUSKeyboardLayout:_useUSKeyboardLayout];
-}
-
-- (IBAction)switchNotificationChanged:(id)sender {
-    [[_delegate configController] setShowNotificationWhen:_flagShowNotification];
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"useUSKeyboardLayout"]) {
+        [[_delegate configController] setUseUSKeyboardLayout:_useUSKeyboardLayout];
+        return;
+    }
+    if ([keyPath isEqualToString:@"flagShowNotification"]) {
+        [[_delegate configController] setShowNotificationWhen:_flagShowNotification];
+        return;
+    }
 }
 
 @end

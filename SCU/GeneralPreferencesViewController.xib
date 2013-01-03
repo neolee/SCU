@@ -295,22 +295,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					<int key="connectionID">2</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">alwaysUseUSKeyboardLayoutChanged:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="250367288"/>
-					</object>
-					<int key="connectionID">177</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">switchNotificationChanged:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="275042842"/>
-					</object>
-					<int key="connectionID">178</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: self.useUSKeyboardLayout</string>
 						<reference key="source" ref="250367288"/>

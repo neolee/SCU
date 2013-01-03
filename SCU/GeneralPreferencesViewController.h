@@ -18,8 +18,4 @@
 @property NSUInteger flagShowNotification;
 
 - (void)reload;
-
-// User making changes
-- (IBAction)alwaysUseUSKeyboardLayoutChanged:(id)sender;
-- (IBAction)switchNotificationChanged:(id)sender;
 @end
