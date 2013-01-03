@@ -132,39 +132,39 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"orientation"]) {
-        NSLog(@"isHorizontal=%@", [NSString stringWithBool:(_orientation==1)]);
+        [[_delegate configController] setIsHorizontal:(_orientation==1)];
         return;
     }
     if ([keyPath isEqualToString:@"numberOfCandidates"]) {
-        NSLog(@"numberOfCandidates=%ld", _numberOfCandidates);
+        [[_delegate configController] setNumberOfCandidates:_numberOfCandidates];
         return;
     }
     if ([keyPath isEqualToString:@"fontFace"]) {
-        NSLog(@"fontFace=%@", _fontFace);
+        [[_delegate configController] setFontFace:_fontFace];
         return;
     }
     if ([keyPath isEqualToString:@"fontPoint"]) {
-        NSLog(@"fontPoint=%ld", _fontPoint);
+        [[_delegate configController] setFontPoint:_fontPoint];
         return;
     }
     if ([keyPath isEqualToString:@"cornerRadius"]) {
-        NSLog(@"cornerRadius=%ld", _cornerRadius);
+        [[_delegate configController] setCornerRadius:_cornerRadius];
         return;
     }
     if ([keyPath isEqualToString:@"borderHeight"]) {
-        NSLog(@"borderHeight=%ld", _borderHeight);
+        [[_delegate configController] setBorderHeight:_borderHeight];
         return;
     }
     if ([keyPath isEqualToString:@"borderWidth"]) {
-        NSLog(@"borderWidth=%ld", _borderWidth);
+        [[_delegate configController] setBorderWidth:_borderWidth];
         return;
     }
     if ([keyPath isEqualToString:@"alpha"]) {
-        NSLog(@"alpha=%f", _alpha);
+        [[_delegate configController] setAlpha:_alpha];
         return;
     }
     if ([keyPath isEqualToString:@"colorTheme"]) {
-        NSLog(@"colorTheme=%@", _colorTheme);
+        [[_delegate configController] setColorTheme:_colorTheme];
         return;
     }
 }
