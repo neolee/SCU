@@ -24,35 +24,37 @@
         _delegate = [NSApp delegate];
         
         // UI inialization and properties default value
-        _numbersOfCandidates = [[NSArray alloc] initWithObjects:
-                                [NSDictionary dictionaryWithObjectsAndKeys:@"3", @"name", @"3", @"value", nil],
-                                [NSDictionary dictionaryWithObjectsAndKeys:@"4", @"name", @"4", @"value", nil],
-                                [NSDictionary dictionaryWithObjectsAndKeys:@"5", @"name", @"5", @"value", nil],
-                                [NSDictionary dictionaryWithObjectsAndKeys:@"6", @"name", @"6", @"value", nil],
-                                [NSDictionary dictionaryWithObjectsAndKeys:@"7", @"name", @"7", @"value", nil],
-                                [NSDictionary dictionaryWithObjectsAndKeys:@"8", @"name", @"8", @"value", nil],
-                                [NSDictionary dictionaryWithObjectsAndKeys:@"9", @"name", @"9", @"value", nil],
-                                nil];
-        _colorThemes = [[NSArray alloc] initWithObjects:
-                        [NSDictionary dictionaryWithObjectsAndKeys:@"系统／Native", @"name", @"native", @"value", nil],
-                        [NSDictionary dictionaryWithObjectsAndKeys:@"碧水／Aqua", @"name", @"aqua", @"value", nil],
-                        [NSDictionary dictionaryWithObjectsAndKeys:@"青天／Azure", @"name", @"azure", @"value", nil],
-                        [NSDictionary dictionaryWithObjectsAndKeys:@"暗堂／Dark Temple", @"name", @"dark_temple", @"value", nil],
-                        [NSDictionary dictionaryWithObjectsAndKeys:@"谷歌／Google", @"name", @"google", @"value", nil],
-                        [NSDictionary dictionaryWithObjectsAndKeys:@"墨池／Ink", @"name", @"ink", @"value", nil],
-                        [NSDictionary dictionaryWithObjectsAndKeys:@"孤寺／Lost Temple", @"name", @"lost_temple", @"value", nil],
-                        [NSDictionary dictionaryWithObjectsAndKeys:@"明月／Luna", @"name", @"luna", @"value", nil],
-                        [NSDictionary dictionaryWithObjectsAndKeys:@"星際我爭霸／StarCraft", @"name", @"starcraft", @"value", nil],
-                        nil];
+        _numbersOfCandidates = @[
+        @{@"name" : @"3", @"value" : @"3"},
+        @{@"name" : @"4", @"value" : @"4"},
+        @{@"name" : @"5", @"value" : @"5"},
+        @{@"name" : @"6", @"value" : @"6"},
+        @{@"name" : @"7", @"value" : @"7"},
+        @{@"name" : @"8", @"value" : @"8"},
+        @{@"name" : @"9", @"value" : @"9"}
+        ];
+        
+        _colorThemes = @[
+        @{@"name" : @"系统／Native", @"value" : @"native"},
+        @{@"name" : @"碧水／Aqua", @"value" : @"aqua"},
+        @{@"name" : @"青天／Azure", @"value" : @"azure"},
+        @{@"name" : @"暗堂／Dark Temple", @"value" : @"dark_temple"},
+        @{@"name" : @"谷歌／Google", @"value" : @"google"},
+        @{@"name" : @"墨池／Ink", @"value" : @"ink"},
+        @{@"name" : @"孤寺／Lost Temple", @"value" : @"lost_temple"},
+        @{@"name" : @"明月／Luna", @"value" : @"luna"},
+        @{@"name" : @"星際我爭霸／StarCraft", @"value" : @"starcraft"}
+        ];
 
         _orientation = 0;
         _numberOfCandidates = 5;
         _fontPoint = [NSFont systemFontSize];
         _currentFont = [NSFont systemFontOfSize:_fontPoint];
+        _fontFace = [_currentFont fontName];
         _cornerRadius = 5;
         _borderHeight = 0;
         _borderWidth = 0;
-        _alpha = 0.85;
+        _alpha = 1.0;
         _colorTheme = @"native";
         
         [self addObserver:self forKeyPath:@"orientation" options:0 context:nil];

@@ -12,11 +12,6 @@
 @implementation RimeConfigController
 
 - (id)init:(RimeConfigError **)error {
-    // Configuration defaults
-    _useUSKeyboardLayout = YES;
-    _enableNotifications = YES;
-    _enableBuiltinNotifications = NO;
-
     // Load configuration from disk
     _defaultConfig = [RimeConfig defaultConfig:error];
     if (!_defaultConfig) return nil;    
@@ -38,6 +33,10 @@
     _borderWidth = [_squirrelConfig integerForKeyPath:@"style.border_width"];
     _alpha = [_squirrelConfig floatForKeyPath:@"style.alpha"];
     _colorTheme = [_squirrelConfig stringForKeyPath:@"style.color_scheme"];
+
+    // Fix some default value
+    if (_fontPoint == 0) _fontPoint = 13;
+    if (_alpha == 0.0) _alpha = 1.0;
 
     return self;
 }

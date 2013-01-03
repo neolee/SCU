@@ -113,8 +113,8 @@
     
     if (writeToDisk) {
          return [[_customConfig YACYAMLEncodedString] writeToFile:_customConfigPath
-                                                   atomically:NO
-                                                     encoding:NSUTF8StringEncoding
+                                                       atomically:NO
+                                                         encoding:NSUTF8StringEncoding
                                                             error:error];
     }
     

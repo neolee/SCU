@@ -5,7 +5,7 @@
 如果不希望自己编译而又希望试用 SCU，可以从这里下载
 
 - [SCU 最新版本](http://update.soulhacker.me/scu/SCU.zip)  
-  SHA1 checksum: `e0d5aad7da07954f03aee8642b30e77e22d689c6`
+  SHA1 checksum: `84c05381bf6889958359e646e7cdea156dcd9a1d`
   
 已经安装过 SCU 的朋友建议使用应用内置的自动升级功能来进行升级。使用前请确保至少激活过 Squirrel（鼠鬚管）输入法一次，进行任何配置之后必须执行 Squirrel（鼠鬚管）输入法菜单中的 Deploy（部署）命令才能生效。
 
