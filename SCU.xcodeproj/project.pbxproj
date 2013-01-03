@@ -31,6 +31,8 @@
 		B54219B7168C3E3D00C21C1C /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5421933168C3E3D00C21C1C /* MASPreferencesWindow.xib */; };
 		B54219B8168C3E3D00C21C1C /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5421935168C3E3D00C21C1C /* MASPreferencesWindowController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B544B1F31694906800392564 /* libYACYAML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B544B1EB1694904F00392564 /* libYACYAML.a */; };
+		B544B1F51694972100392564 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B544B1F41694972100392564 /* Sparkle.framework */; };
+		B544B1F7169497C300392564 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B544B1F41694972100392564 /* Sparkle.framework */; };
 		B5552B81168DEFB700601C3C /* SCU.icns in Resources */ = {isa = PBXBuildFile; fileRef = B5552B80168DEFB700601C3C /* SCU.icns */; };
 		B58FA759168EF87D00E75314 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B58FA758168EF87D00E75314 /* libresolv.dylib */; };
 		B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA78A168F3CB900E75314 /* RimeConfig.m */; };
@@ -75,6 +77,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B544B1F6169497A900392564 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B544B1F7169497C300392564 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B519C003168C87D700B04D55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B5293FEB1692F0ED00543EEC /* AppsPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppsPreferencesViewController.h; sourceTree = "<group>"; };
@@ -118,6 +133,7 @@
 		B5421934168C3E3D00C21C1C /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
 		B5421935168C3E3D00C21C1C /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
 		B544B1E11694904F00392564 /* YACYAML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YACYAML.xcodeproj; path = YAML/YACYAML.xcodeproj; sourceTree = "<group>"; };
+		B544B1F41694972100392564 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		B5552B80168DEFB700601C3C /* SCU.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SCU.icns; sourceTree = "<group>"; };
 		B58FA758168EF87D00E75314 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
 		B58FA770168F3B2300E75314 /* RimeConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RimeConstants.h; path = RimeKit/RimeConstants.h; sourceTree = "<group>"; };
@@ -146,6 +162,7 @@
 				B58FA759168EF87D00E75314 /* libresolv.dylib in Frameworks */,
 				B544B1F31694906800392564 /* libYACYAML.a in Frameworks */,
 				B542190B168C3AF000C21C1C /* Cocoa.framework in Frameworks */,
+				B544B1F51694972100392564 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +225,7 @@
 		B5421909168C3AF000C21C1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B544B1F41694972100392564 /* Sparkle.framework */,
 				B542190A168C3AF000C21C1C /* Cocoa.framework */,
 				B542190C168C3AF000C21C1C /* Other Frameworks */,
 			);
@@ -315,9 +333,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5421924168C3AF000C21C1C /* Build configuration list for PBXNativeTarget "SCU" */;
 			buildPhases = (
+				B544B1F816949F3200392564 /* ShellScript */,
 				B5421902168C3AF000C21C1C /* Sources */,
 				B5421903168C3AF000C21C1C /* Frameworks */,
 				B5421904168C3AF000C21C1C /* Resources */,
+				B544B1F6169497A900392564 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -408,6 +428,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B544B1F816949F3200392564 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbN=$(($bN + 1))\nbN=$(printf \"%u\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B5421902168C3AF000C21C1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -495,6 +531,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Neo Lee (RE4DRB3R3B)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -517,6 +554,7 @@
 					"-ObjC",
 					"-all_load",
 				);
+				PROVISIONING_PROFILE = "5260F47A-A6E8-49ED-A899-6AFDC214CD60";
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "\"$(TARGET_BUILD_DIR)/usr/local/lib/include\" \"$(OBJROOT)/UninstalledProducts/include\"";
 			};
@@ -532,6 +570,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Neo Lee (RE4DRB3R3B)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -547,6 +586,7 @@
 					"-ObjC",
 					"-all_load",
 				);
+				PROVISIONING_PROFILE = "5260F47A-A6E8-49ED-A899-6AFDC214CD60";
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "\"$(TARGET_BUILD_DIR)/usr/local/lib/include\" \"$(OBJROOT)/UninstalledProducts/include\"";
 			};
@@ -555,7 +595,12 @@
 		B5421925168C3AF000C21C1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Neo Lee";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCU/SCU-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
@@ -567,6 +612,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -574,7 +620,12 @@
 		B5421926168C3AF000C21C1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Neo Lee";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCU/SCU-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
@@ -586,6 +637,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
