@@ -87,6 +87,15 @@
     [_prefWindowController showWindow:self];
 }
 
+- (IBAction)askSquirrelToDeploy:(id)sender {
+    // Squirrel will soon add this support. See the link below for details:
+    // https://github.com/lotem/squirrel/commit/62848ce6f2da56d6f5e48413b369d9a52e42ed91
+    [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"SquirrelReloadNotification"
+                                                                   object:nil];
+    
+    NSLog(@"Asked for Deploy...");
+}
+
 - (IBAction)reloadFromDisk:(id)sender {
     // TODO: Reload all preferences from disk: ~/Library/Rime/*
     

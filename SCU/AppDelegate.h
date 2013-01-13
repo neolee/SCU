@@ -19,5 +19,6 @@
 - (RimeConfigController *)configController;
 
 - (IBAction)showPreferencesWindow:(id)sender;
+- (IBAction)askSquirrelToDeploy:(id)sender;
 - (IBAction)reloadFromDisk:(id)sender;
 @end

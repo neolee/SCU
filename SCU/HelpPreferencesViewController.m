@@ -18,10 +18,14 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Initialization code here.
+        _delegate = [NSApp delegate];
     }
     
     return self;
+}
+
+- (IBAction)askSquirrelToDeploy:(id)sender {
+    [_delegate askSquirrelToDeploy:sender];
 }
 
 #pragma mark - MASPreferencesViewController protocol

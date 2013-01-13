@@ -8,7 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MASPreferencesViewController.h"
+#import "AppDelegate.h"
 
-@interface HelpPreferencesViewController : NSViewController <MASPreferencesViewController>
+@interface HelpPreferencesViewController : NSViewController <MASPreferencesViewController> {
+    AppDelegate *_delegate;
+}
 
+- (IBAction)askSquirrelToDeploy:(id)sender;
 @end
