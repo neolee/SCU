@@ -31,6 +31,7 @@
 @property (nonatomic) NSInteger borderHeight;
 @property (nonatomic) NSInteger borderWidth;
 @property (nonatomic) float alpha;
+@property (readonly) NSArray *colorThemes;
 @property (nonatomic) NSString *colorTheme;
 
 - (id)init:(RimeConfigError **)error;

@@ -18,7 +18,9 @@
     _squirrelConfig = [RimeConfig squirrelConfig:error];
     if (!_squirrelConfig) return nil;
     
-    // Set patched configuration properties
+//    NSLog(@"squirrelConfig:\n%@", _squirrelConfig);
+    
+    // Load properties from configurations
     _useUSKeyboardLayout = [_squirrelConfig boolForKey:@"us_keyboard_layout"];
     NSString *showNotificationWhen = [_squirrelConfig stringForKey:@"show_notifications_when"];
     _enableNotifications = ![showNotificationWhen isEqualToString:@"never"];
@@ -33,12 +35,35 @@
     _borderWidth = [_squirrelConfig integerForKeyPath:@"style.border_width"];
     _alpha = [_squirrelConfig floatForKeyPath:@"style.alpha"];
     _colorTheme = [_squirrelConfig stringForKeyPath:@"style.color_scheme"];
+    
+    [self loadColorThemes];
 
-    // Fix some default value
+    // Fix default value if needed
     if (_fontPoint == 0) _fontPoint = 13;
     if (_alpha == 0.0) _alpha = 1.0;
 
     return self;
+}
+
+- (void)loadColorThemes {
+    NSDictionary *dict = [_squirrelConfig valueForKey:@"preset_color_schemes"];
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [array addObject:@{@"name" : [obj objectForKey:@"name"], @"value" : key}];
+    }];
+    [array sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        NSString *key1 = [(NSDictionary *)obj1 objectForKey:@"value"];
+        NSString *key2 = [(NSDictionary *)obj2 objectForKey:@"value"];
+        return [key1 compare:key2];
+        /* The method below may be more meaningful
+        NSString *name1 = [(NSDictionary *)obj1 objectForKey:@"name"];
+        NSString *name2 = [(NSDictionary *)obj2 objectForKey:@"name"];
+        return [name1 localizedStandardCompare:name2];
+         */
+    }];
+    [array insertObject:@{@"name": @"系统／Native", @"value": @"native"} atIndex:0];
+
+    _colorThemes = [NSArray arrayWithArray:array];
 }
 
 #pragma mark - Setter overrides

@@ -85,6 +85,7 @@
     [self setBorderHeight:[[_delegate configController] borderHeight]];
     [self setBorderWidth:[[_delegate configController] borderWidth]];
     [self setAlpha:[[_delegate configController] alpha]];
+    [self setColorThemes:[[_delegate configController] colorThemes]];
     [self setColorTheme:[[_delegate configController] colorTheme]];
     
     // Update local helper object and UI
