@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>SCU Changelog</title>
+        <link>http://update.soulhacker.me/scu/versions.xml</link>
+        <description>Most recent changes with links to updates.</description>
+        <language>en</language>
+        <item>
+            <title>Version 0.2 (1 bugs fixed; 1 new features)</title>
+            <sparkle:releaseNotesLink>
+                http://update.soulhacker.me/scu/0.2.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Thu, 03 Jan 2013 15:30:11 +0800</pubDate>
+            <enclosure url="http://update.soulhacker.me/scu/SCU-0.2.zip" sparkle:version="107" sparkle:shortVersionString="0.2" sparkle:dsaSignature="MC0CFDV7c7njM8yLOynqGEzFt0WX0IrvAhUAi5qkrkE01XViwAAjF+deHcMBFoY=" length="1111272" type="application/octet-stream" />
+        </item>
+
+        <!-- Now here's an example of a version with a weird internal version number (like an SVN revision) but a human-readable external one. -->
+        <item>
+            <title>Version 0.1 (Let's begin!)</title>
+            <sparkle:releaseNotesLink>
+                http://update.soulhacker.me/scu/0.1.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Thu, 03 Jan 2013 01:03:11 +0800</pubDate>
+            <enclosure url="http://update.soulhacker.me/scu/SCU-0.1.zip" sparkle:version="79" sparkle:shortVersionString="0.1" sparkle:dsaSignature="MCwCFBaxuMcoGDIIrJ/NHzC/SsIHJWvoAhRNJ1z2kyvbB8lNP7AyO6ejUIjf8Q==" length="1110244" type="application/octet-stream" />
+        </item>
+    </channel>
+</rss>
