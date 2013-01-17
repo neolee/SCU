@@ -47,7 +47,7 @@
 - Vadim Shpakovski (shpakovski)，开源 Cocoa Preference 窗口类库 MASPreferences 的作者。  
   https://github.com/shpakovski/MASPreferences
 
-  另外，为了 SCU 开发的舒服一点，写了 `NSDictionary+KeyPath` 和 `NSObject+DeepMutableCopy` 两个 category 来实现 `NSDictionay` 和 `NSMutableDictionary` 的 keypath 读写支持（其实绝大部分时间花在这上面了），有需要的朋友可以从下面的项目中检取：
+  另外，为了 SCU 开发的舒服一点，写了 `NSDictionary+KeyPath` 和 `NSObject+DeepMutableCopy` 两个 category 来实现 `NSDictionary` 和 `NSMutableDictionary` 的 keypath 读写支持（其实绝大部分时间花在这上面了），有需要的朋友可以从下面的项目中检取：
 
 - neolee / SHKit  
   https://github.com/neolee/SHKit
