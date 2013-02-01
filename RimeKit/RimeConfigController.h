@@ -34,6 +34,9 @@
 @property (readonly) NSArray *colorThemes;
 @property (nonatomic) NSString *colorTheme;
 
+// Category: Apps
+@property (nonatomic) NSMutableArray *appOptions;
+
 - (id)init:(RimeConfigError **)error;
 
 // Override property setters to do patching

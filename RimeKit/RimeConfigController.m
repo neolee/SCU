@@ -8,6 +8,7 @@
 
 #import "RimeConfigController.h"
 #import "RimeConstants.h"
+#import "RimeConfigAppOption.h"
 
 @implementation RimeConfigController
 
@@ -37,6 +38,7 @@
     _colorTheme = [_squirrelConfig stringForKeyPath:@"style.color_scheme"];
     
     [self loadColorThemes];
+    [self loadAppOptions];
 
     // Fix default value if needed
     if (_fontPoint == 0) _fontPoint = 13;
@@ -55,7 +57,7 @@
         NSString *key1 = [(NSDictionary *)obj1 objectForKey:@"value"];
         NSString *key2 = [(NSDictionary *)obj2 objectForKey:@"value"];
         return [key1 compare:key2];
-        /* The method below may be more meaningful
+        /* The method below may be more meaningful but not now
         NSString *name1 = [(NSDictionary *)obj1 objectForKey:@"name"];
         NSString *name2 = [(NSDictionary *)obj2 objectForKey:@"name"];
         return [name1 localizedStandardCompare:name2];
@@ -64,6 +66,19 @@
     [array insertObject:@{@"name": @"系统／Native", @"value": @"native"} atIndex:0];
 
     _colorThemes = [NSArray arrayWithArray:array];
+}
+
+- (void)loadAppOptions {
+    NSDictionary *dict = [_squirrelConfig valueForKey:@"app_options"];
+    _appOptions = [[NSMutableArray alloc] init];
+    [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        RimeConfigAppOption *option = [[RimeConfigAppOption alloc] init];
+        NSDictionary *dictAppOption = (NSDictionary *)obj;
+        [option setAppId:key];
+        [option setAsciiMode:[dictAppOption valueForKey:@"ascii_mode"]];
+        [option setSoftCursor:[dictAppOption valueForKey:@"soft_cursor"]];
+        [_appOptions addObject:option];
+    }];
 }
 
 #pragma mark - Setter overrides

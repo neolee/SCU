@@ -33,6 +33,7 @@
 		B544B1F31694906800392564 /* libYACYAML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B544B1EB1694904F00392564 /* libYACYAML.a */; };
 		B544B1F51694972100392564 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B544B1F41694972100392564 /* Sparkle.framework */; };
 		B544B1F7169497C300392564 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B544B1F41694972100392564 /* Sparkle.framework */; };
+		B553060216BBB17500D850F1 /* RimeConfigAppOption.m in Sources */ = {isa = PBXBuildFile; fileRef = B553060116BBB17500D850F1 /* RimeConfigAppOption.m */; };
 		B5552B81168DEFB700601C3C /* SCU.icns in Resources */ = {isa = PBXBuildFile; fileRef = B5552B80168DEFB700601C3C /* SCU.icns */; };
 		B58FA759168EF87D00E75314 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B58FA758168EF87D00E75314 /* libresolv.dylib */; };
 		B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA78A168F3CB900E75314 /* RimeConfig.m */; };
@@ -135,6 +136,8 @@
 		B5421935168C3E3D00C21C1C /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
 		B544B1E11694904F00392564 /* YACYAML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YACYAML.xcodeproj; path = YAML/YACYAML.xcodeproj; sourceTree = "<group>"; };
 		B544B1F41694972100392564 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		B553060016BBB17500D850F1 /* RimeConfigAppOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfigAppOption.h; path = RimeKit/RimeConfigAppOption.h; sourceTree = "<group>"; };
+		B553060116BBB17500D850F1 /* RimeConfigAppOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfigAppOption.m; path = RimeKit/RimeConfigAppOption.m; sourceTree = "<group>"; };
 		B5552B80168DEFB700601C3C /* SCU.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SCU.icns; sourceTree = "<group>"; };
 		B58FA758168EF87D00E75314 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
 		B58FA770168F3B2300E75314 /* RimeConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RimeConstants.h; path = RimeKit/RimeConstants.h; sourceTree = "<group>"; };
@@ -325,6 +328,8 @@
 				B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */,
 				B58FA81B169136A500E75314 /* RimeConfigError.h */,
 				B58FA81C169136A500E75314 /* RimeConfigError.m */,
+				B553060016BBB17500D850F1 /* RimeConfigAppOption.h */,
+				B553060116BBB17500D850F1 /* RimeConfigAppOption.m */,
 			);
 			name = RimeKit;
 			sourceTree = "<group>";
@@ -472,6 +477,7 @@
 				B529416A1694660600543EEC /* NSObject+DeepMutableCopy.m in Sources */,
 				B529416B1694660600543EEC /* NSString+SHExtensions.m in Sources */,
 				B529416D1694660600543EEC /* SHFoundation.m in Sources */,
+				B553060216BBB17500D850F1 /* RimeConfigAppOption.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

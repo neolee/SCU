@@ -10,8 +10,11 @@
 #import "MASPreferencesViewController.h"
 #import "AppDelegate.h"
 
-@interface AppsPreferencesViewController : NSViewController<MASPreferencesViewController> {
+@interface AppsPreferencesViewController : NSViewController<MASPreferencesViewController, NSTableViewDataSource> {
     AppDelegate *_delegate;
+    
+    NSMutableArray *_appOptions;
+    NSMutableDictionary *_appIcons;
 }
 
 - (void)reload;
