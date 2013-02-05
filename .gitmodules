@@ -3,7 +3,7 @@
 	url = git@github.com:shpakovski/MASPreferences.git
 [submodule "SHKit"]
 	path = SHKit
-	url = git://github.com/neolee/SHKit.git
+	url = git@github.com:neolee/SHKit.git
 [submodule "YAML"]
 	path = YAML
-	url = git://github.com/neolee/YACYAML.git
+	url = git@github.com:neolee/YACYAML.git
