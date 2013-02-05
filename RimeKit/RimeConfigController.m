@@ -88,7 +88,7 @@
         _useUSKeyboardLayout = value;
         
         RimeConfigError *error;
-        [_squirrelConfig patchValue:[NSNumber numberWithBool:_useUSKeyboardLayout] forKeyPath:@"patch.us_keyboard_layout" error:&error];
+        [_squirrelConfig patchValue:[NSNumber numberWithBool:_useUSKeyboardLayout] forKeyPath:@"us_keyboard_layout" error:&error];
     }
 }
 
@@ -100,7 +100,7 @@
     _enableBuiltinNotifications = (value == 0);
     
     RimeConfigError *error;
-    [_squirrelConfig patchValue:[values objectAtIndex:value] forKeyPath:@"patch.show_notifications_when" error:&error];
+    [_squirrelConfig patchValue:[values objectAtIndex:value] forKeyPath:@"show_notifications_when" error:&error];
 }
 
 - (void)setIsHorizontal:(BOOL)value {
@@ -108,7 +108,7 @@
         _isHorizontal = value;
         
         RimeConfigError *error;
-        [_squirrelConfig patchValue:[NSNumber numberWithBool:_isHorizontal] forKeyPath:@"patch.style.horizontal" error:&error];
+        [_squirrelConfig patchValue:[NSNumber numberWithBool:_isHorizontal] forKeyPath:@"style.horizontal" error:&error];
     }
 }
 
@@ -117,7 +117,7 @@
         _numberOfCandidates = value;
         
         RimeConfigError *error;
-        [_defaultConfig patchValue:[NSNumber numberWithInteger:_numberOfCandidates] forKeyPath:@"patch.menu.page_size" error:&error];
+        [_defaultConfig patchValue:[NSNumber numberWithInteger:_numberOfCandidates] forKeyPath:@"menu.page_size" error:&error];
     }
 }
 
@@ -126,7 +126,7 @@
         _fontFace = value;
         
         RimeConfigError *error;
-        [_squirrelConfig patchValue:_fontFace forKeyPath:@"patch.style.font_face" error:&error];
+        [_squirrelConfig patchValue:_fontFace forKeyPath:@"style.font_face" error:&error];
     }
 }
 
@@ -135,7 +135,7 @@
         _fontPoint = value;
         
         RimeConfigError *error;
-        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_fontPoint] forKeyPath:@"patch.style.font_point" error:&error];
+        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_fontPoint] forKeyPath:@"style.font_point" error:&error];
     }
 }
 
@@ -144,7 +144,7 @@
         _cornerRadius = value;
         
         RimeConfigError *error;
-        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_cornerRadius] forKeyPath:@"patch.style.corner_radius" error:&error];
+        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_cornerRadius] forKeyPath:@"style.corner_radius" error:&error];
     }
 }
 
@@ -153,7 +153,7 @@
         _borderHeight = value;
         
         RimeConfigError *error;
-        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_borderHeight] forKeyPath:@"patch.style.border_height" error:&error];
+        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_borderHeight] forKeyPath:@"style.border_height" error:&error];
     }
 }
 
@@ -162,7 +162,7 @@
         _borderWidth = value;
         
         RimeConfigError *error;
-        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_borderWidth] forKeyPath:@"patch.style.border_width" error:&error];
+        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_borderWidth] forKeyPath:@"style.border_width" error:&error];
     }
 }
 
@@ -171,7 +171,7 @@
         _alpha = value;
         
         RimeConfigError *error;
-        [_squirrelConfig patchValue:[NSNumber numberWithFloat:_alpha] forKeyPath:@"patch.style.alpha" error:&error];
+        [_squirrelConfig patchValue:[NSNumber numberWithFloat:_alpha] forKeyPath:@"style.alpha" error:&error];
     }
 }
 
@@ -180,8 +180,16 @@
         _colorTheme = value;
         
         RimeConfigError *error;
-        [_squirrelConfig patchValue:_colorTheme forKeyPath:@"patch.style.color_scheme" error:&error];
+        [_squirrelConfig patchValue:_colorTheme forKeyPath:@"style.color_scheme" error:&error];
     }
+}
+
+- (void)setAppOptionFor:(NSString *)appId asciiMode:(BOOL)ascii softCursor:(BOOL)cursor {
+    // We have very differect situation here:
+    // 1. The sub-keypath is like 'com.apple.Terminal', which cannot handled by NSDictionary+KeyPath.
+    // 2. We should patch 2 value at one time (ascii & cursor).
+    // 3. We may add support for adding new app id in the future.
+    // So we need very special operations here.
 }
 
 #pragma mark - Class helpers

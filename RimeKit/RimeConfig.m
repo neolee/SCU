@@ -83,10 +83,6 @@
     return YES;
 }
 
-- (NSString *)patchKeyPath:(NSString *)key {
-    return [NSString stringWithFormat:@"patch.%@", key];
-}
-
 #pragma mark - Write model patch value
 
 - (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath error:(RimeConfigError **)error {
@@ -108,7 +104,7 @@
     }
     assert(_customConfig);
     
-    [_customConfig setObject:value forKeyPath:keyPath];
+    [_customConfig setObject:value forKeyPath:[self patchKeyPath:keyPath]];
     if (!_customConfigExists) _customConfigExists = YES;
     
     if (writeToDisk) {
@@ -122,6 +118,10 @@
 }
 
 #pragma mark - Read model attribute
+
+- (NSString *)patchKeyPath:(NSString *)key {
+    return [@"patch." stringByAppendingString:key];
+}
 
 - (id)valueForKey:(NSString *)key {
     // See comment in method reload
