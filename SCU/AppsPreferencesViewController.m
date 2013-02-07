@@ -79,6 +79,7 @@
 
 - (void)tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NSString *columnIdentifer = [tableColumn identifier];
+    RimeConfigAppOption *option = [_appOptions objectAtIndex:row];
     
     if ([columnIdentifer isEqualToString:@"icon"]) {
         // Not editable
@@ -90,12 +91,12 @@
         // Not editable
     }
     else if ([columnIdentifer isEqualToString:@"ascii"]) {
-        RimeConfigAppOption *option = [_appOptions objectAtIndex:row];
         [option setAsciiMode:object];
+        [[_delegate configController] setAppOptionFor:[option appId] asciiMode:[option asciiMode]];
     }
     else if ([columnIdentifer isEqualToString:@"cursor"]) {
-        RimeConfigAppOption *option = [_appOptions objectAtIndex:row];
         [option setSoftCursor:object];
+        [[_delegate configController] setAppOptionFor:[option appId] softCursor:[option softCursor]];
     }
 }
 

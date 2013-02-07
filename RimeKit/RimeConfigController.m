@@ -184,12 +184,16 @@
     }
 }
 
-- (void)setAppOptionFor:(NSString *)appId asciiMode:(BOOL)ascii softCursor:(BOOL)cursor {
-    // We have very differect situation here:
-    // 1. The sub-keypath is like 'com.apple.Terminal', which cannot handled by NSDictionary+KeyPath.
-    // 2. We should patch 2 value at one time (ascii & cursor).
-    // 3. We may add support for adding new app id in the future.
-    // So we need very special operations here.
+- (void)setAppOptionFor:(NSString *)appId asciiMode:(BOOL)ascii {
+    RimeConfigError *error;
+    [_squirrelConfig patchValue:[NSNumber numberWithBool:ascii]
+                forKeyPathArray:@[@"app_options", appId, @"ascii_mode"] error:&error];
+}
+
+- (void)setAppOptionFor:(NSString *)appId softCursor:(BOOL)cursor {
+    RimeConfigError *error;
+    [_squirrelConfig patchValue:[NSNumber numberWithBool:cursor]
+                forKeyPathArray:@[@"app_options", appId, @"soft_cursor"] error:&error];
 }
 
 #pragma mark - Class helpers
