@@ -12,6 +12,8 @@
 
 @implementation RimeConfigController
 
+#define SHOW_NOTIFICATION_WHEN_VALUES @[@"always", @"growl_is_running", @"never"]
+
 - (id)init:(RimeConfigError **)error {
     // Load configuration from disk
     _defaultConfig = [RimeConfig defaultConfig:error];
@@ -23,9 +25,10 @@
     
     // Load properties from configurations
     _useUSKeyboardLayout = [_squirrelConfig boolForKey:@"us_keyboard_layout"];
-    NSString *showNotificationWhen = [_squirrelConfig stringForKey:@"show_notifications_when"];
-    _enableNotifications = ![showNotificationWhen isEqualToString:@"never"];
-    _enableBuiltinNotifications = [showNotificationWhen isEqualToString:@"always"];
+    NSString *stringShowNotificationWhen = [_squirrelConfig stringForKey:@"show_notifications_when"];
+    _showNotificationWhen = [SHOW_NOTIFICATION_WHEN_VALUES indexOfObject:stringShowNotificationWhen];
+
+    _showNotificationViaNotificationCenter = [_squirrelConfig boolForKey:@"show_notifications_via_notification_center"];
     
     _isHorizontal = [_squirrelConfig boolForKeyPath:@"style.horizontal"];
     _numberOfCandidates = [_defaultConfig integerForKeyPath:@"menu.page_size"];
@@ -93,14 +96,21 @@
 }
 
 - (void)setShowNotificationWhen:(NSUInteger)value {
-    // Input value: 0-always 1-appropriate=growl_is_running 2-never
-    NSArray *values = [NSArray arrayWithObjects:@"always", @"growl_is_running", @"never", nil];
-    
-    _enableNotifications = (value != 2);
-    _enableBuiltinNotifications = (value == 0);
-    
-    RimeConfigError *error;
-    [_squirrelConfig patchValue:[values objectAtIndex:value] forKeyPath:@"show_notifications_when" error:&error];
+    if (_showNotificationWhen != value) {
+        _showNotificationWhen = value;        
+        
+        RimeConfigError *error;
+        [_squirrelConfig patchValue:[SHOW_NOTIFICATION_WHEN_VALUES objectAtIndex:_showNotificationWhen] forKeyPath:@"show_notifications_when" error:&error];
+    }
+}
+
+- (void)setShowNotificationViaNotificationCenter:(BOOL)value {
+    if (_showNotificationViaNotificationCenter != value) {
+        _showNotificationViaNotificationCenter = value;
+        
+        RimeConfigError *error;
+        [_squirrelConfig patchValue:[NSNumber numberWithBool:_showNotificationViaNotificationCenter] forKeyPath:@"show_notifications_via_notification_center" error:&error];
+    }
 }
 
 - (void)setIsHorizontal:(BOOL)value {

@@ -19,8 +19,8 @@
 
 // Category: General
 @property (nonatomic) BOOL useUSKeyboardLayout;
-@property (nonatomic) BOOL enableNotifications;
-@property (nonatomic) BOOL enableBuiltinNotifications;
+@property (nonatomic) NSUInteger showNotificationWhen;
+@property (nonatomic) BOOL showNotificationViaNotificationCenter;
 
 // Category: Style
 @property (nonatomic) BOOL isHorizontal;
@@ -42,6 +42,7 @@
 // Override property setters to do patching
 - (void)setUseUSKeyboardLayout:(BOOL)value;
 - (void)setShowNotificationWhen:(NSUInteger)value;
+- (void)setShowNotificationViaNotificationCenter:(BOOL)value;
 
 - (void)setIsHorizontal:(BOOL)value;
 - (void)setNumberOfCandidates:(NSInteger)value;

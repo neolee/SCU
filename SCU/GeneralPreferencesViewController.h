@@ -15,7 +15,12 @@
 }
 
 @property BOOL useUSKeyboardLayout;
-@property NSUInteger flagShowNotification;
+@property NSUInteger showNotificationWhen;
+@property BOOL showNotificationViaNotificationCenter;
+
+// Helper properties
+@property (nonatomic) BOOL isNotificationEnabled;
+@property (nonatomic) BOOL isNotificationCenterNotAvailable;
 
 - (void)reload;
 @end

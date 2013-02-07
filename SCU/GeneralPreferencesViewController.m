@@ -23,7 +23,8 @@
         _delegate = [NSApp delegate];
         
         [self addObserver:self forKeyPath:@"useUSKeyboardLayout" options:0 context:nil];
-        [self addObserver:self forKeyPath:@"flagShowNotification" options:0 context:nil];
+        [self addObserver:self forKeyPath:@"showNotificationWhen" options:0 context:nil];
+        [self addObserver:self forKeyPath:@"showNotificationViaNotificationCenter" options:0 context:nil];
     }
     
     return self;
@@ -35,13 +36,14 @@
 
 - (void)reload {
     [self setUseUSKeyboardLayout:_delegate.configController.useUSKeyboardLayout];
-    
-    NSInteger flag = 1;
-    BOOL enableNotifications = _delegate.configController.enableNotifications;
-    BOOL enableBuiltinNotifications = _delegate.configController.enableBuiltinNotifications;
-    if (enableNotifications && enableBuiltinNotifications) flag = 0;
-    if (!enableNotifications && !enableBuiltinNotifications) flag = 2;
-    [self setFlagShowNotification:flag];
+    [self setShowNotificationWhen:_delegate.configController.showNotificationWhen];
+    [self setShowNotificationViaNotificationCenter:_delegate.configController.showNotificationViaNotificationCenter];
+}
+
+#pragma mark - Helper property overrides
+
+- (BOOL)isNotificationCenterNotAvailable {
+    return ![NSUserNotificationCenter class];
 }
 
 #pragma mark - MASPreferencesViewController protocol
@@ -65,8 +67,19 @@
         [[_delegate configController] setUseUSKeyboardLayout:_useUSKeyboardLayout];
         return;
     }
-    if ([keyPath isEqualToString:@"flagShowNotification"]) {
-        [[_delegate configController] setShowNotificationWhen:_flagShowNotification];
+    if ([keyPath isEqualToString:@"showNotificationWhen"]) {
+        [[_delegate configController] setShowNotificationWhen:_showNotificationWhen];
+        if (_showNotificationWhen == 2) {
+            [self setIsNotificationEnabled:NO];
+            [self setShowNotificationViaNotificationCenter:NO];
+        }
+        else {
+            [self setIsNotificationEnabled:YES];
+        }
+        return;
+    }
+    if ([keyPath isEqualToString:@"showNotificationViaNotificationCenter"]) {
+        [[_delegate configController] setShowNotificationViaNotificationCenter:_showNotificationViaNotificationCenter];
         return;
     }
 }
