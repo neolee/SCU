@@ -44,6 +44,8 @@
 
 - (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath error:(RimeConfigError **)error;
 - (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath toDisk:(BOOL)writeToDisk error:(RimeConfigError **)error;
+- (BOOL)patchValue:(id)value forKeyPathArray:(NSArray *)keyPathArray error:(RimeConfigError **)error;
+- (BOOL)patchValue:(id)value forKeyPathArray:(NSArray *)keyPathArray toDisk:(BOOL)writeToDisk error:(RimeConfigError **)error;
 
 + (RimeConfig *)defaultConfig:(RimeConfigError **)error;
 + (RimeConfig *)squirrelConfig:(RimeConfigError **)error;

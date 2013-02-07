@@ -90,6 +90,15 @@
 }
 
 - (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath toDisk:(BOOL)writeToDisk error:(RimeConfigError **)error {
+    NSArray *keyPathArray = [keyPath componentsSeparatedByString:@"."];
+    return [self patchValue:value forKeyPathArray:keyPathArray toDisk:writeToDisk error:error];
+}
+
+- (BOOL)patchValue:(id)value forKeyPathArray:(NSArray *)keyPathArray error:(RimeConfigError **)error {
+    return [self patchValue:value forKeyPathArray:keyPathArray toDisk:YES error:error];
+}
+
+- (BOOL)patchValue:(id)value forKeyPathArray:(NSArray *)keyPathArray toDisk:(BOOL)writeToDisk error:(RimeConfigError **)error {
     // Key assumption about patching value:
     // 1. M-RimeConfig, C-RimeConfigController and V-PreferencesViewController.
     // 2. One RimeConfig object represents a *.custom.yaml file. Any modification on the object should be
@@ -104,23 +113,28 @@
     }
     assert(_customConfig);
     
-    [_customConfig setObject:value forKeyPath:[self patchKeyPath:keyPath]];
+    [_customConfig setObject:value forKeyPathArray:[self patchKeyPathArray:keyPathArray]];
     if (!_customConfigExists) _customConfigExists = YES;
     
     if (writeToDisk) {
-         return [[_customConfig YACYAMLEncodedString] writeToFile:_customConfigPath
-                                                       atomically:NO
-                                                         encoding:NSUTF8StringEncoding
-                                                            error:error];
+        return [[_customConfig YACYAMLEncodedString] writeToFile:_customConfigPath
+                                                      atomically:NO
+                                                        encoding:NSUTF8StringEncoding
+                                                           error:error];
     }
     
     return YES;
+    
 }
 
 #pragma mark - Read model attribute
 
-- (NSString *)patchKeyPath:(NSString *)key {
-    return [@"patch." stringByAppendingString:key];
+- (NSString *)patchKeyPath:(NSString *)keyPath {
+    return [@"patch." stringByAppendingString:keyPath];
+}
+
+- (NSArray *)patchKeyPathArray:(NSArray *)keyPathArray {
+    return [@[@"patch"] arrayByAddingObjectsFromArray:keyPathArray];
 }
 
 - (id)valueForKey:(NSString *)key {
