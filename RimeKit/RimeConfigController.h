@@ -24,6 +24,7 @@
 
 // Category: Style
 @property (nonatomic) BOOL isHorizontal;
+@property (nonatomic) NSInteger lineSpacing;
 @property (nonatomic) NSInteger numberOfCandidates;
 @property (nonatomic) NSString *fontFace;
 @property (nonatomic) NSInteger fontPoint;
@@ -45,6 +46,7 @@
 - (void)setShowNotificationViaNotificationCenter:(BOOL)value;
 
 - (void)setIsHorizontal:(BOOL)value;
+- (void)setLineSpacing:(NSInteger)value;
 - (void)setNumberOfCandidates:(NSInteger)value;
 - (void)setFontFace:(NSString *)value;
 - (void)setFontPoint:(NSInteger)value;

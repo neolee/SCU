@@ -31,6 +31,7 @@
     _showNotificationViaNotificationCenter = [_squirrelConfig boolForKey:@"show_notifications_via_notification_center"];
     
     _isHorizontal = [_squirrelConfig boolForKeyPath:@"style.horizontal"];
+    _lineSpacing = [_squirrelConfig integerForKeyPath:@"style.line_spacing"];
     _numberOfCandidates = [_defaultConfig integerForKeyPath:@"menu.page_size"];
     _fontFace = [_squirrelConfig stringForKeyPath:@"style.font_face"];
     _fontPoint = [_squirrelConfig integerForKeyPath:@"style.font_point"];
@@ -119,6 +120,15 @@
         
         RimeConfigError *error;
         [_squirrelConfig patchValue:[NSNumber numberWithBool:_isHorizontal] forKeyPath:@"style.horizontal" error:&error];
+    }
+}
+
+- (void)setLineSpacing:(NSInteger)value {
+    if (_lineSpacing != value) {
+        _lineSpacing = value;
+        
+        RimeConfigError *error;
+        [_squirrelConfig patchValue:[NSNumber numberWithInteger:_lineSpacing] forKeyPath:@"style.line_spacing" error:&error];
     }
 }
 

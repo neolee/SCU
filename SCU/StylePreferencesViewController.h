@@ -17,6 +17,7 @@
 }
 
 @property NSInteger orientation;
+@property NSInteger lineSpacing;
 @property NSArray *numbersOfCandidates;
 @property NSInteger numberOfCandidates;
 @property NSFont *currentFont;
@@ -28,6 +29,9 @@
 @property float alpha;
 @property NSArray *colorThemes;
 @property NSString *colorTheme;
+
+// Helper properties
+@property (nonatomic) BOOL isOrientationHorizontal;
 
 - (void)reload;
 

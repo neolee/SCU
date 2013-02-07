@@ -47,6 +47,7 @@
         ];
 
         _orientation = 0;
+        _lineSpacing = 1;
         _numberOfCandidates = 5;
         _fontPoint = [NSFont systemFontSize];
         _currentFont = [NSFont systemFontOfSize:_fontPoint];
@@ -58,6 +59,7 @@
         _colorTheme = @"native";
         
         [self addObserver:self forKeyPath:@"orientation" options:0 context:nil];
+        [self addObserver:self forKeyPath:@"lineSpacing" options:0 context:nil];
         [self addObserver:self forKeyPath:@"numberOfCandidates" options:0 context:nil];
         [self addObserver:self forKeyPath:@"fontFace" options:0 context:nil];
         [self addObserver:self forKeyPath:@"fontPoint" options:0 context:nil];
@@ -78,6 +80,7 @@
 - (void)reload {
     BOOL isHorizontal = [[_delegate configController] isHorizontal];
     [self setOrientation:(isHorizontal ? 1 : 0)];
+    [self setLineSpacing:[[_delegate configController] lineSpacing]];
     [self setNumberOfCandidates:[[_delegate configController] numberOfCandidates]];
     [self setFontFace:[[_delegate configController] fontFace]];
     [self setFontPoint:[[_delegate configController] fontPoint]];
@@ -136,6 +139,11 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"orientation"]) {
         [[_delegate configController] setIsHorizontal:(_orientation==1)];
+        [self setIsOrientationHorizontal:(_orientation==1)];
+        return;
+    }
+    if ([keyPath isEqualToString:@"lineSpacing"]) {
+        [[_delegate configController] setLineSpacing:_lineSpacing];
         return;
     }
     if ([keyPath isEqualToString:@"numberOfCandidates"]) {
