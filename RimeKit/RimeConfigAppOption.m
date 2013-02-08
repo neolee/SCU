@@ -12,7 +12,7 @@
 @implementation RimeConfigAppOption
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"RimeConfigAppOption(appId=%@, asciiMode=%@, softCursor=%@, appName=%@)",
+    return [NSString stringWithFormat:@"AppOption(appId=%@, asciiMode=%@, softCursor=%@, appName=%@)",
             _appId, [NSString stringWithBool:_asciiMode], [NSString stringWithBool:_softCursor], _appName];
 }
 

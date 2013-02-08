@@ -17,6 +17,9 @@
 @property(strong) NSString *desc;
 @property(strong) NSArray *dependencies;
 
+@property(strong) NSString *authorsString;
+@property(strong) NSString *dependenciesString;
+
 @property BOOL enabled;
 
 - (RimeConfigSchema *)initWithSchemaId:(NSString *)schemaId;

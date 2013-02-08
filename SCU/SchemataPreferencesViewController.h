@@ -9,10 +9,16 @@
 #import <Cocoa/Cocoa.h>
 #import "MASPreferencesViewController.h"
 #import "AppDelegate.h"
+#import "RimeConfigSchema.h"
 
-@interface SchemataPreferencesViewController : NSViewController<MASPreferencesViewController> {
+@interface SchemataPreferencesViewController : NSViewController<MASPreferencesViewController, NSTableViewDelegate, NSTableViewDataSource> {
     AppDelegate *_delegate;
+    
+    NSMutableArray *_schemata;
 }
+
+@property (strong) RimeConfigSchema *currentSchema;
+@property (weak) IBOutlet NSTableView *schemataTableView;
 
 - (void)reload;
 @end

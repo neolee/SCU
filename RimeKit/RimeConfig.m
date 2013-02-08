@@ -252,8 +252,8 @@
 }
 
 - (NSString *)description {
-    NSString *format = @"RimeConfig[%@]:\n%@\nRimeConfig[%@]:\n%@";
-    NSString *desc = [NSString stringWithFormat:format, _configPath, _config, _customConfigPath, _customConfig];
+    NSString *desc = [NSString stringWithFormat:@"RimeConfig[%@]:\n%@\nRimeConfig[%@]:\n%@",
+                      _configPath, _config, _customConfigPath, _customConfig];
     
     return desc;
 }

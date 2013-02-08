@@ -622,7 +622,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SCU/SCU-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -646,7 +646,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "SCU/SCU-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",

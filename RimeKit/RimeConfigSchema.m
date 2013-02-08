@@ -26,6 +26,9 @@
     _desc = [schemaConfig stringForKeyPath:@"schema.description"];
     _dependencies = [schemaConfig arrayForKeyPath:@"schema.dependencies"];
     
+    _authorsString = [_authors componentsJoinedByString:@", "];
+    _dependenciesString = [_dependencies componentsJoinedByString:@", "];
+    
     _enabled = NO;
     
     return self;
@@ -36,7 +39,9 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"RimeConfigSchema(schemaId=%@, name=%@, version=%@, author=%@, desc=%@, dependencies=%@, enabled=%@)", _schemaId, _name, _version, _authors, _desc, _dependencies, [NSString stringWithBool:_enabled]];
+    return [NSString stringWithFormat:
+            @"Schema(schemaId=%@, name=%@, version=%@, author=%@, desc=%@, dependencies=%@, enabled=%@)",
+            _schemaId, _name, _version, _authors, _desc, _dependencies, [NSString stringWithBool:_enabled]];
 }
 
 @end
