@@ -9,6 +9,7 @@
 #import "RimeConfigController.h"
 #import "RimeConstants.h"
 #import "RimeConfigAppOption.h"
+#import "RimeConfigSchema.h"
 
 @implementation RimeConfigController
 
@@ -21,7 +22,11 @@
     _squirrelConfig = [RimeConfig squirrelConfig:error];
     if (!_squirrelConfig) return nil;
     
+//    NSLog(@"defaultConfig:\n%@", _defaultConfig);
 //    NSLog(@"squirrelConfig:\n%@", _squirrelConfig);
+    
+    // Init all available schemata IDs
+    [self loadSchemata];
     
     // Load properties from configurations
     _useUSKeyboardLayout = [_squirrelConfig boolForKey:@"us_keyboard_layout"];
@@ -49,6 +54,58 @@
     if (_alpha == 0.0) _alpha = 1.0;
 
     return self;
+}
+
+- (void)loadSchemata {
+    // All schema IDs
+    _schemaIds = @[
+                   RIME_SCHEMA_BOPOMOFO,
+                   RIME_SCHEMA_CANJIE5,
+                   RIME_SCHEMA_DOUBLE_PINYIN,
+                   RIME_SCHEMA_DOUBLE_PINYIN_ABC,
+                   RIME_SCHEMA_DOUBLE_PINYIN_FLYPY,
+                   RIME_SCHEMA_DOUBLE_PINYIN_MSPY,
+                   RIME_SCHEMA_EMOJI,
+                   RIME_SCHEMA_JYUTPING,
+                   RIME_SCHEMA_LUNA_PINYIN,
+                   RIME_SCHEMA_LUNA_PINYIN_FLUENCY,
+                   RIME_SCHEMA_LUNA_PINYIN_SIMP,
+                   RIME_SCHEMA_LUNA_PINYIN_TW,
+                   RIME_SCHEMA_PINYIN_SIMP,
+                   RIME_SCHEMA_QUICK5,
+                   RIME_SCHEMA_SOUTZOE,
+                   RIME_SCHEMA_STROKE_SIMP,
+                   RIME_SCHEMA_TERRA_PINYIN,
+                   RIME_SCHEMA_TRIUNGKOX3P,
+                   RIME_SCHEMA_WUBI86,
+                   RIME_SCHEMA_WUBI_PINYIN,
+                   RIME_SCHEMA_WUGNIU,
+                   RIME_SCHEMA_WUGNIU_LOPHA,
+                   RIME_SCHEMA_ZYENPHENG
+                   ];
+    
+    // Enabled schema IDs
+    if (!_enabledSchemaIds) {
+        _enabledSchemaIds = [[NSMutableSet alloc] init];
+    }
+    NSArray *enabledSchemata = [_defaultConfig valueForKeyPath:@"schema_list"];
+    for (NSDictionary *schema in enabledSchemata) {
+        [_enabledSchemaIds addObject:[schema objectForKey:@"schema"]];
+    }
+    
+    // All schemata with ID, name and enabled flag
+    if (!_schemata) {
+        _schemata = [[NSMutableArray alloc] init];
+    }
+    for (NSString *schemaId in _schemaIds) {
+        RimeConfigSchema *schema = [RimeConfigSchema schemaWithSchemaId:schemaId];
+        
+        
+        
+        [schema setEnabled:[_enabledSchemaIds containsObject:schemaId]];
+        
+        [_schemata addObject:schema];
+    }
 }
 
 - (void)loadColorThemes {

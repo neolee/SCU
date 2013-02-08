@@ -46,6 +46,7 @@
 		B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */; };
 		B5E30059168C49170068BBE7 /* StylePreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */; };
 		B5E3005A168C49170068BBE7 /* StylePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */; };
+		B5EA2B1316C4D4DC00E434AF /* RimeConfigSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA2B1216C4D4DC00E434AF /* RimeConfigSchema.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,8 @@
 		B5E30056168C49170068BBE7 /* StylePreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StylePreferencesViewController.h; sourceTree = "<group>"; };
 		B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StylePreferencesViewController.m; sourceTree = "<group>"; };
 		B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StylePreferencesViewController.xib; sourceTree = "<group>"; };
+		B5EA2B1116C4D4DC00E434AF /* RimeConfigSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfigSchema.h; path = RimeKit/RimeConfigSchema.h; sourceTree = "<group>"; };
+		B5EA2B1216C4D4DC00E434AF /* RimeConfigSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfigSchema.m; path = RimeKit/RimeConfigSchema.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +333,8 @@
 				B58FA81C169136A500E75314 /* RimeConfigError.m */,
 				B553060016BBB17500D850F1 /* RimeConfigAppOption.h */,
 				B553060116BBB17500D850F1 /* RimeConfigAppOption.m */,
+				B5EA2B1116C4D4DC00E434AF /* RimeConfigSchema.h */,
+				B5EA2B1216C4D4DC00E434AF /* RimeConfigSchema.m */,
 			);
 			name = RimeKit;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 				B529416B1694660600543EEC /* NSString+SHExtensions.m in Sources */,
 				B529416D1694660600543EEC /* SHFoundation.m in Sources */,
 				B553060216BBB17500D850F1 /* RimeConfigAppOption.m in Sources */,
+				B5EA2B1316C4D4DC00E434AF /* RimeConfigSchema.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

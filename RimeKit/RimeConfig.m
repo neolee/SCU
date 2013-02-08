@@ -17,16 +17,23 @@
 
 @implementation RimeConfig
 
+- (RimeConfig *)initWithBundledSchemaName:(NSString *)name error:(RimeConfigError **)error {
+    _fromBundle = YES;
+    return [self initWithConfigName:[name stringByAppendingString:RIME_SCHEMA_EXT] root:[RimeConfig sharedSupportFolder] error:error];
+}
+
 - (RimeConfig *)initWithSchemaName:(NSString *)name error:(RimeConfigError **)error {
     return [self initWithConfigName:[name stringByAppendingString:RIME_SCHEMA_EXT] error:error];
 }
 
-// initWithConfigName return nil when Rime configuration folder not exists OR
+- (RimeConfig *)initWithConfigName:(NSString *)name error:(RimeConfigError **)error {
+    return [self initWithConfigName:name root:[RimeConfig rimeFolder] error:error];
+}
+
+// initWithConfigName return nil when root configuration folder not exists OR
 // requested config file not exists. Caller should prompt user to run Deploy
 // command from Squirrel IME menu before any customization.
-- (RimeConfig *)initWithConfigName:(NSString *)name error:(RimeConfigError **)error {
-    NSString *folder = [RimeConfig rimeFolder];
-    
+- (RimeConfig *)initWithConfigName:(NSString *)name root:(NSString *)folder error:(RimeConfigError **)error {
     if (![[NSFileManager defaultManager] fileExistsAtPath:folder]) {
         if (error) {
             *error = [[RimeConfigError alloc] init];
@@ -71,6 +78,8 @@
         return NO;
     }
     _config = [[NSString stringWithContentsOfFile:_configPath encoding:NSUTF8StringEncoding error:nil] YACYAMLDecode];
+    
+    if (_fromBundle) return YES;
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:_customConfigPath]) {
         NSLog(@"INFO: Custom config file does not exist: %@. Will create new one while patching values.", _customConfigPath);
@@ -130,11 +139,11 @@
 #pragma mark - Read model attribute
 
 - (NSString *)patchKeyPath:(NSString *)keyPath {
-    return [@"patch." stringByAppendingString:keyPath];
+    return [[RIME_CUSTOM_ROOT_KEY stringByAppendingString:@"."] stringByAppendingString:keyPath];
 }
 
 - (NSArray *)patchKeyPathArray:(NSArray *)keyPathArray {
-    return [@[@"patch"] arrayByAddingObjectsFromArray:keyPathArray];
+    return [@[RIME_CUSTOM_ROOT_KEY] arrayByAddingObjectsFromArray:keyPathArray];
 }
 
 - (id)valueForKey:(NSString *)key {
@@ -212,8 +221,18 @@
 }
 
 + (BOOL)checkRimeFolder {
-    NSString *folder = [RimeConfig rimeFolder];
-    
+    return [RimeConfig checkFolder:[RimeConfig rimeFolder]];
+}
+
++ (NSString *)sharedSupportFolder {
+    return [RIME_SHARED_SUPPORT_FOLDER stringByExpandingTildeInPath];
+}
+
++ (BOOL)checkSharedSupportFolder {
+    return [RimeConfig checkFolder:[RimeConfig sharedSupportFolder]];
+}
+
++ (BOOL)checkFolder:(NSString *)folder {
     if (![[NSFileManager defaultManager] fileExistsAtPath:folder]) {
         NSLog(@"WARNING: Rime config folder does not exist: %@", folder);
         return NO;

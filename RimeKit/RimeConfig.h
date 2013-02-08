@@ -15,6 +15,9 @@
     NSString *_customConfigName;
     NSString *_customConfigPath;
     
+    // If in bundle the config is loaded from Squirrel IME bundle and the _customConfig==nil
+    BOOL _fromBundle;
+    
     BOOL _customConfigExists;
     
     // _config contains all key-value pairs from the config file
@@ -26,6 +29,7 @@
 - (BOOL)reload:(RimeConfigError **)error;
 - (RimeConfig *)initWithConfigName:(NSString *)name error:(RimeConfigError **)error;
 - (RimeConfig *)initWithSchemaName:(NSString *)name error:(RimeConfigError **)error;
+- (RimeConfig *)initWithBundledSchemaName:(NSString *)name error:(RimeConfigError **)error;
 
 - (id)valueForKey:(NSString *)key;
 - (id)valueForKeyPath:(NSString *)keyPath;
@@ -52,6 +56,8 @@
 
 + (NSString *)rimeFolder;
 + (BOOL)checkRimeFolder;
++ (NSString *)sharedSupportFolder;
++ (BOOL)checkSharedSupportFolder;
 
 - (NSString *)description;
 @end

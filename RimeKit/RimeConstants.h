@@ -11,6 +11,7 @@
 
 // Constants for Rime configuration
 
+#define RIME_SHARED_SUPPORT_FOLDER          @"/Library/Input Methods/Squirrel.app/Contents/SharedSupport"
 #define RIME_CONFIG_FOLDER                  @"~/Library/Rime"
 
 #define RIME_SCHEMA_EXT                     @".schema"

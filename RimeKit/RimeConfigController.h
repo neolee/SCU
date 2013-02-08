@@ -12,10 +12,12 @@
 @interface RimeConfigController : NSObject {
     RimeConfig *_defaultConfig;
     RimeConfig *_squirrelConfig;
-    RimeConfig *_lunaPinyinConfig;
-    RimeConfig *_lunaPinyinFluencyConfig;
-    RimeConfig *_wubi86Config;
+
+    NSArray *_schemaIds;
+    NSMutableSet *_enabledSchemaIds;
 }
+
+@property NSMutableArray *schemata;
 
 // Category: General
 @property (nonatomic) BOOL useUSKeyboardLayout;
