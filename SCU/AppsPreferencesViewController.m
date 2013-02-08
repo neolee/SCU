@@ -92,11 +92,11 @@
     }
     else if ([columnIdentifer isEqualToString:@"ascii"]) {
         [option setAsciiMode:object];
-        [[_delegate configController] setAppOptionFor:[option appId] asciiMode:[option asciiMode]];
+        [[_delegate configController] setOptionASCIIMode:[option asciiMode] forApp:[option appId]];
     }
     else if ([columnIdentifer isEqualToString:@"cursor"]) {
         [option setSoftCursor:object];
-        [[_delegate configController] setAppOptionFor:[option appId] softCursor:[option softCursor]];
+        [[_delegate configController] setOptionSoftCursor:[option softCursor] forApp:[option appId]];
     }
 }
 

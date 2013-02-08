@@ -261,16 +261,33 @@
     }
 }
 
-- (void)setAppOptionFor:(NSString *)appId asciiMode:(BOOL)ascii {
+- (void)setOptionASCIIMode:(BOOL)ascii forApp:(NSString *)appId {
     RimeConfigError *error;
     [_squirrelConfig patchValue:[NSNumber numberWithBool:ascii]
                 forKeyPathArray:@[@"app_options", appId, @"ascii_mode"] error:&error];
 }
 
-- (void)setAppOptionFor:(NSString *)appId softCursor:(BOOL)cursor {
+- (void)setOptionSoftCursor:(BOOL)cursor forApp:(NSString *)appId {
     RimeConfigError *error;
     [_squirrelConfig patchValue:[NSNumber numberWithBool:cursor]
                 forKeyPathArray:@[@"app_options", appId, @"soft_cursor"] error:&error];
+}
+
+- (void)setEnabled:(BOOL)enabled forSchema:(NSString *)schemaId {
+    if (enabled) {
+        [_enabledSchemaIds addObject:schemaId];
+    }
+    else {
+        [_enabledSchemaIds removeObject:schemaId];
+    }
+    
+    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:[_enabledSchemaIds count]];
+    for (NSString *s in _enabledSchemaIds) {
+        [array addObject:@{@"schema" : s}];
+    }
+    
+    RimeConfigError *error;
+    [_defaultConfig patchValue:array forKeyPath:@"schema_list" error:&error];
 }
 
 #pragma mark - Class helpers

@@ -58,8 +58,10 @@
 - (void)setAlpha:(float)value;
 - (void)setColorTheme:(NSString *)value;
 
-- (void)setAppOptionFor:(NSString *)appId asciiMode:(BOOL)ascii;
-- (void)setAppOptionFor:(NSString *)appId softCursor:(BOOL)cursor;
+- (void)setOptionASCIIMode:(BOOL)ascii forApp:(NSString *)appId;
+- (void)setOptionSoftCursor:(BOOL)cursor forApp:(NSString *)appId;
+
+- (void)setEnabled:(BOOL)enabled forSchema:(NSString *)schemaId;
 
 // Class helpers
 + (NSString *)rimeFolder;

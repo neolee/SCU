@@ -73,7 +73,7 @@
     
     if ([columnIdentifer isEqualToString:@"enabled"]) {
         [schema setEnabled:object];
-        // TODO: Call config controller
+        [[_delegate configController] setEnabled:[schema enabled] forSchema:[schema schemaId]];
     }
     else if ([columnIdentifer isEqualToString:@"name"]) {
         // Not editable
