@@ -35,6 +35,9 @@
 
     _showNotificationViaNotificationCenter = [_squirrelConfig boolForKey:@"show_notifications_via_notification_center"];
     
+    _switcherCaption = [_defaultConfig stringForKeyPath:@"switcher.caption"];
+    _switcherHotkeys = [_defaultConfig arrayForKeyPath:@"switcher.hotkeys"];
+    
     _isHorizontal = [_squirrelConfig boolForKeyPath:@"style.horizontal"];
     _lineSpacing = [_squirrelConfig integerForKeyPath:@"style.line_spacing"];
     _numberOfCandidates = [_defaultConfig integerForKeyPath:@"menu.page_size"];
@@ -48,7 +51,7 @@
     
     [self loadColorThemes];
     [self loadAppOptions];
-
+    
     // Fix default value if needed
     if (_fontPoint == 0) _fontPoint = 13;
     if (_alpha == 0.0) _alpha = 1.0;
@@ -171,6 +174,22 @@
     }
 }
 
+- (void)setSwitcherCaption:(NSString *)value {
+    if (![_switcherCaption isEqualToString:value]) {
+        _switcherCaption = value;
+        
+        RimeConfigError *error;
+        [_defaultConfig patchValue:_switcherCaption forKeyPath:@"switcher.caption" error:&error];
+    }
+}
+
+- (void)setSwitcherHotkeys:(NSArray *)value {
+    _switcherHotkeys = value;
+    
+    RimeConfigError *error;
+    [_defaultConfig patchValue:_switcherHotkeys forKeyPath:@"switcher.hotkeys" error:&error];
+}
+
 - (void)setIsHorizontal:(BOOL)value {
     if (_isHorizontal != value) {
         _isHorizontal = value;
@@ -253,7 +272,7 @@
 }
 
 - (void)setColorTheme:(NSString *)value {
-    if (_colorTheme != value) {
+    if (![_colorTheme isEqualToString:value]) {
         _colorTheme = value;
         
         RimeConfigError *error;

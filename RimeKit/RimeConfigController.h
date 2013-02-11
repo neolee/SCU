@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "RimeConfig.h"
 
+// We ONLY handle 3 hotkeys for switcher (default.yaml: switcher.hotkeys)
+#define SWITCHER_HOTKEY_COUNT 3
+
 @interface RimeConfigController : NSObject {
     RimeConfig *_defaultConfig;
     RimeConfig *_squirrelConfig;
@@ -23,6 +26,8 @@
 @property (nonatomic) BOOL useUSKeyboardLayout;
 @property (nonatomic) NSUInteger showNotificationWhen;
 @property (nonatomic) BOOL showNotificationViaNotificationCenter;
+@property (nonatomic) NSString *switcherCaption;
+@property (nonatomic) NSArray *switcherHotkeys;
 
 // Category: Style
 @property (nonatomic) BOOL isHorizontal;
@@ -46,6 +51,8 @@
 - (void)setUseUSKeyboardLayout:(BOOL)value;
 - (void)setShowNotificationWhen:(NSUInteger)value;
 - (void)setShowNotificationViaNotificationCenter:(BOOL)value;
+- (void)setSwitcherCaption:(NSString *)value;
+- (void)setSwitcherHotkeys:(NSArray *)value;
 
 - (void)setIsHorizontal:(BOOL)value;
 - (void)setLineSpacing:(NSInteger)value;
