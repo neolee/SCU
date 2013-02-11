@@ -7,3 +7,6 @@
 [submodule "YAML"]
 	path = YAML
 	url = git@github.com:neolee/YACYAML.git
+[submodule "ShortcutRecorder"]
+	path = ShortcutRecorder
+	url = git://github.com/Kentzo/ShortcutRecorder.git

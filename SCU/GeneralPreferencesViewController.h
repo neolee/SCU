@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "MASPreferencesViewController.h"
 #import "AppDelegate.h"
+#import "SRRecorderControl.h"
 
 @interface GeneralPreferencesViewController : NSViewController<MASPreferencesViewController> {
     AppDelegate *_delegate;
