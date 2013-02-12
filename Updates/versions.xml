@@ -6,7 +6,16 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         <item>
-            <title>Version 0.2 (1 bugs fixed; 1 new features)</title>
+            <title>Version 0.3</title>
+            <sparkle:releaseNotesLink>
+                http://update.soulhacker.me/scu/0.3.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Thu, 14 Feb 2013 19:00:00 +0800</pubDate>
+            <enclosure url="http://update.soulhacker.me/scu/SCU-0.3.zip" sparkle:version="378" sparkle:shortVersionString="0.3" sparkle:dsaSignature="MC0CFQCaekGl5j38jmD7ILBNasgfffyWBAIUDO67h68r2YmduiqSrORY7wijJK8=" length="1296662" type="application/octet-stream" />
+        </item>
+
+        <item>
+            <title>Version 0.2</title>
             <sparkle:releaseNotesLink>
                 http://update.soulhacker.me/scu/0.2.html
             </sparkle:releaseNotesLink>
@@ -14,9 +23,8 @@
             <enclosure url="http://update.soulhacker.me/scu/SCU-0.2.zip" sparkle:version="107" sparkle:shortVersionString="0.2" sparkle:dsaSignature="MC0CFDV7c7njM8yLOynqGEzFt0WX0IrvAhUAi5qkrkE01XViwAAjF+deHcMBFoY=" length="1111272" type="application/octet-stream" />
         </item>
 
-        <!-- Now here's an example of a version with a weird internal version number (like an SVN revision) but a human-readable external one. -->
         <item>
-            <title>Version 0.1 (Let's begin!)</title>
+            <title>Version 0.1</title>
             <sparkle:releaseNotesLink>
                 http://update.soulhacker.me/scu/0.1.html
             </sparkle:releaseNotesLink>
