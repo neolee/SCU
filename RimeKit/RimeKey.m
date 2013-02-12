@@ -20,8 +20,7 @@
     
     // Rime key code and name
     RimeKeyCodeTransformer *kcTransformer = [RimeKeyCodeTransformer sharedTransformer];
-    _rimeKeyCode = [[kcTransformer reverseTransformedValue:@(_keyCode)
-                                                 character:_character] intValue];
+    _rimeKeyCode = [[kcTransformer reverseTransformedValue:@(_keyCode)] intValue];
     _rimeKeyName = [kcTransformer keyCodeToName:_rimeKeyCode];
     if (!_rimeKeyName) {
         _rimeKeyName = [NSString stringWithFormat:@"%c", _character];

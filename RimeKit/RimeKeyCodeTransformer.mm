@@ -16,6 +16,7 @@
     static NSDictionary *mapping = nil;
     dispatch_once(&onceToken, ^{
         mapping = @{
+                    // Special keys
                     @(XK_Alt_L): @(OSX_VK_Option),
                     @(XK_BackSpace): @(OSX_VK_Delete),
                     @(XK_Control_L): @(OSX_VK_Control),
@@ -46,7 +47,56 @@
                     @(XK_F9): @(OSX_VK_F9),
                     @(XK_F10): @(OSX_VK_F10),
                     @(XK_F11): @(OSX_VK_F11),
-                    @(XK_F12): @(OSX_VK_F12)
+                    @(XK_F12): @(OSX_VK_F12),
+                    // Others
+                    @('a'): @(0),
+                    @('s'): @(1),
+                    @('d'): @(2),
+                    @('f'): @(3),
+                    @('h'): @(4),
+                    @('g'): @(5),
+                    @('z'): @(6),
+                    @('x'): @(7),
+                    @('c'): @(8),
+                    @('v'): @(9),
+                    // What is 10?
+                    @('b'): @(11),
+                    @('q'): @(12),
+                    @('w'): @(13),
+                    @('e'): @(14),
+                    @('r'): @(15),
+                    @('y'): @(16),
+                    @('t'): @(17),
+                    @('1'): @(18),
+                    @('2'): @(19),
+                    @('3'): @(20),
+                    @('4'): @(21),
+                    @('6'): @(22),
+                    @('5'): @(23),
+                    @('='): @(24),
+                    @('9'): @(25),
+                    @('7'): @(26),
+                    @('-'): @(27),
+                    @('8'): @(28),
+                    @('0'): @(29),
+                    @(']'): @(30),
+                    @('o'): @(31),
+                    @('u'): @(32),
+                    @('['): @(33),
+                    @('i'): @(34),
+                    @('p'): @(35),
+                    @('l'): @(37),
+                    @('j'): @(38),
+                    @('\''): @(39),
+                    @('k'): @(40),
+                    @(';'): @(41),
+                    @('\\'): @(42),
+                    @(','): @(43),
+                    @('/'): @(44),
+                    @('n'): @(45),
+                    @('m'): @(46),
+                    @('.'): @(47),
+                    @('`'): @(50)                    
                     };
     });
     
@@ -73,86 +123,17 @@
     return [NSNumber class];
 }
 
-// Transform a Rime key code to Mac OS X key code
-- (int)characterToKeyCode:(unichar)character {
-    switch (character) {
-        case 'a': return 0;
-        case 's': return 1;
-        case 'd': return 2;
-        case 'f': return 3;
-        case 'h': return 4;
-        case 'g': return 5;
-        case 'z': return 6;
-        case 'x': return 7;
-        case 'c': return 8;
-        case 'v': return 9;
-        // What is 10?
-        case 'b': return 11;
-        case 'q': return 12;
-        case 'w': return 13;
-        case 'e': return 14;
-        case 'r': return 15;
-        case 'y': return 16;
-        case 't': return 17;
-        case '1': return 18;
-        case '2': return 19;
-        case '3': return 20;
-        case '4': return 21;
-        case '6': return 22;
-        case '5': return 23;
-        case '=': return 24;
-        case '9': return 25;
-        case '7': return 26;
-        case '-': return 27;
-        case '8': return 28;
-        case '0': return 29;
-        case ']': return 30;
-        case 'o': return 31;
-        case 'u': return 32;
-        case '[': return 33;
-        case 'i': return 34;
-        case 'p': return 35;
-        case 'l': return 37;
-        case 'j': return 38;
-        case '\'': return 39;
-        case 'k': return 40;
-        case ';': return 41;
-        case '\\': return 42;
-        case ',': return 43;
-        case '/': return 44;
-        case 'n': return 45;
-        case 'm': return 46;
-        case '.': return 47;
-        case '`': return 50;
-        default: return 0;
-    }
-}
-
 - (NSNumber *)transformedValue:(NSNumber *)value {
-    NSNumber *output;
-    
-    output = [[RimeKeyCodeTransformer keyMapping] objectForKey:value];
-    if (!output) {
-        // Not in the special key code mapping, and Rime key code is the ASCII char when between 0x20-0x7e
-        // Sorry but this is completely different story and we have to use hard-coded characterToKeyCode
-        unichar character = [value charValue];
-        if (character >= 0x20 && character <= 0x7e) {
-            output = @([self characterToKeyCode:character]);
-        }
-    }
+    NSNumber *output = [[RimeKeyCodeTransformer keyMapping] objectForKey:value];
+    if (!output) output = @(0);
     
     return output;
 }
 
 // Transform a Mac OS X key code to Rime key code
-- (NSNumber *)reverseTransformedValue:(NSNumber *)value character:(unichar)keyChar {
-    NSNumber *output;
-    
-    output = [[RimeKeyCodeTransformer reverseKeyMapping] objectForKey:value];
-    if (!output) {
-        // Not in the special key code mapping
-        output = [NSNumber numberWithInt:((keyChar >= 0x20 && keyChar <= 0x7e) ? keyChar : 0)];
-    }
+- (NSNumber *)reverseTransformedValue:(NSNumber *)value {
+    NSNumber *output = [[RimeKeyCodeTransformer reverseKeyMapping] objectForKey:value];
+    if (!output) output = @(0);
     
     return output;
 }

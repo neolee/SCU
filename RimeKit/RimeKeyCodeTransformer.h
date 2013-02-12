@@ -16,8 +16,6 @@
 + (NSDictionary *)keyMapping;
 + (NSDictionary *)reverseKeyMapping;
 
-- (NSNumber *)reverseTransformedValue:(NSNumber *)value character:(unichar)keyChar;
-
 - (NSString *)keyCodeToName:(int)keyCode;
 - (int)keyNameToCode:(NSString *)keyName;
 @end
