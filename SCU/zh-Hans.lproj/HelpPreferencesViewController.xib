@@ -38,24 +38,26 @@
 				<string key="NSClassName">NSApplication</string>
 			</object>
 			<object class="NSCustomView" id="1005">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSTextField" id="395406369">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 477}, {506, 17}}</string>
+						<string key="NSFrame">{{17, 428}, {566, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="955025872"/>
 						<string key="NSReuseIdentifierKey">_NS:1535</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="622902469">
 							<int key="NSCellFlags">68157504</int>
 							<int key="NSCellFlags2">272630784</int>
-							<string key="NSContents">Note that this reloading process need some time to complete so don't spam it.</string>
-							<object class="NSFont" key="NSSupport" id="408641495">
-								<string key="NSName">LucidaGrande</string>
+							<string key="NSContents">注意重新部署需要时间，不要频繁执行这个命令。</string>
+							<object class="NSFont" key="NSSupport" id="311883664">
+								<string key="NSName">STHeitiSC-Light</string>
 								<double key="NSSize">13</double>
-								<int key="NSfFlags">1044</int>
+								<int key="NSfFlags">16</int>
 							</object>
 							<string key="NSCellIdentifier">_NS:1535</string>
 							<reference key="NSControlView" ref="395406369"/>
@@ -83,15 +85,17 @@
 					<object class="NSButton" id="858003733">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{14, 495}, {181, 32}}</string>
+						<string key="NSFrame">{{14, 446}, {157, 32}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="395406369"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="993061460">
 							<int key="NSCellFlags">67108864</int>
 							<int key="NSCellFlags2">134217728</int>
-							<string key="NSContents">Ask Squirrel to Deploy</string>
-							<reference key="NSSupport" ref="408641495"/>
+							<string key="NSContents">请求鼠鬚管重新部署</string>
+							<reference key="NSSupport" ref="311883664"/>
 							<string key="NSCellIdentifier">_NS:9</string>
 							<reference key="NSControlView" ref="858003733"/>
 							<int key="NSButtonFlags">-2038284288</int>
@@ -106,8 +110,9 @@
 					<object class="NSTextField" id="955025872">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 375}, {506, 68}}</string>
+						<string key="NSFrame">{{17, 375}, {566, 34}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="175733595"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="NSAntiCompressionPriority">{250, 750}</string>
@@ -115,12 +120,8 @@
 						<object class="NSTextFieldCell" key="NSCell" id="861098901">
 							<int key="NSCellFlags">67108864</int>
 							<int key="NSCellFlags2">272629760</int>
-							<string key="NSContents">It it doesn't work you should use Squirrel's own Deploy menu command. To do that you should make sure that Squirrel IME is activated, then click on the input source icon in the right side of the system menu bar then choose the Deploy command under Squirrel section.</string>
-							<object class="NSFont" key="NSSupport" id="711655948">
-								<string key="NSName">LucidaGrande</string>
-								<double key="NSSize">13</double>
-								<int key="NSfFlags">16</int>
-							</object>
+							<string key="NSContents">如果上述方法无效，您可以使用鼠鬚管输入法菜单中的「重新部署」命令。请确认您目前激活了鼠鬚管输入法，点击桌面右上角的输入法图标，从下拉菜单中选择「重新部署」。</string>
+							<reference key="NSSupport" ref="311883664"/>
 							<string key="NSCellIdentifier">_NS:9</string>
 							<reference key="NSControlView" ref="955025872"/>
 							<reference key="NSBackgroundColor" ref="988563465"/>
@@ -139,8 +140,9 @@
 							<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
 							<string>NeXT TIFF v4.0 pasteboard type</string>
 						</set>
-						<string key="NSFrame">{{82, 17}, {377, 353}}</string>
+						<string key="NSFrame">{{112, 17}, {377, 353}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSImageCell" key="NSCell" id="521883081">
@@ -162,25 +164,22 @@
 					<object class="NSTextField" id="423387399">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 531}, {506, 104}}</string>
+						<string key="NSFrame">{{17, 482}, {566, 102}}</string>
 						<reference key="NSSuperview" ref="1005"/>
-						<reference key="NSNextKeyView" ref="955025872"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="858003733"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="NSAntiCompressionPriority">{250, 750}</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="392364017">
 							<int key="NSCellFlags">67108864</int>
 							<int key="NSCellFlags2">272629760</int>
-							<object class="NSMutableString" key="NSContents">
-								<bytes key="NS.bytes">U0NVIChTcXVpcnJlbCBDb25maWd1cmF0aW9uIFV0aWxpdHkpIGlzIGEgM3JkLXBhcnR5IGZyb250LWVu
-ZCBmb3IgdGhlIGNvbmZpZ3VyYXRpb24gc3lzdGVtIG9mIFNxdWlycmVsLCBhbiBleGNlbGxlbnQgQ2hp
-bmVzZSBpbnB1dCBtZXRob2QgZW5naW5lLiBZb3UgY2FuIHVzZSBTQ1UgaW5zdGVhZCBvZiBlZGl0aW5n
-IGl0cyBZQU1MIGNvbmZpZ3VyYXRpb24gZmlsZXMuIEFmdGVyIHlvdSBjaGFuZ2Ugc29tZXRoaW5nIHlv
-dSBzaG91bGQgYXNrIFNxdWlycmVsIHRvIHJlbG9hZCBzZXR0aW5ncyBhbmQgbWFrZSBjaGFuZ2VzIGNv
-bWUgaW50byBlZmZlY3QuIFlvdSBjYW4gdXNlIHRoZSBidXR0b24gYmVsb3cgdG8gZG8gdGhhdCAoeW91
-IGNhbiBhbHNvIHJ1biBpdCBmcm9tIEZpbGUgbWVudSBvciBzaW1wbHkgcHJlc3Mg4oyYRCkuA</bytes>
+							<string key="NSContents">SCU（鼠鬚管输入法配置工具）是中文输入法引擎「鼠鬚管」的一个第三方图形化配置工具。使用 SCU 可以（部分）替代手工编辑鼠鬚管众多的 YAML 格式配置文件，在使用前请备份好您的输入法配置目录 ~/Library/Rime（如果不知道在哪里，可以从鼠鬚管输入法菜单里选择「用户设定」，然后备份打开窗口里所有文件），在使用 SCU 修改输入法设置后需要使用鼠鬚管输入法菜单中的「重新部署」命令来使修改生效。您可以使用下面的按钮，或者从主菜单「文件」下运行，或者使用快捷键 ⌘D）。</string>
+							<object class="NSFont" key="NSSupport">
+								<string key="NSName">LucidaGrande</string>
+								<double key="NSSize">13</double>
+								<int key="NSfFlags">16</int>
 							</object>
-							<reference key="NSSupport" ref="711655948"/>
 							<string key="NSCellIdentifier">_NS:9</string>
 							<reference key="NSControlView" ref="423387399"/>
 							<reference key="NSBackgroundColor" ref="988563465"/>
@@ -191,19 +190,20 @@ IGNhbiBhbHNvIHJ1biBpdCBmcm9tIEZpbGUgbWVudSBvciBzaW1wbHkgcHJlc3Mg4oyYRCkuA</bytes
 					<object class="NSTextField" id="559934383">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 643}, {439, 17}}</string>
+						<string key="NSFrame">{{17, 592}, {439, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="423387399"/>
 						<string key="NSReuseIdentifierKey">_NS:1535</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="849098499">
 							<int key="NSCellFlags">68157504</int>
 							<int key="NSCellFlags2">272630784</int>
-							<string key="NSContents">IMPORTANT NOTICE</string>
+							<string key="NSContents">重要提示</string>
 							<object class="NSFont" key="NSSupport">
-								<string key="NSName">LucidaGrande-Bold</string>
+								<string key="NSName">STHeitiSC-Medium</string>
 								<double key="NSSize">13</double>
-								<int key="NSfFlags">2072</int>
+								<int key="NSfFlags">16</int>
 							</object>
 							<string key="NSCellIdentifier">_NS:1535</string>
 							<reference key="NSControlView" ref="559934383"/>
@@ -213,7 +213,9 @@ IGNhbiBhbHNvIHJ1biBpdCBmcm9tIEZpbGUgbWVudSBvciBzaW1wbHkgcHJlc3Mg4oyYRCkuA</bytes
 						<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 					</object>
 				</array>
-				<string key="NSFrameSize">{540, 680}</string>
+				<string key="NSFrameSize">{600, 629}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="559934383"/>
 				<string key="NSClassName">NSView</string>
 			</object>
@@ -270,9 +272,9 @@ IGNhbiBhbHNvIHJ1biBpdCBmcm9tIEZpbGUgbWVudSBvciBzaW1wbHkgcHJlc3Mg4oyYRCkuA</bytes
 							<reference ref="559934383"/>
 							<reference ref="423387399"/>
 							<reference ref="858003733"/>
+							<reference ref="395406369"/>
 							<reference ref="955025872"/>
 							<reference ref="175733595"/>
-							<reference ref="395406369"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

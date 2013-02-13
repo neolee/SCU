@@ -41,20 +41,22 @@
 				<string key="NSClassName">NSApplication</string>
 			</object>
 			<object class="NSCustomView" id="1005">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSTextField" id="129856014">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 354}, {424, 17}}</string>
+						<string key="NSFrame">{{17, 354}, {446, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="500369005"/>
 						<string key="NSReuseIdentifierKey">_NS:1535</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="11055941">
 							<int key="NSCellFlags">68157504</int>
 							<int key="NSCellFlags2">272630784</int>
-							<string key="NSContents">Force ASCII input mode and/or soft cursor in specific applications:</string>
+							<string key="NSContents">强制在特定应用程序中使用 ASCII 字符输入模式和/或软光标：</string>
 							<object class="NSFont" key="NSSupport" id="418379910">
 								<string key="NSName">LucidaGrande</string>
 								<double key="NSSize">13</double>
@@ -88,12 +90,14 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{17, 20}, {446, 28}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:1535</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="967476644">
 							<int key="NSCellFlags">67108864</int>
 							<int key="NSCellFlags2">272629760</int>
-							<string key="NSContents">Note: Applications begin with a asterisk(*) are not installed in your system, but you still can change their settings.</string>
+							<string key="NSContents">注意：以星号（*）开始的应用程序表示其在您的系统中未安装，但您仍然可设置其选项。</string>
 							<object class="NSFont" key="NSSupport" id="26">
 								<string key="NSName">LucidaGrande</string>
 								<double key="NSSize">11</double>
@@ -119,7 +123,8 @@
 										<int key="NSvFlags">256</int>
 										<string key="NSFrameSize">{438, 272}</string>
 										<reference key="NSSuperview" ref="1022175319"/>
-										<reference key="NSNextKeyView" ref="348473150"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView" ref="832104323"/>
 										<string key="NSReuseIdentifierKey">_NS:13</string>
 										<bool key="NSEnabled">YES</bool>
 										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -129,6 +134,7 @@
 											<int key="NSvFlags">256</int>
 											<string key="NSFrameSize">{438, 17}</string>
 											<reference key="NSSuperview" ref="348473150"/>
+											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="1022175319"/>
 											<reference key="NSTableView" ref="327612920"/>
 										</object>
@@ -187,7 +193,7 @@
 												<object class="NSTableHeaderCell" key="NSHeaderCell">
 													<int key="NSCellFlags">75497536</int>
 													<int key="NSCellFlags2">2048</int>
-													<string key="NSContents">Application</string>
+													<string key="NSContents">应用程序</string>
 													<reference key="NSSupport" ref="26"/>
 													<reference key="NSBackgroundColor" ref="972212334"/>
 													<reference key="NSTextColor" ref="473292141"/>
@@ -218,7 +224,7 @@
 												<object class="NSTableHeaderCell" key="NSHeaderCell">
 													<int key="NSCellFlags">75497536</int>
 													<int key="NSCellFlags2">2048</int>
-													<string key="NSContents">ASCII Mode</string>
+													<string key="NSContents">ASCII 模式</string>
 													<reference key="NSSupport" ref="26"/>
 													<reference key="NSBackgroundColor" ref="972212334"/>
 													<reference key="NSTextColor" ref="473292141"/>
@@ -257,7 +263,7 @@
 												<object class="NSTableHeaderCell" key="NSHeaderCell">
 													<int key="NSCellFlags">75497536</int>
 													<int key="NSCellFlags2">2048</int>
-													<string key="NSContents">Soft Cursor</string>
+													<string key="NSContents">软光标</string>
 													<reference key="NSSupport" ref="26"/>
 													<reference key="NSBackgroundColor" ref="972212334"/>
 													<reference key="NSTextColor" ref="473292141"/>
@@ -337,6 +343,7 @@
 								</array>
 								<string key="NSFrame">{{1, 17}, {438, 272}}</string>
 								<reference key="NSSuperview" ref="500369005"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="327612920"/>
 								<string key="NSReuseIdentifierKey">_NS:11</string>
 								<reference key="NSDocView" ref="327612920"/>
@@ -348,6 +355,7 @@
 								<int key="NSvFlags">-2147483392</int>
 								<string key="NSFrame">{{224, 17}, {15, 102}}</string>
 								<reference key="NSSuperview" ref="500369005"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="349691813"/>
 								<string key="NSReuseIdentifierKey">_NS:58</string>
 								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -360,6 +368,8 @@
 								<int key="NSvFlags">-2147483392</int>
 								<string key="NSFrame">{{1, 303}, {438, 16}}</string>
 								<reference key="NSSuperview" ref="500369005"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="569058539"/>
 								<string key="NSReuseIdentifierKey">_NS:60</string>
 								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 								<int key="NSsFlags">1</int>
@@ -375,6 +385,7 @@
 								</array>
 								<string key="NSFrame">{{1, 0}, {438, 17}}</string>
 								<reference key="NSSuperview" ref="500369005"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="916934388"/>
 								<reference key="NSDocView" ref="916934388"/>
 								<reference key="NSBGColor" ref="47141004"/>
@@ -383,7 +394,8 @@
 						</array>
 						<string key="NSFrame">{{20, 56}, {440, 290}}</string>
 						<reference key="NSSuperview" ref="1005"/>
-						<reference key="NSNextKeyView" ref="1022175319"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="348473150"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="NSsFlags">133682</int>
 						<reference key="NSVScroller" ref="832104323"/>
@@ -397,7 +409,9 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{480, 391}</string>
-				<reference key="NSNextKeyView" ref="500369005"/>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView" ref="129856014"/>
 				<string key="NSClassName">NSView</string>
 			</object>
 		</array>

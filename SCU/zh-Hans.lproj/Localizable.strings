@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  SCU
+
+  Created by Neo on 12/27/12.
+  Copyright (c) 2012 Neo. All rights reserved.
+*/
+
+"Preference window title" = "鼠鬚管输入法配置工具";
+
+"General tab label" = "常规";
+"Style tab label" = "样式";
+"Apps tab label" = "应用";
+"Schemata tab label" = "输入方案";
+"Help tab label" = "帮助";
+
+"Rime configuration folder does not exist" = "中州韵/鼠鬚管配置文件夹不存在";
+"Rime configuration file does not exist" = "中州韵/鼠鬚管配置文件不存在";
+"Rime configuration loading failed" = "中州韵/鼠鬚管配置文件加载失败";
+"Should run the Deploy command with file path" = "路径: %@\n\n请确认在使用本工具前运行过鼠鬚管输入法的「重新部署」命令。";
+"Should run the Deploy command with further info" = "请确认在使用本工具前运行过鼠鬚管输入法的「重新部署」命令。如果此错误继续出现请向开发者报告错误，谢谢！";
+"OK" = "确认";

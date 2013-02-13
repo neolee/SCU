@@ -10,8 +10,8 @@
 
 "General tab label" = "General";
 "Style tab label" = "Style";
-"Schemata tab label" = "Schemata";
 "Apps tab label" = "Apps";
+"Schemata tab label" = "Schemata";
 "Help tab label" = "Help";
 
 "Rime configuration folder does not exist" = "Rime configuration folder does not exist";

@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		B519C002168C87D700B04D55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B519C004168C87D700B04D55 /* Localizable.strings */; };
 		B5293FEE1692F0ED00543EEC /* AppsPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5293FEC1692F0ED00543EEC /* AppsPreferencesViewController.m */; };
-		B5293FEF1692F0ED00543EEC /* AppsPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5293FED1692F0ED00543EEC /* AppsPreferencesViewController.xib */; };
 		B5293FF31692F10900543EEC /* HelpPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5293FF11692F10900543EEC /* HelpPreferencesViewController.m */; };
-		B5293FF41692F10900543EEC /* HelpPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5293FF21692F10900543EEC /* HelpPreferencesViewController.xib */; };
 		B5293FF71692F41100543EEC /* squirrelDeployCommand.png in Resources */ = {isa = PBXBuildFile; fileRef = B5293FF51692F41100543EEC /* squirrelDeployCommand.png */; };
 		B5293FF81692F41100543EEC /* squirrelDeployCommand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5293FF61692F41100543EEC /* squirrelDeployCommand@2x.png */; };
 		B52941651694660600543EEC /* SHKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B52941501694660600543EEC /* SHKit.m */; };
@@ -39,7 +37,11 @@
 		B58FA78B168F3CB900E75314 /* RimeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA78A168F3CB900E75314 /* RimeConfig.m */; };
 		B58FA81D169136A500E75314 /* RimeConfigError.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA81C169136A500E75314 /* RimeConfigError.m */; };
 		B58FA82116915BEA00E75314 /* SchemataPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B58FA81F16915BEA00E75314 /* SchemataPreferencesViewController.m */; };
-		B58FA82216915BEA00E75314 /* SchemataPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58FA82016915BEA00E75314 /* SchemataPreferencesViewController.xib */; };
+		B593CCD416CB794600C74C0B /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B593CCD616CB794600C74C0B /* GeneralPreferencesViewController.xib */; };
+		B593CCD716CB794D00C74C0B /* StylePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B593CCD916CB794D00C74C0B /* StylePreferencesViewController.xib */; };
+		B593CCDA16CB795200C74C0B /* AppsPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B593CCDC16CB795200C74C0B /* AppsPreferencesViewController.xib */; };
+		B593CCDD16CB795700C74C0B /* SchemataPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B593CCDF16CB795700C74C0B /* SchemataPreferencesViewController.xib */; };
+		B593CCE016CB795C00C74C0B /* HelpPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B593CCE216CB795C00C74C0B /* HelpPreferencesViewController.xib */; };
 		B5C4F4C11695546500430F20 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = B5C4F4C01695546500430F20 /* dsa_pub.pem */; };
 		B5DCCC33168EDF4B00E3D502 /* RimeConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */; };
 		B5DE2D6C16C958B1000BF87B /* RimeKeyCodeTransformer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5DE2D6316C958B1000BF87B /* RimeKeyCodeTransformer.mm */; };
@@ -49,9 +51,7 @@
 		B5DE2E2516CA137F000BF87B /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DE2E0E16C9593B000BF87B /* ShortcutRecorder.framework */; };
 		B5DE2E2616CA13B3000BF87B /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5DE2E0E16C9593B000BF87B /* ShortcutRecorder.framework */; };
 		B5E30054168C48650068BBE7 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */; };
-		B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */; };
 		B5E30059168C49170068BBE7 /* StylePreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */; };
-		B5E3005A168C49170068BBE7 /* StylePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */; };
 		B5EA2B1316C4D4DC00E434AF /* RimeConfigSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA2B1216C4D4DC00E434AF /* RimeConfigSchema.m */; };
 /* End PBXBuildFile section */
 
@@ -125,10 +125,8 @@
 		B519C003168C87D700B04D55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B5293FEB1692F0ED00543EEC /* AppsPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppsPreferencesViewController.h; sourceTree = "<group>"; };
 		B5293FEC1692F0ED00543EEC /* AppsPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppsPreferencesViewController.m; sourceTree = "<group>"; };
-		B5293FED1692F0ED00543EEC /* AppsPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppsPreferencesViewController.xib; sourceTree = "<group>"; };
 		B5293FF01692F10900543EEC /* HelpPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpPreferencesViewController.h; sourceTree = "<group>"; };
 		B5293FF11692F10900543EEC /* HelpPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpPreferencesViewController.m; sourceTree = "<group>"; };
-		B5293FF21692F10900543EEC /* HelpPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpPreferencesViewController.xib; sourceTree = "<group>"; };
 		B5293FF51692F41100543EEC /* squirrelDeployCommand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squirrelDeployCommand.png; sourceTree = "<group>"; };
 		B5293FF61692F41100543EEC /* squirrelDeployCommand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squirrelDeployCommand@2x.png"; sourceTree = "<group>"; };
 		B529414F1694660600543EEC /* SHKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKit.h; sourceTree = "<group>"; };
@@ -176,7 +174,19 @@
 		B58FA81C169136A500E75314 /* RimeConfigError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfigError.m; path = RimeKit/RimeConfigError.m; sourceTree = "<group>"; };
 		B58FA81E16915BEA00E75314 /* SchemataPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemataPreferencesViewController.h; sourceTree = "<group>"; };
 		B58FA81F16915BEA00E75314 /* SchemataPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemataPreferencesViewController.m; sourceTree = "<group>"; };
-		B58FA82016915BEA00E75314 /* SchemataPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SchemataPreferencesViewController.xib; sourceTree = "<group>"; };
+		B593CCCE16CB792F00C74C0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.xib"; sourceTree = "<group>"; };
+		B593CCD216CB792F00C74C0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B593CCD316CB793000C74C0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "zh-Hans"; path = "zh-Hans.lproj/Credits.rtf"; sourceTree = "<group>"; };
+		B593CCD516CB794600C74C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/GeneralPreferencesViewController.xib; sourceTree = "<group>"; };
+		B593CCD816CB794D00C74C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/StylePreferencesViewController.xib; sourceTree = "<group>"; };
+		B593CCDB16CB795200C74C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/AppsPreferencesViewController.xib; sourceTree = "<group>"; };
+		B593CCDE16CB795700C74C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/SchemataPreferencesViewController.xib; sourceTree = "<group>"; };
+		B593CCE116CB795C00C74C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/HelpPreferencesViewController.xib; sourceTree = "<group>"; };
+		B593CCE316CB798700C74C0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/HelpPreferencesViewController.xib"; sourceTree = "<group>"; };
+		B593CCE416CB798C00C74C0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/SchemataPreferencesViewController.xib"; sourceTree = "<group>"; };
+		B593CCE516CB799000C74C0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/AppsPreferencesViewController.xib"; sourceTree = "<group>"; };
+		B593CCE616CB799800C74C0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/StylePreferencesViewController.xib"; sourceTree = "<group>"; };
+		B593CCE716CB799D00C74C0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/GeneralPreferencesViewController.xib"; sourceTree = "<group>"; };
 		B5C4F4C01695546500430F20 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		B5DCCC31168EDF4B00E3D502 /* RimeConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfigController.h; path = RimeKit/RimeConfigController.h; sourceTree = "<group>"; };
 		B5DCCC32168EDF4B00E3D502 /* RimeConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfigController.m; path = RimeKit/RimeConfigController.m; sourceTree = "<group>"; };
@@ -192,10 +202,8 @@
 		B5DE2E0816C9593B000BF87B /* ShortcutRecorder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShortcutRecorder.xcodeproj; path = ShortcutRecorder/ShortcutRecorder.xcodeproj; sourceTree = "<group>"; };
 		B5E30051168C48650068BBE7 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
 		B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralPreferencesViewController.m; sourceTree = "<group>"; };
-		B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralPreferencesViewController.xib; sourceTree = "<group>"; };
 		B5E30056168C49170068BBE7 /* StylePreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StylePreferencesViewController.h; sourceTree = "<group>"; };
 		B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StylePreferencesViewController.m; sourceTree = "<group>"; };
-		B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StylePreferencesViewController.xib; sourceTree = "<group>"; };
 		B5EA2B1116C4D4DC00E434AF /* RimeConfigSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RimeConfigSchema.h; path = RimeKit/RimeConfigSchema.h; sourceTree = "<group>"; };
 		B5EA2B1216C4D4DC00E434AF /* RimeConfigSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RimeConfigSchema.m; path = RimeKit/RimeConfigSchema.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -297,19 +305,19 @@
 				B542191D168C3AF000C21C1C /* AppDelegate.m */,
 				B5E30051168C48650068BBE7 /* GeneralPreferencesViewController.h */,
 				B5E30052168C48650068BBE7 /* GeneralPreferencesViewController.m */,
-				B5E30053168C48650068BBE7 /* GeneralPreferencesViewController.xib */,
+				B593CCD616CB794600C74C0B /* GeneralPreferencesViewController.xib */,
 				B5E30056168C49170068BBE7 /* StylePreferencesViewController.h */,
 				B5E30057168C49170068BBE7 /* StylePreferencesViewController.m */,
-				B5E30058168C49170068BBE7 /* StylePreferencesViewController.xib */,
+				B593CCD916CB794D00C74C0B /* StylePreferencesViewController.xib */,
 				B5293FEB1692F0ED00543EEC /* AppsPreferencesViewController.h */,
 				B5293FEC1692F0ED00543EEC /* AppsPreferencesViewController.m */,
-				B5293FED1692F0ED00543EEC /* AppsPreferencesViewController.xib */,
+				B593CCDC16CB795200C74C0B /* AppsPreferencesViewController.xib */,
 				B58FA81E16915BEA00E75314 /* SchemataPreferencesViewController.h */,
 				B58FA81F16915BEA00E75314 /* SchemataPreferencesViewController.m */,
-				B58FA82016915BEA00E75314 /* SchemataPreferencesViewController.xib */,
+				B593CCDF16CB795700C74C0B /* SchemataPreferencesViewController.xib */,
 				B5293FF01692F10900543EEC /* HelpPreferencesViewController.h */,
 				B5293FF11692F10900543EEC /* HelpPreferencesViewController.m */,
-				B5293FF21692F10900543EEC /* HelpPreferencesViewController.xib */,
+				B593CCE216CB795C00C74C0B /* HelpPreferencesViewController.xib */,
 				B5421911168C3AF000C21C1C /* Supporting Files */,
 			);
 			path = SCU;
@@ -527,13 +535,13 @@
 				B542191B168C3AF000C21C1C /* Credits.rtf in Resources */,
 				B5421921168C3AF000C21C1C /* MainMenu.xib in Resources */,
 				B54219B7168C3E3D00C21C1C /* MASPreferencesWindow.xib in Resources */,
-				B5E30055168C48650068BBE7 /* GeneralPreferencesViewController.xib in Resources */,
-				B5E3005A168C49170068BBE7 /* StylePreferencesViewController.xib in Resources */,
+				B593CCD416CB794600C74C0B /* GeneralPreferencesViewController.xib in Resources */,
+				B593CCD716CB794D00C74C0B /* StylePreferencesViewController.xib in Resources */,
 				B519C002168C87D700B04D55 /* Localizable.strings in Resources */,
 				B5552B81168DEFB700601C3C /* SCU.icns in Resources */,
-				B58FA82216915BEA00E75314 /* SchemataPreferencesViewController.xib in Resources */,
-				B5293FEF1692F0ED00543EEC /* AppsPreferencesViewController.xib in Resources */,
-				B5293FF41692F10900543EEC /* HelpPreferencesViewController.xib in Resources */,
+				B593CCDD16CB795700C74C0B /* SchemataPreferencesViewController.xib in Resources */,
+				B593CCDA16CB795200C74C0B /* AppsPreferencesViewController.xib in Resources */,
+				B593CCE016CB795C00C74C0B /* HelpPreferencesViewController.xib in Resources */,
 				B5293FF71692F41100543EEC /* squirrelDeployCommand.png in Resources */,
 				B5293FF81692F41100543EEC /* squirrelDeployCommand@2x.png in Resources */,
 				B5C4F4C11695546500430F20 /* dsa_pub.pem in Resources */,
@@ -611,6 +619,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B519C003168C87D700B04D55 /* en */,
+				B593CCD216CB792F00C74C0B /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			path = ../SCU;
@@ -629,6 +638,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B542191A168C3AF000C21C1C /* en */,
+				B593CCD316CB793000C74C0B /* zh-Hans */,
 			);
 			name = Credits.rtf;
 			path = ../SCU;
@@ -638,9 +648,55 @@
 			isa = PBXVariantGroup;
 			children = (
 				B5421920168C3AF000C21C1C /* en */,
+				B593CCCE16CB792F00C74C0B /* zh-Hans */,
 			);
 			name = MainMenu.xib;
 			path = ../SCU;
+			sourceTree = "<group>";
+		};
+		B593CCD616CB794600C74C0B /* GeneralPreferencesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B593CCD516CB794600C74C0B /* en */,
+				B593CCE716CB799D00C74C0B /* zh-Hans */,
+			);
+			name = GeneralPreferencesViewController.xib;
+			sourceTree = "<group>";
+		};
+		B593CCD916CB794D00C74C0B /* StylePreferencesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B593CCD816CB794D00C74C0B /* en */,
+				B593CCE616CB799800C74C0B /* zh-Hans */,
+			);
+			name = StylePreferencesViewController.xib;
+			sourceTree = "<group>";
+		};
+		B593CCDC16CB795200C74C0B /* AppsPreferencesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B593CCDB16CB795200C74C0B /* en */,
+				B593CCE516CB799000C74C0B /* zh-Hans */,
+			);
+			name = AppsPreferencesViewController.xib;
+			sourceTree = "<group>";
+		};
+		B593CCDF16CB795700C74C0B /* SchemataPreferencesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B593CCDE16CB795700C74C0B /* en */,
+				B593CCE416CB798C00C74C0B /* zh-Hans */,
+			);
+			name = SchemataPreferencesViewController.xib;
+			sourceTree = "<group>";
+		};
+		B593CCE216CB795C00C74C0B /* HelpPreferencesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B593CCE116CB795C00C74C0B /* en */,
+				B593CCE316CB798700C74C0B /* zh-Hans */,
+			);
+			name = HelpPreferencesViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
