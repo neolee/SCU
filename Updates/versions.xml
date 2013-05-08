@@ -6,6 +6,15 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         <item>
+            <title>Version 0.3.387</title>
+            <sparkle:releaseNotesLink>
+                http://update.soulhacker.me/scu/0.3.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Wed, 8 May 2013 15:00:00 +0800</pubDate>
+            <enclosure url="http://update.soulhacker.me/scu/SCU-0.3.387.zip" sparkle:version="387" sparkle:shortVersionString="0.3.387" sparkle:dsaSignature="MCwCFGrSvIStRyPrfD1M9n6WS/s+1tL2AhR/Cbh9TP4h9LT8gvLuDuNhpoKqxA==" length="1296918" type="application/octet-stream" />
+        </item>
+
+        <item>
             <title>Version 0.3</title>
             <sparkle:releaseNotesLink>
                 http://update.soulhacker.me/scu/0.3.html
