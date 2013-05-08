@@ -92,6 +92,16 @@
     return YES;
 }
 
+#pragma mark - Making patch key path for *.custom.yaml
+
+- (NSString *)patchKeyPath:(NSString *)keyPath {
+    return [[RIME_CUSTOM_ROOT_KEY stringByAppendingString:@"."] stringByAppendingString:keyPath];
+}
+
+- (NSArray *)patchKeyPathArray:(NSArray *)keyPathArray {
+    return [@[RIME_CUSTOM_ROOT_KEY] arrayByAddingObjectsFromArray:keyPathArray];
+}
+
 #pragma mark - Write model patch value
 
 - (BOOL)patchValue:(id)value forKeyPath:(NSString *)keyPath error:(RimeConfigError **)error {
@@ -138,14 +148,6 @@
 
 #pragma mark - Read model attribute
 
-- (NSString *)patchKeyPath:(NSString *)keyPath {
-    return [[RIME_CUSTOM_ROOT_KEY stringByAppendingString:@"."] stringByAppendingString:keyPath];
-}
-
-- (NSArray *)patchKeyPathArray:(NSArray *)keyPathArray {
-    return [@[RIME_CUSTOM_ROOT_KEY] arrayByAddingObjectsFromArray:keyPathArray];
-}
-
 - (id)valueForKey:(NSString *)key {
     // See comment in method reload
     if (_customConfigExists && [_customConfig valueForKeyPath:[self patchKeyPath:key]]) {
@@ -165,6 +167,8 @@
         return [_config valueForKeyPath:keyPath];
     }
 }
+
+// Wrappers for different data types
 
 - (NSArray *)arrayForKey:(NSString *)key {
     return (NSArray *)[self valueForKey:key];
