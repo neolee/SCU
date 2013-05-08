@@ -91,11 +91,11 @@
         // Not editable
     }
     else if ([columnIdentifer isEqualToString:@"ascii"]) {
-        [option setAsciiMode:object];
+        [option setAsciiMode:[object boolValue]];
         [[_delegate configController] setOptionASCIIMode:[option asciiMode] forApp:[option appId]];
     }
     else if ([columnIdentifer isEqualToString:@"cursor"]) {
-        [option setSoftCursor:object];
+        [option setSoftCursor:[object boolValue]];
         [[_delegate configController] setOptionSoftCursor:[option softCursor] forApp:[option appId]];
     }
 }

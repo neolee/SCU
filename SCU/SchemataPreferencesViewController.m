@@ -72,7 +72,7 @@
     RimeConfigSchema *schema = [_schemata objectAtIndex:row];
     
     if ([columnIdentifer isEqualToString:@"enabled"]) {
-        [schema setEnabled:object];
+        [schema setEnabled:[object boolValue]];
         [[_delegate configController] setEnabled:[schema enabled] forSchema:[schema schemaId]];
     }
     else if ([columnIdentifer isEqualToString:@"name"]) {
