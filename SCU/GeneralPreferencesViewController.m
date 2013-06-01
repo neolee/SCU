@@ -86,8 +86,10 @@
     for (int n = 1; n <= SWITCHER_HOTKEY_COUNT; n++) {
         SRRecorderControl *shortcutRecorder = [self valueForKey:[@"shortcutRecorder" stringByAppendingFormat:@"%d", n]];
         NSDictionary *value = [shortcutRecorder objectValue];
-        RimeKey *key = [RimeKey keyWithSRDictionary:value];
-        [hotkeys addObject:[key rimeKeyString]];
+        if (value) {
+            RimeKey *key = [RimeKey keyWithSRDictionary:value];
+            [hotkeys addObject:[key rimeKeyString]];
+        }
     }
     
     [[_delegate configController] setSwitcherHotkeys:hotkeys];
