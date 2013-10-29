@@ -4,9 +4,9 @@
 [submodule "SHKit"]
 	path = SHKit
 	url = git@github.com:neolee/SHKit.git
-[submodule "YAML"]
-	path = YAML
-	url = git@github.com:neolee/YACYAML.git
+[submodule "YACYAML"]
+	path = YACYAML
+	url = git@github.com:th-in-gs/YACYAML.git
 [submodule "ShortcutRecorder"]
 	path = ShortcutRecorder
-	url = git@github.com:neolee/ShortcutRecorder.git
+	url = git@github.com:Kentzo/ShortcutRecorder.git
