@@ -79,9 +79,8 @@
                    RIME_SCHEMA_SOUTZOE,
                    RIME_SCHEMA_STROKE_SIMP,
                    RIME_SCHEMA_TERRA_PINYIN,
-                   RIME_SCHEMA_TRIUNGKOX3P,
-                   RIME_SCHEMA_WUBI86,
                    RIME_SCHEMA_WUBI_PINYIN,
+                   RIME_SCHEMA_WUBI86,
                    RIME_SCHEMA_WUGNIU,
                    RIME_SCHEMA_WUGNIU_LOPHA,
                    RIME_SCHEMA_ZYENPHENG
@@ -102,12 +101,12 @@
     }
     for (NSString *schemaId in _schemaIds) {
         RimeConfigSchema *schema = [RimeConfigSchema schemaWithSchemaId:schemaId];
-        
-        
-        
-        [schema setEnabled:[_enabledSchemaIds containsObject:schemaId]];
-        
-        [_schemata addObject:schema];
+
+        if (schema) {
+            [schema setEnabled:[_enabledSchemaIds containsObject:schemaId]];
+            
+            [_schemata addObject:schema];
+        }
     }
 }
 

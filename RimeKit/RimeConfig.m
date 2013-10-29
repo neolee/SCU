@@ -171,11 +171,21 @@
 // Wrappers for different data types
 
 - (NSArray *)arrayForKey:(NSString *)key {
-    return (NSArray *)[self valueForKey:key];
+    id v = [self valueForKey:key];
+    if (!v) {
+        return [[NSArray alloc] init];
+    }
+
+    return (NSArray *)v;
 }
 
 - (NSArray *)arrayForKeyPath:(NSString *)keyPath {
-    return (NSArray *)[self valueForKeyPath:keyPath];
+    id v = [self valueForKeyPath:keyPath];
+    if (!v) {
+        return [[NSArray alloc] init];
+    }
+
+    return (NSArray *)v;
 }
 
 - (BOOL)boolForKey:(NSString *)key {
@@ -187,11 +197,21 @@
 }
 
 - (NSDictionary *)dictionaryForKey:(NSString *)key {
-    return (NSDictionary *)[self valueForKey:key];    
+    id v = [self valueForKey:key];
+    if (!v) {
+        return [[NSDictionary alloc] init];
+    }
+
+    return (NSDictionary *)v;
 }
 
 - (NSDictionary *)dictionaryForKeyPath:(NSString *)keyPath {
-    return (NSDictionary *)[self valueForKeyPath:keyPath];
+    id v = [self valueForKeyPath:keyPath];
+    if (!v) {
+        return [[NSDictionary alloc] init];
+    }
+    
+    return (NSDictionary *)v;
 }
 
 - (float)floatForKey:(NSString *)key {
@@ -211,11 +231,21 @@
 }
 
 - (NSString *)stringForKey:(NSString *)key {
-    return (NSString *)[self valueForKey:key];
+    id v = [self valueForKey:key];
+    if (!v) {
+        return @"";
+    }
+
+    return (NSString *)v;
 }
 
 - (NSString *)stringForKeyPath:(NSString *)keyPath {
-    return (NSString *)[self valueForKeyPath:keyPath];
+    id v = [self valueForKeyPath:keyPath];
+    if (!v) {
+        return @"";
+    }
+
+    return (NSString *)v;
 }
 
 #pragma mark - Class helpers

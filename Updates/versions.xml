@@ -5,6 +5,16 @@
         <link>http://update.soulhacker.me/scu/versions.xml</link>
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
+        
+        <item>
+            <title>Version 0.3.421</title>
+            <sparkle:releaseNotesLink>
+                http://update.soulhacker.me/scu/0.3.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Tue, 29 October 2013 20:00:00 +0800</pubDate>
+            <enclosure url="http://update.soulhacker.me/scu/SCU-0.3.421.zip" sparkle:version="421" sparkle:shortVersionString="0.3.421" sparkle:dsaSignature="MC0CFHMdgG9KXPfg6XpK/db6eT2Vot8lAhUAktoJp68rzrOSMs0Txp+9Y9H4ugg=" length="1351480" type="application/octet-stream" />
+        </item>
+        
         <item>
             <title>Version 0.3.389</title>
             <sparkle:releaseNotesLink>
