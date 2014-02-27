@@ -4,8 +4,8 @@
 
 如果不希望自己编译而又希望试用 SCU，可以从这里下载
 
-- [SCU 最新版本 0.3.421](http://update.soulhacker.me/scu/SCU.zip)  
-  SHA1 checksum: `dd07dc9ae742a82c756262ca53ed45828f901175`
+- [SCU 最新版本 0.3.428](http://update.paradigmx.net/scu/SCU.zip)  
+  SHA1 checksum: `656455be22890791a1764e0ddf4bda696e35d2a9`
   
 已经安装过 SCU 的朋友建议使用应用内置的自动升级功能来进行升级。使用前确保至少激活过 Squirrel（鼠鬚管）输入法一次并务必备份好 Squirrel 配置目录 `~/Library/Rime`（如果不知道在哪里，可以从 Squirrel 鼠鬚管输入法菜单里选择 Settings/用户设定，然后备份打开窗口里所有文件），进行任何配置之后必须执行 Squirrel（鼠鬚管）输入法菜单中的 Deploy/部署 命令才能生效。
 

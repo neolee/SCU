@@ -2,62 +2,71 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
         <title>SCU Changelog</title>
-        <link>http://update.soulhacker.me/scu/versions.xml</link>
+        <link>http://update.paradigmx.net/scu/versions.xml</link>
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         
         <item>
+            <title>Version 0.3.428</title>
+            <sparkle:releaseNotesLink>
+                http://update.paradigmx.net/scu/0.3.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Fri, 28 February 2014 02:00:00 +0800</pubDate>
+            <enclosure url="http://update.paradigmx.net/scu/SCU-0.3.428.zip" sparkle:version="428" sparkle:shortVersionString="0.3.428" sparkle:dsaSignature="MCwCFFaG22iJY1mJyAeK4n9K1y+GzvY7AhRQq+/hhGWVzB6gBtOsmu1tMWDYhA==" length="1351474" type="application/octet-stream" />
+        </item>
+        
+        <item>
             <title>Version 0.3.421</title>
             <sparkle:releaseNotesLink>
-                http://update.soulhacker.me/scu/0.3.html
+                http://update.paradigmx.net/scu/0.3.html
             </sparkle:releaseNotesLink>
             <pubDate>Tue, 29 October 2013 20:00:00 +0800</pubDate>
-            <enclosure url="http://update.soulhacker.me/scu/SCU-0.3.421.zip" sparkle:version="421" sparkle:shortVersionString="0.3.421" sparkle:dsaSignature="MC0CFHMdgG9KXPfg6XpK/db6eT2Vot8lAhUAktoJp68rzrOSMs0Txp+9Y9H4ugg=" length="1351480" type="application/octet-stream" />
+            <enclosure url="http://update.paradigmx.net/scu/SCU-0.3.421.zip" sparkle:version="421" sparkle:shortVersionString="0.3.421" sparkle:dsaSignature="MC0CFHMdgG9KXPfg6XpK/db6eT2Vot8lAhUAktoJp68rzrOSMs0Txp+9Y9H4ugg=" length="1351480" type="application/octet-stream" />
         </item>
         
         <item>
             <title>Version 0.3.389</title>
             <sparkle:releaseNotesLink>
-                http://update.soulhacker.me/scu/0.3.html
+                http://update.paradigmx.net/scu/0.3.html
             </sparkle:releaseNotesLink>
             <pubDate>Wed, 1 June 2013 12:00:00 +0800</pubDate>
-            <enclosure url="http://update.soulhacker.me/scu/SCU-0.3.389.zip" sparkle:version="389" sparkle:shortVersionString="0.3.389" sparkle:dsaSignature="MCwCFGKVSzhhxusXkIcWjaXZmcy/bgoPAhQ2lyQ2jHBYB+EU4R4TAyu7FpN6sQ==" length="1296919" type="application/octet-stream" />
+            <enclosure url="http://update.paradigmx.net/scu/SCU-0.3.389.zip" sparkle:version="389" sparkle:shortVersionString="0.3.389" sparkle:dsaSignature="MCwCFGKVSzhhxusXkIcWjaXZmcy/bgoPAhQ2lyQ2jHBYB+EU4R4TAyu7FpN6sQ==" length="1296919" type="application/octet-stream" />
         </item>
 
         <item>
             <title>Version 0.3.387</title>
             <sparkle:releaseNotesLink>
-                http://update.soulhacker.me/scu/0.3.html
+                http://update.paradigmx.net/scu/0.3.html
             </sparkle:releaseNotesLink>
             <pubDate>Wed, 8 May 2013 15:00:00 +0800</pubDate>
-            <enclosure url="http://update.soulhacker.me/scu/SCU-0.3.387.zip" sparkle:version="387" sparkle:shortVersionString="0.3.387" sparkle:dsaSignature="MCwCFGrSvIStRyPrfD1M9n6WS/s+1tL2AhR/Cbh9TP4h9LT8gvLuDuNhpoKqxA==" length="1296918" type="application/octet-stream" />
+            <enclosure url="http://update.paradigmx.net/scu/SCU-0.3.387.zip" sparkle:version="387" sparkle:shortVersionString="0.3.387" sparkle:dsaSignature="MCwCFGrSvIStRyPrfD1M9n6WS/s+1tL2AhR/Cbh9TP4h9LT8gvLuDuNhpoKqxA==" length="1296918" type="application/octet-stream" />
         </item>
 
         <item>
             <title>Version 0.3</title>
             <sparkle:releaseNotesLink>
-                http://update.soulhacker.me/scu/0.3.html
+                http://update.paradigmx.net/scu/0.3.html
             </sparkle:releaseNotesLink>
             <pubDate>Thu, 14 Feb 2013 19:00:00 +0800</pubDate>
-            <enclosure url="http://update.soulhacker.me/scu/SCU-0.3.zip" sparkle:version="378" sparkle:shortVersionString="0.3" sparkle:dsaSignature="MC0CFQCaekGl5j38jmD7ILBNasgfffyWBAIUDO67h68r2YmduiqSrORY7wijJK8=" length="1296662" type="application/octet-stream" />
+            <enclosure url="http://update.paradigmx.net/scu/SCU-0.3.zip" sparkle:version="378" sparkle:shortVersionString="0.3" sparkle:dsaSignature="MC0CFQCaekGl5j38jmD7ILBNasgfffyWBAIUDO67h68r2YmduiqSrORY7wijJK8=" length="1296662" type="application/octet-stream" />
         </item>
 
         <item>
             <title>Version 0.2</title>
             <sparkle:releaseNotesLink>
-                http://update.soulhacker.me/scu/0.2.html
+                http://update.paradigmx.net/scu/0.2.html
             </sparkle:releaseNotesLink>
             <pubDate>Thu, 03 Jan 2013 15:30:11 +0800</pubDate>
-            <enclosure url="http://update.soulhacker.me/scu/SCU-0.2.zip" sparkle:version="107" sparkle:shortVersionString="0.2" sparkle:dsaSignature="MC0CFDV7c7njM8yLOynqGEzFt0WX0IrvAhUAi5qkrkE01XViwAAjF+deHcMBFoY=" length="1111272" type="application/octet-stream" />
+            <enclosure url="http://update.paradigmx.net/scu/SCU-0.2.zip" sparkle:version="107" sparkle:shortVersionString="0.2" sparkle:dsaSignature="MC0CFDV7c7njM8yLOynqGEzFt0WX0IrvAhUAi5qkrkE01XViwAAjF+deHcMBFoY=" length="1111272" type="application/octet-stream" />
         </item>
 
         <item>
             <title>Version 0.1</title>
             <sparkle:releaseNotesLink>
-                http://update.soulhacker.me/scu/0.1.html
+                http://update.paradigmx.net/scu/0.1.html
             </sparkle:releaseNotesLink>
             <pubDate>Thu, 03 Jan 2013 01:03:11 +0800</pubDate>
-            <enclosure url="http://update.soulhacker.me/scu/SCU-0.1.zip" sparkle:version="79" sparkle:shortVersionString="0.1" sparkle:dsaSignature="MCwCFBaxuMcoGDIIrJ/NHzC/SsIHJWvoAhRNJ1z2kyvbB8lNP7AyO6ejUIjf8Q==" length="1110244" type="application/octet-stream" />
+            <enclosure url="http://update.paradigmx.net/scu/SCU-0.1.zip" sparkle:version="79" sparkle:shortVersionString="0.1" sparkle:dsaSignature="MCwCFBaxuMcoGDIIrJ/NHzC/SsIHJWvoAhRNJ1z2kyvbB8lNP7AyO6ejUIjf8Q==" length="1110244" type="application/octet-stream" />
         </item>
     </channel>
 </rss>
