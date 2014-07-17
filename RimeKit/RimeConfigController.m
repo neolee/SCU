@@ -64,6 +64,7 @@
     _schemaIds = @[
                    RIME_SCHEMA_BOPOMOFO,
                    RIME_SCHEMA_CANJIE5,
+                   RIME_SCHEMA_COMBO_PINYIN,
                    RIME_SCHEMA_DOUBLE_PINYIN,
                    RIME_SCHEMA_DOUBLE_PINYIN_ABC,
                    RIME_SCHEMA_DOUBLE_PINYIN_FLYPY,

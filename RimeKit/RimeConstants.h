@@ -25,6 +25,7 @@
 
 #define RIME_SCHEMA_BOPOMOFO                @"bopomofo"
 #define RIME_SCHEMA_CANJIE5                 @"cangjie5"
+#define RIME_SCHEMA_COMBO_PINYIN            @"combo_pinyin"
 #define RIME_SCHEMA_DOUBLE_PINYIN           @"double_pinyin"
 #define RIME_SCHEMA_DOUBLE_PINYIN_ABC       @"double_pinyin_abc"
 #define RIME_SCHEMA_DOUBLE_PINYIN_FLYPY     @"double_pinyin_flypy"
